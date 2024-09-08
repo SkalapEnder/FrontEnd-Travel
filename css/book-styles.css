@@ -5,11 +5,20 @@
 }
 
 body {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: Arial, sans-serif;
 }
 
+.backlayer{
+    padding: 20px;
+    
+    background-size: cover;
+    background-position: center;
+}
+
 .container {
-    background-image: url('banner.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -50,16 +59,29 @@ input {
     border-radius: 5px;
 }
 
+.backbutton{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.submitbutton{
+     background-color: rgba(0, 0, 0, 0.5);
+}
+
 button {
     padding: 10px;
-    background-color: transparent;
+   
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgba(0, 0, 0, 0.8);
     
+}
+
+.art-subtext{
+    align-items: center;
 }

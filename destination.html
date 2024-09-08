@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Destination</title>
+	<link rel="stylesheet" href="css/destination-styles.css">
+</head>
+<body style="background-image: url(pictures/steppe.jpg); 
+    background-size:    cover;
+    background-repeat:  no-repeat;">
+	<header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-login">
+            <input type="text" placeholder="Search...">
+            <button onclick="window.location.href = 'destination.html';">Search</button>
+            |
+            <button onclick="window.location.href = 'registration.html';">Sign Up</button>
+            <button onclick="window.location.href = 'registration.html';">Sign In</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <h1 align="center" style="margin-top: 30px;">Find your favorite travel path!</h1>
+            <input type="text" id="searchInput" placeholder="Введите название тура..." onkeyup="filterTours()">
+        </section>
+
+        <hr color="#014d5b" size="7px">
+
+        <section id="tour-list">
+            <div class="tour">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Big_Almaty_Lake_%28Bolshaya_Almatinka%29_in_June.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Alatau mountains">
+                <div class="tour-info">
+                    <h2>Alatau mountains</h2>
+                </div>
+            </div>
+
+            <div class="tour">
+                <img src="https://discovery.sndimg.com/content/dam/images/discovery/editorial/podcasts/Curiosity/2020/3/Kaindy_Lake_Shutterstock.jpg.rend.hgtvcom.1280.1280.suffix/1583694353397.jpeg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Kaindy lake">
+                <div class="tour-info">
+                    <h2>Kaindy lake</h2>
+                   
+                </div>
+            </div>
+
+            <div class="tour">
+                <img src="https://www.universetoday.com/wp-content/uploads/2016/07/nhq201607040139.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Baikonur Cosmodrome">
+                <div class="tour-info">
+                    <h2>Baikonur Cosmodrome</h2>
+                </div>
+            </div>
+
+            <div class="tour">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/IMG_7431-Sharyn_canyon.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Charyn Canyon">
+                <div class="tour-info">
+                    <h2>Charyn Canyon</h2>
+                </div>
+            </div>
+            <div class="tour">
+                <img src="https://wildticketasia.com/uploads/posts/2022-07/1658938870_medeu-sport-complex-01.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Medeu skating rink">
+                <div class="tour-info">
+                    <h2>Medeu skating rink</h2>
+                </div>
+            </div>
+
+            <div class="tour">
+                <img src="https://lp-cms-production.imgix.net/2019-06/957a72db530d46172924344883740dd4-bayterek-monument.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Baiterek">
+                <div class="tour-info">
+                    <h2>Baiterek</h2>
+                </div>
+            </div>
+
+            <div class="tour">
+                <img src="https://informburo.kz/storage/photos/72/6420fb73aba2c.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Shymbulak">
+                <div class="tour-info">
+                    <h2>Shymbulak</h2>
+                </div>
+            </div>
+
+            <div class="tour">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/WWII_Monument_Feat%2C_Almaty.jpg/800px-WWII_Monument_Feat%2C_Almaty.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="28 Panfilov Guardsmen">
+                <div class="tour-info">
+                    <h2>28 Panfilov Guardsmen</h2>
+                </div>
+            </div>
+
+            <div class="tour">
+                <img src="https://www.skyway.kz/wp-content/uploads/2019/03/den-astany-10.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Palace of peace and consolidation">
+                <div class="tour-info">
+                    <h2>Palace of peace and consolidation</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Kazhybek Asset</li>
+            <li>Alisher Berik</li>
+            <li>IT-2308</li>
+        </ul>
+    </footer>
+</body>
+</html>

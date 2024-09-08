@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Form</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="css/book-styles.css">
 </head>
-<body>
+<body style="background-image: url(pictures/banner.jpg); 
+    background-size:    cover;
+    background-repeat:  no-repeat;">
+    <div class="backlayer">
+        <a href="main.html" class="backbutton"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Back_Arrow.svg/2048px-Back_Arrow.svg.png" width="40px" height="40px" /></a>
+    </div>
     <div class="container">
-        <div class="form-container">
+        <div>
             <form>
                 <h2>Make Your Reservation</h2>
                 <label for="destination">Your Destination</label>
@@ -29,7 +34,7 @@
                 <label for="children">Children</label>
                 <input type="number" id="children" value="0" min="0">
                 
-                <button type="submit">Check Availability</button>
+                <button class="submitbutton" type="submit">Check Availability</button>
             </form>
         </div>
     </div>

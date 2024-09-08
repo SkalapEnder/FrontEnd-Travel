@@ -20,7 +20,7 @@ header {
 }
 
 .backlayer{
-    background-color: rgb(0, 90, 106, 0.4);
+    background-color: rgb(0, 90, 106, 0.5);
 }
 
 /* Footer class*/
@@ -67,7 +67,10 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
+main {
+    padding: 20px;
+    flex-grow: 1;
+}
 
 .logo img {
     height: 40px;
@@ -103,8 +106,3 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
 }
-
-
-
-
-
