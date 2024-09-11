@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Destination</title>
 	<link rel="stylesheet" href="css/destination-styles.css">
+    <style>
+    hr {
+        color: #014d5b;
+        font-size: 7px;
+        margin-top: 30px; 
+        width: 100%; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    </style>
+
 </head>
 <body style="background-image: url(pictures/steppe.jpg); 
     background-size:    cover;
@@ -15,7 +26,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="main.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Destination</a></li>
                 <li><a href="contacts.html">Contact Us</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -32,14 +43,14 @@
     </header>
 
     <main>
-        <section id="search-section">
-            <h1 align="center" style="margin-top: 30px;">Find your favorite travel path!</h1>
-            <input type="text" id="searchInput" placeholder="Введите название тура..." onkeyup="filterTours()">
+        <section class="search-section">
+            <h1 style="margin-top: 30px; align-self: center;">Find your favorite travel path!</h1>
+            <input type="text" class="searchInput" placeholder="Write name of place..." onkeyup="filterTours()">
         </section>
 
-        <hr color="#014d5b" size="7px">
+        <hr>
 
-        <section id="tour-list">
+        <section class="tour-list">
             <div class="tour">
                 <img src="pictures/almatynka-lake.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Alatau mountains">
                 <div class="tour-info">

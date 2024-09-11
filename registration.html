@@ -10,24 +10,35 @@
     background-size:    cover;
     background-repeat:  no-repeat;">
     <div class="backlayer">
-        <a href="main.html" class="backbutton"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Back_Arrow.svg/2048px-Back_Arrow.svg.png" width="40px" height="40px" /></a>
+        <a href="index.html" class="backbutton"><img src="pictures/back-arrow.png" width="40" height="40" alt="Background Mountains Evening"/></a>
     </div>
     <div class="container">
 
         <div>
             <form>
                 <h2>Create your account</h2>
-                <label for="destination">Name</label>
-                <input type="text" id="name" placeholder="Enter your name">
+                <label>Full name</label>
+                <input type="text" placeholder="Enter your name">
                 
-                <label for="checkin">Email</label>
-                <input type="text" id="email" placeholder="Enter your email">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
                 
-                <label for="checkout">Your birthday</label>
-                <input type="date" id="birthday">
+                <label>Your birthday</label>
+                <input type="date">
+
+                <label>Gender</label>
+                <select style="margin-bottom: 20px;">
+                    <option value="male" selected>Male</option>
+                    <option value="female">Female</option>
+                </select>
                 
-                <label for="rooms">Password</label>
-                <input type="password" id="password">
+                <label>Password</label>
+                <input type="password"  minlength="8" required>
+
+                <label>About you</label>
+                <textarea placeholder="Write some info about you..."
+                style="margin-bottom: 20px;"></textarea>
+
                 <button class="submitbutton" type="submit">Create Account</button>
             </form>
         </div>

@@ -69,15 +69,21 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    flex-grow: 1;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo img {
+    margin-right: 10px;
     height: 40px;
 }
 
 .logo h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
