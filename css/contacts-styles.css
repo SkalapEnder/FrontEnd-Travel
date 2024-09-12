@@ -5,48 +5,66 @@
 }
 
 body {
+
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #fff;
 }
 
+.backlayer{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 header {
+    z-index: 1000;
+    top: 0;
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: rgba(1, 77, 91, 0.7);
-}
-
-.backlayer{
-    background-color: rgb(0, 90, 106, 0.5);
+    background-color: #014D5A;
 }
 
 /* Footer class*/
 footer {
-    display: block; 
+    display: flex; 
+    justify-content: space-between;
     padding: 20px;
-    background-color: #014d5b;
+    background-color: #002A32;
     text-align: center;
+    align-items: center;
 }
 
-footer ul {
+#footer-section{
+    display: grid;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+#footer-section ul {
     list-style: none;
-    padding: 0;
+    line-height: 150%;
 }
 
-footer ul li {
-    display: inline;
-    margin: 0 10px;
+#footer-section ul li {
+    margin: 5px 10px 5px
 }
 
-footer ul li a {
+#footer-section ul li a {
     color: #fff;
     text-decoration: none;
 }
 
 /* Navigator Bar class*/
+nav{
+    font-size: 20px;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -54,27 +72,30 @@ nav ul {
 }
 
 nav ul li {
+    border-radius: 5px;
+    padding: 5px 15px;;
+    background-color: rgba(0, 0, 0, 0.0);
     display: inline;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: background-color 0.3s ease;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-main {
-    padding: 20px;
-}
 
 .logo{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 20px;
 }
 
 .logo img {
@@ -99,16 +120,19 @@ main {
 }
 
 .search-login input[type="text"] {
+    font-size: 16px;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
 }
 
 .search-login button {
+    font-size: 17px;
     padding: 5px 15px;
     background-color: #017a8b;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 5px;
 }

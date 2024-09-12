@@ -17,13 +17,13 @@
     </style>
 
 </head>
-<body style="background-image: url(pictures/steppe.jpg); 
-    background-size:    cover;
-    background-repeat:  no-repeat;">
+<body>
 	<header>
         <div class="logo">
-            <img src="logo.png" alt="Logo">
+            <img src="pictures/logo.png" alt="Logo">
+            <h1>KazDream</h1>
         </div>
+        <br>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -32,24 +32,167 @@
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
-
+        <br>
         <div class="search-login">
-            <input type="text" placeholder="Search...">
-            <button onclick="window.location.href = 'destination.html';">Search</button>
-            |
             <button onclick="window.location.href = 'registration.html';">Sign Up</button>
             <button onclick="window.location.href = 'registration.html';">Sign In</button>
         </div>
     </header>
 
     <main>
-        <section class="search-section">
+        <div class="search-section">
             <h1 style="margin-top: 30px; align-self: center;">Find your favorite travel path!</h1>
-            <input type="text" class="searchInput" placeholder="Write name of place..." onkeyup="filterTours()">
-        </section>
+            <div class="search-filter">
+                <h3 class="search-dropdown">City<img src="pictures/chevron_down.png" height="16px" width="16px"></h3>
+                <h3 class="search-dropdown">Price<img src="pictures/chevron_down.png" height="16px" width="16px"></h3>
+                <h3 class="search-dropdown">Duration<img src="pictures/chevron_down.png" height="16px" width="16px"></h3>
+                <input type="text" placeholder="Write name of place...">
+            </div>
+            
+        </div>
 
-        <hr>
 
+        <div class="event-list">
+            <!-- Одна карточка мероприятия -->
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/almatynka-lake.jpg" alt="Alatau Mountains">
+                    <div class="label">Best rating</div>
+                </div>
+                <div class="event-details">
+                    <h2>Almaty: bus tour to nature places (Kayndy lake, Medeu, Shymbulak, etc)</h2>
+                    <p>7 hours • Free water</p>
+                    <p>TrustTour certification</p>
+                    <div class="event-price"> 
+                      <span class="price">from 10,00 $</span>
+                      <span class="rating">★ 4,5 (2160)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/baiterek.jpg" alt="Astana Baiterek">
+                </div>
+                <div class="event-details">
+                    <h2>Astana: bus tour through the capital with visiting reustarant</h2>
+                    <p>1 day • Dinner included</p>
+                    <p>TrustTour certification</p>
+                    <div class="event-price"> 
+                      <span class="price">from 27,00 $</span>
+                      <span class="rating">★ 4,2 (1453)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/kaindy-lake.jpg" alt="Almaty, Kaindy lake">
+                </div>
+                <div class="event-details">
+                    <h2>Almaty: bus tour across whole Almaty area</h2>
+                    <p>2 - 3 days • Dinner & Breakfast included</p>
+                    <p>TrustTour certification</p>
+                    <div class="event-price"> 
+                      <span class="price">from 40,00 $</span>
+                      <span class="rating">★ 4,0 (523)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/aktau.jpg" alt="Тур на автобусе">
+                </div>
+                <div class="event-details">
+                    <h2>Atyrau: visit beach of biggest lake in the world</h2>
+                    <p>2 days • Dinner included</p>
+                    <p>TrustTour certification</p>
+                    <div class="event-price"> 
+                      <span class="price">от 50,00 $</span>
+                      <span class="rating">★ 4,1 (681)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/medeu2.jpg" alt="Medeu in Winter">
+                    <div class="label">Best rating</div>
+                </div>
+                <div class="event-details">
+                    <h2>Almaty: ice skating in Medeu</h2>
+                    <p>1 day • Dinner included</p>
+                    <p>TrustTour certification</p>
+                    <div class="event-price"> 
+                      <span class="price">от 23,00 $</span>
+                      <span class="rating">★ 4,7 (3923)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/28Panfilov.jpg" alt="28 Panfilov guardmen statue">
+                    <div class="label">Best rating</div>
+                </div>
+                <div class="event-details">
+                    <h2>Almaty: bus tour Hop-On Hop-Off across history places</h2>
+                    <p>1 day • Audiogid: as desired</p>
+                    <div class="event-price"> 
+                      <span class="price">от 15,00 $</span>
+                      <span class="rating">★ 4,8 (1337)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/sharyn-canyon.jpg" alt="28 Panfilov guardmen statue">
+                </div>
+                <div class="event-details">
+                    <h2>Aktau: bus tour Hop-On Hop-Off to Sharyn Canyon</h2>
+                    <p>1 day • Audiogid: as desired</p>
+                    <p>TrustTour certification</p>
+                    <div class="event-price"> 
+                      <span class="price">от 35,00 $</span>
+                      <span class="rating">★ 4,3 (223)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/palace.jpg" alt="28 Panfilov guardmen statue">
+                </div>
+                <div class="event-details">
+                    <h2>Astana: National Museum, Palace of peace and consolidation, etc.</h2>
+                    <p>5 hours • Audiogid: as desired</p>
+                    <div class="event-price"> 
+                      <span class="price">от 8,00 $</span>
+                      <span class="rating">★ 3,9 (134)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="pictures/shymbulak.jpg" alt="28 Panfilov guardmen statue">
+                    <div class="label">Best rating</div>
+                </div>
+                <div class="event-details">
+                    <h2>Almaty: skiing on Shymbulak</h2>
+                    <p>4 hours • Dinner included</p>
+                    <p>TrustTour certification</p>
+                    <div class="event-price"> 
+                      <span class="price">от 18,00 $</span>
+                      <span class="rating">★ 4,7 (634)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 
         <section class="tour-list">
             <div class="tour">
                 <img src="pictures/almatynka-lake.jpg" style=" max-width: 90%; height: 80%; object-fit: cover;" alt="Alatau mountains">
@@ -114,14 +257,36 @@
                 </div>
             </div>
         </section>
+    -->
     </main>
 
     <footer>
-        <ul>
-            <li>Kazhybek Asset</li>
-            <li>Alisher Berik</li>
-            <li>IT-2308</li>
-        </ul>
+        <div id="footer-section">
+            <ul>
+                <li>WEB Technologies (FrontEnd)</li>
+                <li>©Astana IT University, 2024</li>
+            </ul>
+        </div>
+
+        <div id="footer-section">
+            <ul>
+                <li style="font-weight: bolder; font-size: 24px;">Pages</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div id="footer-section">
+            <ul>
+                <li style="font-weight: bolder; font-size: 24px;">Authors</li>
+                <li>Kazhybek Asset</li>
+                <li>Alisher Berik</li>
+                <li>Group: IT-2308</li>
+            </ul>
+        </div>
+        
     </footer>
 </body>
 </html>

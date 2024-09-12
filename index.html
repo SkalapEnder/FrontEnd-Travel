@@ -7,9 +7,7 @@
     <!--  -->
     <link rel="stylesheet"  href="css/main-styles.css">
 </head>
-<body style="background-image: url(pictures/ban.jpg); 
-    background-size:    cover;
-    background-repeat:  no-repeat;">
+<body>
     <div class="backlayer">
     <header>
         <div class="logo">
@@ -31,8 +29,11 @@
             <button onclick="window.location.href = 'registration.html';">Sign In</button>
         </div>
     </header>
-
-    <section class="hero">
+    <div class="slider" 
+    style="background-image: url(pictures/ban.jpg); 
+    background-size:    cover;
+    background-repeat:  no-repeat;">
+        <section class="hero">
         <div class="hero-content">
             <h1>Explore Dream Destination</h1>
             <p>NEVER SAY NEVER</p>
@@ -45,6 +46,8 @@
             <a href="book_now.html" class="btn">Book Now</a>
         </div>
     </section>
+    </div>
+    
 
      <section class="cards">
         <div class="card">
@@ -81,11 +84,32 @@
     
     </div>
     <footer>
-        <ul>
-            <li>Kazhybek Asset</li>
-            <li>Alisher Berik</li>
-            <li>IT-2308</li>
-        </ul>
+        <div id="footer-section">
+            <ul>
+                <li>WEB Technologies (FrontEnd)</li>
+                <li>©Astana IT University, 2024</li>
+            </ul>
+        </div>
+
+        <div id="footer-section">
+            <ul>
+                <li style="font-weight: bolder; font-size: 24px;">Pages</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div id="footer-section">
+            <ul>
+                <li style="font-weight: bolder; font-size: 24px;">Authors</li>
+                <li>Kazhybek Asset</li>
+                <li>Alisher Berik</li>
+                <li>Group: IT-2308</li>
+            </ul>
+        </div>
+        
     </footer>
 </div>
 </body>

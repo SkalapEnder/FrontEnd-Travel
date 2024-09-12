@@ -11,23 +11,54 @@
 
     <!-- Internal CSS -->
 	<style>
+        main h1{
+            margin-top: 80px;
+            margin-bottom: 40px;
+        }
+
 		h1 {
             text-align: center;
-            margin-bottom: 20px;
         }
 
         h2 {
             margin-bottom: 10px;
         }
 
-        /* Blog article class*/
         .contacts{
-            justify-items: center;
-            align-content: center;
+            max-width: auto;
+            
+            display: flex;
+            flex-direction: column;
             max-width: fit-content;
             margin-left: auto;
             margin-right: auto;
-            background-color: #014d5b;
+            
+            align-items: center;
+        }
+
+        .contact{
+            border-radius: 5px;
+            border: 5px solid rgba(1, 71, 83, 0.4);
+            background-color: rgba(1, 71, 91, 0.6);
+            padding: 20px;
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-content: center;
+        }
+
+        .contact label{
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        .contact input{
+            font-size: 16px;
+        }
+
+        .contact textarea{
+            font-size: 16px;
         }
 
         .content{
@@ -36,6 +67,17 @@
             padding: 20px;
             text-align: center;
         }
+
+        .contact button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #017a8b;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
 	</style>
 </head>
     <!-- Inline CSS -->
@@ -68,22 +110,38 @@
     <main>
 
     <h1>Contact us</h1>
-	<div class="contacts" >
-		<div class="content">
-        		<h2>Authors</h2>
-                <p>Kazhybek Asset IT-2308</p>
-        		<p>Alisher Berik IT-2308</p>
+    <div class="contacts">
+        <div class="contact">
+                <label><h2>Write your name</h2></label>
+                <input type="text" placeholder="Write your name..." style="height: 40px; width: 100%">
+
+                <label><h2>Write your email</h2></label>
+                <input type="email" placeholder="Write your email..." style="height: 40px; width: 100%">
+
+                <label><h2>Write your wishes or something</h2></label>
+                <textarea type="text" placeholder=" Write something..." style="height: 200px;"></textarea>
+
+                <button>Send</button>
+            </div>
                 <br><br>
+        	<div class="contact">
+        		<div class="content">
+                		<h2>Authors</h2>
+                        <p>Kazhybek Asset IT-2308</p>
+                		<p>Alisher Berik IT-2308</p>
+                        <br><br>
 
-                <h2>Our telephones</h2>
-                <p>+70000000000</p>
-                <p>+70000000001</p>
-    	</div>
+                        <h2>Our telephones</h2>
+                        <p>+70000000000</p>
+                        <p>+70000000001</p>
+            	</div>
 
-    	<div class="content">
-    		<h2> Location </h2>
-        	
-        	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.6029150660197!2d71.41772615819232!3d51.09033818127347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585a605525605%3A0x4dff4a1973f7567e!2sAstana%20IT%20University!5e1!3m2!1sru!2skz!4v1725750054968!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            	<div class="content">
+            		<h2> Location </h2>
+                	
+                	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.6029150660197!2d71.41772615819232!3d51.09033818127347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585a605525605%3A0x4dff4a1973f7567e!2sAstana%20IT%20University!5e1!3m2!1sru!2skz!4v1725750054968!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
     </div>
 </main>
