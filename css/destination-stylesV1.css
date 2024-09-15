@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,57 +12,76 @@ body {
 }
 
 header {
+    z-index: 1000;
+    top: 0;
+    position: sticky;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #014d5b;
+    background-color: #014D5A;
 }
 
+/* Navigator Bar class*/
+nav{
+    font-size: 20px;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-left: 5px;
+}
 
 nav ul {
     list-style: none;
     display: flex;
-    grid-gap: 150px;
+    grid-gap: 20px;
 }
 
 nav ul li {
+    border-radius: 5px;
+    padding: 5px 15px;;
+    background-color: rgba(0, 0, 0, 0.0);
     display: inline;
-
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a {
-    font-size: 20px;
     color: #fff;
     text-decoration: none;
+    transition: background-color 0.3s ease;
     font-weight: bold;
-    transition: 0.5s;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-    font-size: 30px;
-    
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
+
 
 /* Footer class*/
 footer {
+    display: flex; 
+    justify-content: space-between;
     padding: 20px;
-    background-color: #014d5b;
+    background-color: #002A32;
     text-align: center;
+    align-items: center;
 }
 
-footer ul {
+#footer-section{
+    display: grid;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+#footer-section ul {
     list-style: none;
-    padding: 0;
+    line-height: 150%;
 }
 
-footer ul li {
-    display: inline;
-    margin: 0 10px;
+#footer-section ul li {
+    margin: 5px 10px 5px
 }
 
-footer ul li a {
+#footer-section ul li a {
     color: #fff;
     text-decoration: none;
 }
