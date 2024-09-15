@@ -3,45 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/book-styles.css">
+    <title>Travel Landing Page</title>
+    <!--  -->
+    <link rel="stylesheet"  href="css/main-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 </head>
-<body style="background-image: url(pictures/banner.jpg); 
-    background-size:    cover;
-    background-repeat:  no-repeat;">
+<body>
     <div class="backlayer">
-        <a href="index.html" class="backbutton"><img src="pictures/back-arrow.png" width="40" height="40" alt="Background Mountains Evening"/></a>
-    </div>
-    <div class="container">
-
-        <div>
-            <form>
-                <h2>Create your account</h2>
-                <label>Full name</label>
-                <input type="text" placeholder="Enter your name">
-                
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email">
-                
-                <label>Your birthday</label>
-                <input type="date">
-
-                <label>Gender</label>
-                <select style="margin-bottom: 20px;">
-                    <option value="male" selected>Male</option>
-                    <option value="female">Female</option>
-                </select>
-                
-                <label>Password</label>
-                <input type="password"  minlength="8" required>
-
-                <label>About you</label>
-                <textarea placeholder="Write some info about you..."
-                style="margin-bottom: 20px;"></textarea>
-
-                <button class="submitbutton" type="submit">Create Account</button>
-            </form>
+    <header>
+        <div class="logo">
+            <img src="pictures/logo.png" alt="Logo"><h1>KazDream</h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="destination.html">Destination</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+        <div class="search-login">
+            <input type="text" placeholder="Search...">
+            <button onclick="window.location.href = 'destination.html';">Search</button>
+
+            <button onclick="window.location.href = 'registration.html';">Sign Up</button>
+            <button onclick="window.location.href = 'registration.html';">Sign In</button>
+        </div>
+    </header>
+   <section class="home">
+        <div class="home-content">
+            <h1>Explore Dream Destination</h1>
+            <dl>
+            <dt>NEVER</dt>
+            <dd>SAY </dd>
+            <dt>NEVER</dt>
+            </dl>
+            <a href="book_now.html" class="btn">Book Now</a>
+        </div>
+        <div class="hpage">
+            <img src="pictures/hpage.png" alt="ship">
+        
+        </div>
+    </section>
     </div>
+    
+
+     <div class="container">
+         <div class="card__container">
+        <article class="card__article">
+            
+            <figure>
+            <img src="pictures/image1.jpg" alt="Burabay">
+            <figcaption>Kazakhstan, Kokshetau, Burabay</figcaption> 
+            </figure>
+            <div class="card__data">
+            <h2 class="card__title">Burabay</h2>
+            <p class="card__description">A true oasis in the midst of the Kazakh steppe, this beautiful place is located within the territory of Burabay Park.</p>
+            <a href="https://visitastana.kz/en/near-the-city/rest-zone/burabay/" class="card__button">Read More</a>
+            </div>
+                
+             </article>
+        <article class="card__article">
+            
+            <figure><img src="pictures/image2.jpg" alt="Medeu">
+            <figcaption>Kazakhstan, Almaty, Medeu</figcaption>
+            </figure>
+            <div class="card__data">
+            <h2 class="card__title">Medeu</h2>
+            <p class="card__description">10,500 square meters of ice at an altitude of 1,691 meters above sea level. </p>
+            <a href="https://medeu.kz/" class="card__button">Read More</a>
+            </div>
+             </article>
+        <article class="card__article">
+            
+            <figure><img src="pictures/image3.jpg" alt="Astana">
+            <figcaption>Kazakhstan, Astana, EXPO-2017</figcaption>
+            </figure>
+            <div class="card__data">
+            <h2 class="card__title">Astana</h2>
+            <p class="card__decription">Experience Expo 2017 Astana </p>
+            <a href="https://www.expo2017astana.com/index.html" class="card__button">Read More</a>
+            
+        </div>
+             </article>
+             </div>
+             </div>
+
+<div class="qtn">
+    <blockquote cite="https://www.shutterfly.com/ideas/travel-quotes/"><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
+    
+    </div>
+    <footer>
+        <div id="footer-section">
+            <ul>
+                <li>WEB Technologies (FrontEnd)</li>
+                <li>©Astana IT University, 2024</li>
+            </ul>
+        </div>
+
+        <div id="footer-section">
+            <ul>
+                <li style="font-weight: bolder; font-size: 24px;">Pages</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div id="footer-section">
+            <ul>
+                <li style="font-weight: bolder; font-size: 24px;">Authors</li>
+                <li>Kazhybek Asset</li>
+                <li>Alisher Berik</li>
+                <li>Group: IT-2308</li>
+            </ul>
+        </div>
+        
+    </footer>
+    
 </body>
 </html>
+
