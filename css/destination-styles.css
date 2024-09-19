@@ -202,7 +202,8 @@ footer ul li a {
 
 .event-card:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-    transform: translateY(-5px);
+    transform: scale(1.08);
+
 }
 
 .event-image {
@@ -238,10 +239,12 @@ footer ul li a {
 .event-details h2 {
     color: black;
     font-size: 18px;
+    font-weight: bold;
     margin: 5px 0;
 }
 
 .event-details p {
+    font-style: italic;
     font-size: 14px;
     color: #555555;
     margin: 5px 0;
