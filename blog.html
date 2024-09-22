@@ -1,158 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Blogs Page</title>
-	<link rel="stylesheet" type="text/css" href="css/blog-styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        
+        .logo{
+            font-family: "Pacifico", cursive;
+        }    
+
+        .offcanvas{
+               background-color: rgba(0, 0, 0, 0.8);  
+        }
+
+        .offcanvas .nav-link{
+            font-size: 1.2rem;
+            font-family: "Raleway", sans-serif;
+            color: white;
+            transition: font-size 0.3s, font-decoration 0.3s;
+        } 
+
+        .offcanvas .nav-link:hover{
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+
+        .offcanvas .offcanvas-title{
+            color: white;
+            font-family: "Permanent Marker", sans-serif;
+            font-size: 3rem;
+        }
+    </style>
 </head>
-<body style="background-color: #024445;">
+    
+<body>
 <!-- Header -->
 	<header>
-        <div class="logo">
-            <img src="pictures/logo.png" alt="Logo"><h1>KazDream</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="registration.html">Home</a></li>
-                <li><a href="destination.html">Destination</a></li>
-                <li><a href="contacts.html">Contact Us</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-dark navbar-expand-lg p-3" style="background-color: #014d5b; height: 6rem; color: white;">
 
-        <div class="search-login">
-            <input type="text" placeholder="Search...">
-            <button onclick="window.location.href = 'destination.html';">Search</button>
-            |
-            <button onclick="window.location.href = 'registration.html';">Sign Up</button>
-            <button onclick="window.location.href = 'registration.html';">Sign In</button>
-        </div>
-	</header>
+
+                  <div class="d-flex logo ms-3">
+                        <img src="pictures/logo.png" alt="Logo" width="50" height="50" class="align-text-center me-3">
+                        <a class="navbar-brand" href="#"> <h1>KazDream</h1> </a>
+                  </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                  <div class="offcanvas-header p-4">
+                    <h4 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Menu</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+
+                  <div class="offcanvas-body">
+
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
+
+                        <li class="nav-item me-3 ">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="destination.html">Destination</a>
+                        </li>
+
+                        <li class="nav-item me-3">
+                            <a class="nav-link " href="blog.html">Blogs</a>
+                        </li>
+
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="contacts.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-center search-login bt-group" role="group">
+                        <button class="btn btn-light me-2" onclick="window.location.href = 'registration.html';">Sign Up</button>
+                        <button class="btn btn-light me-4" onclick="window.location.href = 'registration.html';">Sign In</button>
+                    </div>
+                  </div>
+
+                </div>
+
+        </nav>
+    </header>
 <!-- Header -->
 
 <!-- Main -->
+<body>
     <main>
-        <div class="blog">
-        	<div class="grid-container">
-
-            <article class="post">
-			    <div class="content">
-                    <img src="pictures/blog-map.jpg" alt="Map">
-			    	<div class="text">
-                		<h2>Best places in Kazakhstan in 2077</h2>
-                		<p>From the majestic landscapes of the Altai Mountains to the vibrant cultural tapestry of Almaty, this Central Asian gem offers a wealth of experiences for every type of traveler.</p>
-                		<a href="#">Read more...</a>
-                	</div>
-                	<!-- Inline CSS -->
-                	
-                </div>
-            </article>
-
-            <article class="post">
-			    <div class="content">
-                    <img src="pictures/blog-tips.png" alt="Passport with map">
-			    	<div class="text">
-                		<h2>How to prepare to travel</h2>
-                		<p>Embarking on a new adventure can be exhilarating, but it often comes with its fair share of stress and confusion. Whether you’re planning a weekend getaway or a long-haul international trip, proper preparation can make all the difference.</p>
-                		<a href="#">Read more....</a>
-                	</div>
-                	<!-- Inline CSS -->
-                	
-                </div>
-            </article>
-
-            <article class="post">
-			    <div class="content">
-                    <img src="pictures/blog-astana.png" alt="Baiterek">
-			    	<div class="text">
-                		<h2>Top-5 interesting places in Astana</h2>
-                		<p>Whether you're a history buff, an architecture enthusiast, or simply looking to experience something new, Astana has something for everyone.</p>
-                		<a href="#">Read more...</a>
-                	</div>
-                	<!-- Inline CSS -->
-                	
-                </div>
-            </article>
-
-            <article class="post">
-            	<div class="content">
-                    <img src="pictures/blog-almaty-lake.jpg" alt="Almaty Lake">
-			    	<div class="text">
-                		<h2>Top-5 places in Almaty</h2>
-                		<p>Welcome to Almaty, Kazakhstan's vibrant city nestled at the foot of the majestic Tien Shan mountains. Known for its rich history, cultural diversity, and stunning natural beauty, Almaty offers a unique blend of experiences for every traveler.</p>
-                		<a href="#">Read more...</a>
-            		</div>
-                </div>
-            </article>
-
-            <article class="post">
-            	<div class="content">
-                    <img src="pictures/blog-history.jpg" alt="Nomads">
-			    	<div class="text">
-                		<h2>Brief history of Kazakhstan</h2>
-                		<p>Kazakhstan, the world's largest landlocked country, has a rich history shaped by its vast steppes and diverse cultures. For centuries, nomadic tribes like the Scythians, Turks, and Mongols roamed the region, playing key roles in the Silk Road trade routes.</p>
-                		<a href="#">Read more...</a>
-            		</div>        		
-                </div>
-            </article>
-
-            <article class="post">
-                <div class="content">
-                    <img src="pictures/atyrau.jpg" alt="Caspian Sea">
-                    <div class="text">
-                        <h2>Top-5 hotels in Atyrau</h2>
-                        <p>Whether you're traveling for business or leisure, Atyrau has some incredible hotel options that cater to all your needs. From luxurious amenities to exceptional service, we've handpicked the top five hotels in this vibrant city to ensure you have a comfortable and memorable experience.</p>
-                        <a href="#">Read more...</a>
+        
+        <h1 class="text-center mt-5">Popular blogs in month</h1>
+        
+        <div class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="pictures/ban.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
-            </article>
-
-            <article class="post">
-                <div class="content">
-                    <img src="pictures/blog-do-you-know.png" alt="Do you know image">
-                    <div class="text">
-                        <h2>Do you know about...?</h2>
-                        <p>Nestled at the heart of Central Asia, Kazakhstan is a land of breathtaking contrasts, where ancient traditions meet modern innovation. From its vast, sprawling steppes to the soaring peaks of the Tian Shan mountains, this country offers an extraordinary blend of natural beauty and cultural richness.</p>
-                        <a href="#">Read more...</a>
-                    </div>
+                
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="pictures/ban.jpg" class="d-block w-100" style="height: 300px;" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
                 </div>
-            </article>
-
-        </div>
-    </div>
-</main>
-<!-- Main -->
-
-<footer>
-        <div id="footer-section">
-            <ul>
-                <li>WEB Technologies (FrontEnd)</li>
-                <li>©Astana IT University, 2024</li>
-            </ul>
-        </div>
-
-        <div id="footer-section">
-            <ul>
-                <li style="font-weight: bolder; font-size: 24px;">Pages</li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Destination</a></li>
-                <li><a href="contacts.html">Contact Us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </div>
-
-        <div id="footer-section">
-            <ul>
-                <li style="font-weight: bolder; font-size: 24px;">Authors</li>
-                <li>Kazhybek Asset</li>
-                <li>Alisher Berik</li>
-                <li>Group: IT-2308</li>
-            </ul>
+                
+                <div class="carousel-item">
+                    <img src="pictures/ban.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                </div>
+            </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
         
-    </footer>
-    
-</body>
+            <div class="blog">
+                    <div class="grid-container">
 
+                    <article class="post">
+                        <div class="content">
+                            <img src="pictures/blog-map.jpg" alt="Map">
+                            <div class="text">
+                                <h2>Best places in Kazakhstan in 2077</h2>
+                                <p>From the majestic landscapes of the Altai Mountains to the vibrant cultural tapestry of Almaty, this Central Asian gem offers a wealth of experiences for every type of traveler.</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                            <!-- Inline CSS -->
+
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="content">
+                            <img src="pictures/blog-tips.png" alt="Passport with map">
+                            <div class="text">
+                                <h2>How to prepare to travel</h2>
+                                <p>Embarking on a new adventure can be exhilarating, but it often comes with its fair share of stress and confusion. Whether you’re planning a weekend getaway or a long-haul international trip, proper preparation can make all the difference.</p>
+                                <a href="#">Read more....</a>
+                            </div>
+                            <!-- Inline CSS -->
+
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="content">
+                            <img src="pictures/blog-astana.png" alt="Baiterek">
+                            <div class="text">
+                                <h2>Top-5 interesting places in Astana</h2>
+                                <p>Whether you're a history buff, an architecture enthusiast, or simply looking to experience something new, Astana has something for everyone.</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                            <!-- Inline CSS -->
+
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="content">
+                            <img src="pictures/blog-almaty-lake.jpg" alt="Almaty Lake">
+                            <div class="text">
+                                <h2>Top-5 places in Almaty</h2>
+                                <p>Welcome to Almaty, Kazakhstan's vibrant city nestled at the foot of the majestic Tien Shan mountains. Known for its rich history, cultural diversity, and stunning natural beauty, Almaty offers a unique blend of experiences for every traveler.</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="content">
+                            <img src="pictures/blog-history.jpg" alt="Nomads">
+                            <div class="text">
+                                <h2>Brief history of Kazakhstan</h2>
+                                <p>Kazakhstan, the world's largest landlocked country, has a rich history shaped by its vast steppes and diverse cultures. For centuries, nomadic tribes like the Scythians, Turks, and Mongols roamed the region, playing key roles in the Silk Road trade routes.</p>
+                                <a href="#">Read more...</a>
+                            </div>        		
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="content">
+                            <img src="pictures/atyrau.jpg" alt="Caspian Sea">
+                            <div class="text">
+                                <h2>Top-5 hotels in Atyrau</h2>
+                                <p>Whether you're traveling for business or leisure, Atyrau has some incredible hotel options that cater to all your needs. From luxurious amenities to exceptional service, we've handpicked the top five hotels in this vibrant city to ensure you have a comfortable and memorable experience.</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="post">
+                        <div class="content">
+                            <img src="pictures/blog-do-you-know.png" alt="Do you know image">
+                            <div class="text">
+                                <h2>Do you know about...?</h2>
+                                <p>Nestled at the heart of Central Asia, Kazakhstan is a land of breathtaking contrasts, where ancient traditions meet modern innovation. From its vast, sprawling steppes to the soaring peaks of the Tian Shan mountains, this country offers an extraordinary blend of natural beauty and cultural richness.</p>
+                                <a href="#">Read more...</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </main>
+<!-- Main -->
+
+    <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center fs-5">
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3">WEB Technologies (FrontEnd)</li>
+            <li class="mx-3">© Astana IT University, 2024</li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3"><a href="registration.html" class="text-white">Home</a></li>
+            <li class="mx-3"><a href="#" class="text-white">Destination</a></li>
+            <li class="mx-3"><a href="blog.html" class="text-white">Blog</a></li>
+            <li class="mx-3"><a href="contacts.html" class="text-white">Contact Us</a></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li class="mx-3">Kazhybek Asset</li>
+            <li class="mx-3">Alisher Berik</li>
+            <li class="mx-3">Group: IT-2308</li>
+        </ul>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

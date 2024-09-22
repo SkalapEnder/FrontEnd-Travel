@@ -4,153 +4,177 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact Us</title>
-
-    <!-- External CSS -->
-
-	<link rel="stylesheet" type="text/css" href="css/contacts-styles.css">
-
-    <!-- Internal CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<style>
-        main h1{
-            margin-top: 80px;
-            margin-bottom: 40px;
+        
+        .logo{
+            font-family: "Pacifico", cursive;
+        }    
+
+        .offcanvas{
+               background-color: rgba(0, 0, 0, 0.8);  
         }
 
-		h1 {
-            text-align: center;
+        .offcanvas .nav-link{
+            font-size: 1.2rem;
+            font-family: "Raleway", sans-serif;
+            color: white;
+            transition: font-size 0.3s, font-decoration 0.3s;
+        } 
+
+        .offcanvas .nav-link:hover{
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: underline;
         }
 
-        h2 {
-            margin-bottom: 10px;
-        }
 
-        .contacts{
-            max-width: auto;
-            
-            display: flex;
-            flex-direction: column;
-            max-width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            
-            align-items: center;
+        .offcanvas .offcanvas-title{
+            color: white;
+            font-family: "Permanent Marker", sans-serif;
+            font-size: 3rem;
         }
-
+        
         .contact{
-            border-radius: 5px;
-            border: 5px solid rgba(1, 71, 83, 0.4);
-            background-color: rgba(1, 71, 91, 0.6);
-            padding: 20px;
-            width: 700px;
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            align-content: center;
-            align-items: center;
-        }
-
-        .contact label{
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-
-        .contact input{
-            font-size: 16px;
-            border-radius: 4px;
-
-        }
-        .contact label{
-            padding:10px 10px;
-        }
-
-        .contact textarea{
-            font-size: 16px;
-        }
-
-        .content{
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .contact button{
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-color: #017a8b;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 20px;
+            background-color: #014d5b;
+            border-color: #00697C;
+            border: 5px;
         }
 
 	</style>
 </head>
-    <!-- Inline CSS -->
+
 <body style="background-image: url(pictures/contacts-background.jpg); 
-    background-size:    cover;
-    background-repeat:  no-repeat;">
-    <div class="backlayer">
+            background-size:    cover;
+            background-repeat:  no-repeat;">
 	<header>
-        <div class="logo">
-            <img src="pictures/logo.png" alt="Logo"><h1>KazDream</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="registration.html">Home</a></li>
-                <li><a href="destination.html">Destination</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-dark navbar-expand-lg p-3" style="background-color: #014d5b; height: 6rem; color: white;">
 
-        <div class="search-login">
-            <input type="text" placeholder="Search...">
-            <button onclick="window.location.href = 'destination.html';">Search</button>
-            |
-            <button onclick="window.location.href = 'registration.html';">Sign Up</button>
-            <button onclick="window.location.href = 'registration.html';">Sign In</button>
-        </div>
-    </header>
 
-    <main>
+                  <div class="d-flex logo ms-3">
+                        <img src="pictures/logo.png" alt="Logo" width="50" height="50" class="align-text-center me-3">
+                        <a class="navbar-brand" href="#"> <h1>KazDream</h1> </a>
+                  </div>
 
-    <h1>Contact us</h1>
-    <div class="contacts">
-        <div class="contact">
-                <label><h2>Write your name</h2></label>
-                <input type="text" placeholder="Write your name..." style="height: 40px; width: 100%">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <label><h2>Write your email</h2></label>
-                <input type="email" placeholder="Write your email..." style="height: 40px; width: 100%">
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-                <label><h2>Write your wishes or something</h2></label>
-                <textarea type="text" placeholder=" Write something..." style="height: 200px;"></textarea>
+                  <div class="offcanvas-header p-4">
+                    <h4 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Menu</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
 
-                <button>Send</button>
-            </div>
-                <br><br>
-        	<div class="contact">
-        		<div class="content">
-                		<h2>Authors</h2>
-                        <p>Kazhybek Asset IT-2308</p>
-                		<p>Alisher Berik IT-2308</p>
-                        <br><br>
+                  <div class="offcanvas-body">
 
-                        <h2>Our telephones</h2>
-                        <p>+70000000000</p>
-                        <p>+70000000001</p>
-            	</div>
+                    <ul class="navbar-nav justify-content-center flex-grow-1">
 
-            	<div class="content">
-            		<h2> Location </h2>
-                	
-                	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.6029150660197!2d71.41772615819232!3d51.09033818127347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585a605525605%3A0x4dff4a1973f7567e!2sAstana%20IT%20University!5e1!3m2!1sru!2skz!4v1725750054968!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <li class="nav-item me-3 ">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="destination.html">Destination</a>
+                        </li>
+
+                        <li class="nav-item me-3">
+                            <a class="nav-link " href="blog.html">Blogs</a>
+                        </li>
+
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="contacts.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-center search-login bt-group" role="group">
+                        <button class="btn btn-light me-2" onclick="window.location.href = 'registration.html';">Sign Up</button>
+                        <button class="btn btn-light me-4" onclick="window.location.href = 'registration.html';">Sign In</button>
+                    </div>
+                  </div>
+
                 </div>
+
+        </nav>
+</header>
+
+<main class="text-center text-light">
+    <h1 class=" text-center fs-1 mt-5">Contact us</h1>
+    <div class="container d-flex flex-column w-75">
+        <form class="contact mb-5 border border-5 border-success-subtle rounded-5 p-4">
+            <div class="mb-3">
+                <label class="form-label"><h2 class="text-light ">Write your name</h2></label>
+                <p class="text-start fs-5">Write your name to understand you among other users.</p>
+                <input class="form-control" type="text" placeholder="Write your name...">
+                <p class="text-start fs-6">Your name must contain, at least, 3 characters!</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><h2 class="text-light">Write your email</h2></label>
+                <p class="text-start fs-5">Your email must contain specific element (@).</p>
+                <input class="form-control" type="email" placeholder="Write your email..." >
+                <p class="text-start fs-6">For example: example123@example.com</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><h2 class="text-light">Write your wishes or something</h2></label>
+                <p class="text-start fs-5">Write your wishes to improve our website or report bugs and/or errors to fix them</p>
+                <textarea class="form-control" type="text" placeholder=" Write something..."></textarea>
+                <p class="text-start fs-6">No more than 1000 words</p>
+            </div>
+            
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label"><h5>Optional: Upload your images</h5></label>
+              <input class="form-control" type="file" id="formFileMultiple" multiple>
+            </div>
+            
+            <div class="d-grid gap-2 col-6 mt-4 mx-auto">
+                <button type="button" class="btn btn-light btn-lg">Send</button>
+            </div>
+        </form>
+
+        <div class="contact mb-5 border border-5 border-success-subtle rounded-5 p-4">
+            <div class="content">
+                <div class="mb-5">
+                    <h2>Authors</h2>
+                    <h5>Kazhybek Asset IT-2308</h5>
+                    <h5>Alisher Berik IT-2308</h5>
+                </div>
+
+                <div class="mb-5">
+                    <h2>Our telephones</h2>
+                    <h5>+70000000000</h5>
+                    <h5>+70000000001</h5>
+                </div>
+
+            <div class="content">
+                <h2> Location </h2>
+
+                <iframe class="rounded-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2724.6029150660197!2d71.41772615819232!3d51.09033818127347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424585a605525605%3A0x4dff4a1973f7567e!2sAstana%20IT%20University!5e1!3m2!1sru!2skz!4v1725750054968!5m2!1sru!2skz" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
+    </div>
 </main>
-</div>
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center fs-5">
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3">WEB Technologies (FrontEnd)</li>
+            <li class="mx-3">© Astana IT University, 2024</li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3"><a href="registration.html" class="text-white">Home</a></li>
+            <li class="mx-3"><a href="#" class="text-white">Destination</a></li>
+            <li class="mx-3"><a href="blog.html" class="text-white">Blog</a></li>
+            <li class="mx-3"><a href="contacts.html" class="text-white">Contact Us</a></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li class="mx-3">Kazhybek Asset</li>
+            <li class="mx-3">Alisher Berik</li>
+            <li class="mx-3">Group: IT-2308</li>
+        </ul>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
