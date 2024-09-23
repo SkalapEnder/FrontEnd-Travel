@@ -6,6 +6,7 @@ body {
     color: #fff;
 }
 
+/*
 header {
     display: flex;
     justify-content: space-between;
@@ -14,6 +15,9 @@ header {
     background-color: #014d5b;
 }
 
+.logo img {
+    height: 40px;
+}
 
 nav ul {
     list-style: none;
@@ -27,49 +31,12 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: 20px;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: 0.5s;
 }
-
-nav ul li a:hover {
-    text-decoration: underline;
-    font-size: 30px;
-    
-}
-
-footer {
-    padding: 20px;
-    background-color: #014d5b;
-    text-align: center;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-.logo img {
-    height: 40px;
-}
-
-.logo h1{
-    font-size: 40px;
-}
-
+*/
 
 .search-login {
     display: flex;
@@ -178,7 +145,9 @@ footer ul li a {
 
 .card__data {
   width: 280px;
-  background-color: var(--container-color);
+  background-color: white;
+opacity: 78%;
+ 
   padding: 1.5rem 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
   border-radius: 1rem;
@@ -189,6 +158,7 @@ footer ul li a {
   margin-inline: auto;
   opacity: 0;
   transition: opacity 1s 1s;
+  color:cadetblue;
 }
 
 .card__description {
@@ -200,19 +170,30 @@ footer ul li a {
 .card__title {
   font-size: var(--h2-font-size);
   font-weight: 500;
-  color: var(--title-color);
+  color: darkcyan;
   margin-bottom: .75rem;
 }
 
 .card__button {
+margin-bottom: 20px;
+  padding: 6px 6px;
+  position: center;
+  background-color:cadetblue; 
   text-decoration: none;
+  border-radius: 6px;
   font-size: var(--small-font-size);
   font-weight: 500;
-  color: var(--first-color);
+  color: white;
+transition: 1s;
+  
 }
 
 .card__button:hover {
   text-decoration: underline;
+  background-color: transparent;
+  color:aquamarine;
+  border: solid 1px;
+
 }
 
 /* Naming animations in hover */
@@ -227,7 +208,7 @@ footer ul li a {
  
 }
 .card__article img:hover{
-     box-shadow: 10px 10px 10px rgba(0,0,0,0.6)
+     box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
 
     
 }
@@ -277,11 +258,29 @@ footer ul li a {
   }
 }
 
+footer {
+    padding: 20px;
+    background-color: #014d5b;
+    text-align: center;
+}
 
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
 figcaption{
     font-size: 10px;
 }
-
 .qtn{
     background-color: transparent;
     border-radius: 15px;
@@ -335,8 +334,11 @@ figcaption{
   font-style: normal;
 }
     
-
-
+nav ul li a:hover {
+    text-decoration: underline;
+    font-size: 20px;
+    
+}
 .card__container {
     grid-template-columns: repeat(3, 10fr);
   }
