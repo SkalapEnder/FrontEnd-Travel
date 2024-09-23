@@ -6,16 +6,19 @@
     <title>Travel Landing Page</title>
     <!--  -->
     <link rel="stylesheet"  href="css/main-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="backlayer">
     <header>
-        <div class="logo">
-            <img src="pictures/logo.png" alt="Logo"><h1>KazDream</h1>
+        <div id="logo">
+            <img src="pictures/logo.png" alt="Logo" id="logo-img"><h1>KazDream</h1>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="destination.html">Destination</a></li>
                 <li><a href="contacts.html">Contact Us</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -24,61 +27,70 @@
         <div class="search-login">
             <input type="text" placeholder="Search...">
             <button onclick="window.location.href = 'destination.html';">Search</button>
-            |
+
             <button onclick="window.location.href = 'registration.html';">Sign Up</button>
             <button onclick="window.location.href = 'registration.html';">Sign In</button>
         </div>
     </header>
-    <div class="slider" 
-    style="background-image: url(pictures/ban.jpg); 
-    background-size:    cover;
-    background-repeat:  no-repeat;">
-        <section class="hero">
-        <div class="hero-content">
+   <section class="home">
+        <div class="home-content">
             <h1>Explore Dream Destination</h1>
-            <p>NEVER SAY NEVER</p>
-            <ul>
-                <li>Find</li>
-                <li>Book</li>
-                <li>Travel</li>
-            </ul>
-            <br>
+            <dl>
+            <dt>NEVER</dt>
+            <dd>SAY </dd>
+            <dt>NEVER</dt>
+            </dl>
             <a href="book_now.html" class="btn">Book Now</a>
+        </div>
+        <div class="hpage">
+            <img src="pictures/hpage.png" alt="ship">
+        
         </div>
     </section>
     </div>
     
 
-     <section class="cards">
-        <div class="card">
+     <div class="container">
+         <div class="card__container">
+        <article class="card__article">
+            
             <figure>
             <img src="pictures/image1.jpg" alt="Burabay">
             <figcaption>Kazakhstan, Kokshetau, Burabay</figcaption> 
-            </figure>           
-            <h2>Burabay</h2>
-            <p>A true oasis in the midst of the Kazakh steppe, this beautiful place is located within the territory of Burabay Park.</p>
-            <a href="https://visitastana.kz/en/near-the-city/rest-zone/burabay/" class="btn">Read More</a>
+            </figure>
+            <div class="card__data">
+            <h2 class="card__title">Burabay</h2>
+            <p class="card__description">A true oasis in the midst of the Kazakh steppe, this beautiful place is located within the territory of Burabay Park.</p>
+            <a href="https://visitastana.kz/en/near-the-city/rest-zone/burabay/" class="card__button">Read More</a>
+            </div>
                 
-        </div>
-        <div class="card">
+             </article>
+        <article class="card__article">
+            
             <figure><img src="pictures/image2.jpg" alt="Medeu">
             <figcaption>Kazakhstan, Almaty, Medeu</figcaption>
             </figure>
-            <h2>Medeu</h2>
-            <p>10,500 square meters of ice at an altitude of 1,691 meters above sea level. </p>
-            <a href="https://medeu.kz/" class="btn">Read More</a>
-        
-        </div>
-        <div class="card">
+            <div class="card__data">
+            <h2 class="card__title">Medeu</h2>
+            <p class="card__description">10,500 square meters of ice at an altitude of 1,691 meters above sea level. </p>
+            <a href="https://medeu.kz/" class="card__button">Read More</a>
+            </div>
+             </article>
+        <article class="card__article">
+            
             <figure><img src="pictures/image3.jpg" alt="Astana">
             <figcaption>Kazakhstan, Astana, EXPO-2017</figcaption>
             </figure>
-            <h2>Astana</h2>
-            <p>Experience Expo 2017 Astana, where the future unfolds. Join us to witness groundbreaking innovations, sustainable solutions, and global collaboration.</p>
-            <a href="https://www.expo2017astana.com/index.html" class="btn">Read More</a>
+            <div class="card__data">
+            <h2 class="card__title">EXPO-2017</h2>
+            <p class="card__decription">Experience Expo 2017 Astana </p>
+            <a href="https://www.expo2017astana.com/index.html" class="card__button">Read More</a>
             
         </div>
-    </section>
+             </article>
+             </div>
+             </div>
+
 <div class="qtn">
     <blockquote cite="https://www.shutterfly.com/ideas/travel-quotes/"><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
     
@@ -95,7 +107,7 @@
             <ul>
                 <li style="font-weight: bolder; font-size: 24px;">Pages</li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Destination</a></li>
+                <li><a href="destination.html">Destination</a></li>
                 <li><a href="contacts.html">Contact Us</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
@@ -111,7 +123,7 @@
         </div>
         
     </footer>
-</div>
+    
 </body>
 </html>
 
