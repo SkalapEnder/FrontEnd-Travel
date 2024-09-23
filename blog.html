@@ -36,10 +36,32 @@
             font-family: "Permanent Marker", sans-serif;
             font-size: 3rem;
         }
+        
+        
+        .bg{
+            background-color: #006D81;
+            background-color: white;
+        }
+        
+        .card{
+            box-shadow: 2px 8px 8px rgba(0,0,0,0.2);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .card:hover{
+            box-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+            transform: translateY(-5px);
+        }
+        
+        .card img{
+            height: 200px;
+        }
+        
+        
     </style>
 </head>
     
-<body>
+<body class="bg">
 <!-- Header -->
 	<header>
         <nav class="navbar navbar-dark navbar-expand-lg p-3" style="background-color: #014d5b; height: 6rem; color: white;">
@@ -95,142 +117,147 @@
 <!-- Header -->
 
 <!-- Main -->
-<body>
     <main>
         
-        <h1 class="text-center mt-5">Popular blogs in month</h1>
+        <div class="justify-content-center text-center">
         
-        <div class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="pictures/ban.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="pictures/ban.jpg" class="d-block w-100" style="height: 300px;" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                </div>
-                
-                <div class="carousel-item">
-                    <img src="pictures/ban.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
+        <div id="carouselExample" class="carousel slide" style="width: 100%; height: 500px;" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="pictures/blog-sharyn-canyon.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Amazing nature of the Great Steppe</h1>
+                    <p>Visit the wonderful locations, from steppe to american like canyons</p>
                 </div>
             </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <div class="carousel-item">
+              <img src="pictures/blog-astana-night.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>The center of the Great Steppe</h1>
+                    <p>Visit the capital and newest city in Kazakhstan</p>
+                </div>                
+            </div>
+            <div class="carousel-item">
+              <img src="pictures/blog-kaindy-lake.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Untouched nature</h1>
+                    <p>Kazakhstan has many nature places untouched by human for thousands years</p>
+                </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-        </button>
+          </button>
+        </div>
+            
+            
         </div>
         
-            <div class="blog">
-                    <div class="grid-container">
+            <div class="container text-center p-2">
+                <h1 class="text-center my-4">Popular blog topics in month!</h1>
+                <div class="row justify-content-start">
+                    
+                    <div class="card col-lg mx-lg-2 mx-md-3 mb-3 p-0 rounded-top borders border-4 border-opacity-25">
+                        <img src="pictures/blog-map.jpg" class="card-img-top object-fit-cover" alt="Map of Kazahstan">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Best places in Kazakhstan in 2024</h5>
+                                <p class="card-text fst-italic mt-2">From the majestic landscapes of the Altai Mountains to the vibrant cultural tapestry of Almaty, this Central Asian gem offers a wealth of experiences for every type of traveler.</p>
 
-                    <article class="post">
-                        <div class="content">
-                            <img src="pictures/blog-map.jpg" alt="Map">
-                            <div class="text">
-                                <h2>Best places in Kazakhstan in 2077</h2>
-                                <p>From the majestic landscapes of the Altai Mountains to the vibrant cultural tapestry of Almaty, this Central Asian gem offers a wealth of experiences for every type of traveler.</p>
-                                <a href="#">Read more...</a>
+
                             </div>
-                            <!-- Inline CSS -->
-
-                        </div>
-                    </article>
-
-                    <article class="post">
-                        <div class="content">
-                            <img src="pictures/blog-tips.png" alt="Passport with map">
-                            <div class="text">
-                                <h2>How to prepare to travel</h2>
-                                <p>Embarking on a new adventure can be exhilarating, but it often comes with its fair share of stress and confusion. Whether you’re planning a weekend getaway or a long-haul international trip, proper preparation can make all the difference.</p>
-                                <a href="#">Read more....</a>
+                            <div class="card-footer d-flex justify-content-start">
+                                    <a class="card-text fw-bold me-auto link-dark link-underline-opacity-0" href="#">More about...</a>
                             </div>
-                            <!-- Inline CSS -->
+                    </div>
 
-                        </div>
-                    </article>
-
-                    <article class="post">
-                        <div class="content">
-                            <img src="pictures/blog-astana.png" alt="Baiterek">
-                            <div class="text">
-                                <h2>Top-5 interesting places in Astana</h2>
-                                <p>Whether you're a history buff, an architecture enthusiast, or simply looking to experience something new, Astana has something for everyone.</p>
-                                <a href="#">Read more...</a>
+                     <div class="card col-lg mx-lg-2 mx-md-3 mb-3 p-0 rounded-top borders border-4 border-opacity-25">
+                        <img src="pictures/blog-tips.png" class="card-img-top object-fit-cover" alt="Passport and map">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">How to prepare to travel</h5>
+                                <p class="card-text fst-italic mt-2">Embarking on a new adventure can be exhilarating, but it often comes with its fair share of stress and confusion. Whether you’re planning a weekend getaway or a long-haul international trip, proper preparation can make all the difference.</p>
                             </div>
-                            <!-- Inline CSS -->
+                            
+                            <div class="card-footer d-flex justify-content-start">
+                                    <a class="card-text fw-bold me-auto link-dark link-underline-opacity-0" href="#">More about...</a>
+                            </div>
 
                         </div>
-                    </article>
+                
 
-                    <article class="post">
-                        <div class="content">
-                            <img src="pictures/blog-almaty-lake.jpg" alt="Almaty Lake">
-                            <div class="text">
-                                <h2>Top-5 places in Almaty</h2>
-                                <p>Welcome to Almaty, Kazakhstan's vibrant city nestled at the foot of the majestic Tien Shan mountains. Known for its rich history, cultural diversity, and stunning natural beauty, Almaty offers a unique blend of experiences for every traveler.</p>
-                                <a href="#">Read more...</a>
+                     <div class="card col-lg mx-lg-2 mx-md-3 mb-3 p-0 rounded-top borders border-4 border-opacity-25">
+                        <img src="pictures/blog-astana.png" class="card-img-top object-fit-cover" alt="Baiterek Astana">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Top-5 interesting places in Astana</h5>
+                                <p class="card-text fst-italic mt-2">Whether you're a history buff, an architecture enthusiast, or simply looking to experience something new, Astana has something for everyone.</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-start">
+                                    <a class="card-text fw-bold me-auto link-dark link-underline-opacity-0" href="#">More about...</a>
+                            </div>
+
+                        </div>
+                </div>
+                <div class="row justify-content-start">    
+
+                    <div class="card col-lg mx-lg-2 mx-md-3 mb-3 p-0 rounded-top borders border-4 border-opacity-25">
+                            <img src="pictures/blog-almaty-lake.jpg" class="card-img-top object-fit-cover" alt="Almaty Lake">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Top-5 places in Almaty</h5>
+                                <p class="card-text fst-italic mt-2">Welcome to Almaty, Kazakhstan's vibrant city nestled at the foot of the majestic Tien Shan mountains. Known for its rich history, cultural diversity, and stunning natural beauty, Almaty offers a unique blend of experiences for every traveler.</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-start">
+                                    <a class="card-text fw-bold me-auto link-dark link-underline-opacity-0" href="#">More about...</a>
                             </div>
                         </div>
-                    </article>
 
-                    <article class="post">
-                        <div class="content">
-                            <img src="pictures/blog-history.jpg" alt="Nomads">
-                            <div class="text">
-                                <h2>Brief history of Kazakhstan</h2>
-                                <p>Kazakhstan, the world's largest landlocked country, has a rich history shaped by its vast steppes and diverse cultures. For centuries, nomadic tribes like the Scythians, Turks, and Mongols roamed the region, playing key roles in the Silk Road trade routes.</p>
-                                <a href="#">Read more...</a>
-                            </div>        		
-                        </div>
-                    </article>
+                    <div class="card col-lg mx-lg-2 mx-md-3 mb-3 p-0 rounded-top borders border-4 border-opacity-25">
+                            <img src="pictures/blog-history.jpg" class="card-img-top object-fit-cover" alt="Nomads">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Brief history of Kazakhstan</h5>
+                                <p class="card-text fst-italic mt-2">Kazakhstan, the world's largest landlocked country, has a rich history shaped by its vast steppes and diverse cultures. For centuries, nomadic tribes like the Scythians, Turks, and Mongols roamed the region, playing key roles in the Silk Road trade routes.</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-start">
+                                    <a class="card-text fw-bold me-auto link-dark link-underline-opacity-0" href="#">More about...</a>
+                            </div>
+                    </div>
 
-                    <article class="post">
-                        <div class="content">
+                    <div class="card col-lg mx-lg-2 mx-md-3 mb-3 p-0 rounded-top borders border-4 border-opacity-25">
                             <img src="pictures/atyrau.jpg" alt="Caspian Sea">
-                            <div class="text">
-                                <h2>Top-5 hotels in Atyrau</h2>
-                                <p>Whether you're traveling for business or leisure, Atyrau has some incredible hotel options that cater to all your needs. From luxurious amenities to exceptional service, we've handpicked the top five hotels in this vibrant city to ensure you have a comfortable and memorable experience.</p>
-                                <a href="#">Read more...</a>
+                            <div class="card-body">
+                                    <h5 class="card-title fw-bold">Top-5 hotels in Atyrau</h2>
+                                    <p class="card-text fst-italic mt-2">Whether you're traveling for business or leisure, Atyrau has some incredible hotel options that cater to all your needs. From luxurious amenities to exceptional service, we've handpicked the top five hotels in this vibrant city to ensure you have a comfortable and memorable experience.</p>
                             </div>
-                        </div>
-                    </article>
-
-                    <article class="post">
-                        <div class="content">
-                            <img src="pictures/blog-do-you-know.png" alt="Do you know image">
-                            <div class="text">
-                                <h2>Do you know about...?</h2>
-                                <p>Nestled at the heart of Central Asia, Kazakhstan is a land of breathtaking contrasts, where ancient traditions meet modern innovation. From its vast, sprawling steppes to the soaring peaks of the Tian Shan mountains, this country offers an extraordinary blend of natural beauty and cultural richness.</p>
-                                <a href="#">Read more...</a>
+                            <div class="card-footer d-flex justify-content-start">
+                                    <a class="card-text fw-bold me-auto link-dark link-underline-opacity-0" href="#">More about...</a>
                             </div>
-                        </div>
-                    </article>
+                    </div>
 
+                    
+            </div>
+                
+            <div class="row justify-content-start"> 
+                <div class="card col-lg-4 mx-lg-2 mx-md-3 mb-3 p-0 rounded-top borders border-4 border-opacity-25">
+                            <img src="pictures/blog-do-you-know.png" class="card-img-top object-fit-cover" alt="Do you know image">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Do you know about...?</h5>
+                                <p class="card-text fst-italic mt-2">Nestled at the heart of Central Asia, Kazakhstan is a land of breathtaking contrasts, where ancient traditions meet modern innovation. From its vast, sprawling steppes to the soaring peaks of the Tian Shan mountains, this country offers an extraordinary blend of natural beauty and cultural richness.</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-start">
+                                    <a class="card-text fw-bold me-auto link-dark link-underline-opacity-0" href="#">More about...</a>
+                            </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 <!-- Main -->
 
     <footer class="bg-dark text-white py-4 mt-5">
