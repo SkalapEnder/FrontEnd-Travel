@@ -1,0 +1,153 @@
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000;   
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #014d5b;
+} */
+
+
+/* nav ul {
+    list-style: none;
+    display: flex;
+    grid-gap: 150px;
+}
+
+nav ul li {
+    display: inline;
+
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-size: 30px;
+    
+} */
+
+/* Footer class*/
+footer *{
+    color: #fff;
+    font-size: 20px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #343A40;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    background-color:rgba(0, 0, 0, 0)f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, font-size 0.3s;
+}
+
+footer ul li a:hover {
+    background-color:rgba(0, 0, 0, 0.5)f;
+    font-size: 25px;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.logo img {
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.logo p {
+    font-size: 1.2rem;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px
+}
+
+.search-login input[type="text"] {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-login button {
+    font-size: 17px;
+    padding: 5px 15px;
+    background-color: #017a8b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Bootstrap Navbar & */
+.logo{
+    font-family: "Pacifico", cursive;
+}    
+
+.offcanvas{
+       background-color: rgba(0, 0, 0, 0.8);  
+}
+
+.offcanvas .nav-link{
+    font-size: 1.2rem;
+    font-family: "Raleway", sans-serif;
+    color: white;
+    transition: font-size 0.3s, font-decoration 0.3s;
+} 
+
+.offcanvas .nav-link:hover{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.offcanvas .offcanvas-title{
+    color: white;
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 3rem;
+}

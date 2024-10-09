@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <style>
+        .faq-content {
+            display: none;
+            padding: 10px;
+            background-color: #f1f1f1;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #ddd;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>FAQs</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">What is your return policy?</div>
+        <div class="faq-content">Our return policy lasts for 30 days...</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">How do I track my order?</div>
+        <div class="faq-content">You can track your order using the tracking number...</div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', function () {
+                const content = this.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

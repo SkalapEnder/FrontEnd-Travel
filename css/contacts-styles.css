@@ -1,121 +1,95 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-}
-
 .backlayer{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.6);
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #014d5b;
+body{
+    color: white;
 }
 
-
-nav ul {
-    list-style: none;
-    display: flex;
-    grid-gap: 150px;
-}
-
-nav ul li {
-    display: inline;
-
-}
-
-nav ul li a {
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.5s;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    font-size: 30px;
-    
-}
-
-/* Footer class*/
-footer {
+.form-block{
     padding: 20px;
+    margin: auto;
     background-color: #014d5b;
+    border-radius: 3px;
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.9);
+}
+
+#name-hint, #email-hint{
+    font-weight: 100;
+    font-style: italic;
+}
+
+.form-block input[type="text"], textarea{
+    height: 30px;
+    width: 90%;
+}
+
+.form-block h2{
     text-align: center;
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
+.form-block textarea{
+    min-height: 255px;
+    max-height: 255px;
 }
 
-footer ul li {
-    display: inline;
-    margin: 0 10px;
+table{
+            
+    margin: auto;
+    width: 90%;
+    border: 1px solid #0d312e;
+    margin-bottom: 20px;
 }
 
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
+td{
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
-
-
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
+label h2{
+    text-align: center;
 }
 
-.logo img {
-    margin-right: 10px;
-    height: 40px;
+/* FAQ */
+/* Style the buttons that are used to open and close the accordion panel */
+.faq-section {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.logo h1 {
-    font-size: 2rem;
+.faq {
+    background-color: #014d5b;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
-}
-
-.logo p {
-    font-size: 1.2rem;
-}
-
-
-.search-login {
-    display: flex;
-    align-items: center;
-    grid-gap: 10px
-}
-
-.search-login input[type="text"] {
-    font-size: 16px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.search-login button {
-    font-size: 17px;
-    padding: 5px 15px;
-    background-color: #017a8b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    padding: 15px;
     cursor: pointer;
-    margin-left: 5px;
+}
+
+.faq h2 {
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq h3 span {
+    font-size: 24px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq.open .faq-answer {
+    max-height: 200px; /* Adjust based on content */
+}
+
+.faq-answer p {
+    font-weight: 200;
+    margin: 10px 0;
 }

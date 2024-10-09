@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Destination</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--<link href="css/destination-styles.css" rel="stylesheet">-->
+    <style>
+    .logo{
+        font-family: "Pacifico", cursive;
+    }    
+        
+        
+    .offcanvas{
+           background-color: rgba(0, 0, 0, 0.8);  
+    }
+        
+    .offcanvas .nav-link{
+        font-size: 1.2rem;
+        font-family: "Raleway", sans-serif;
+        color: white;
+        transition: font-size 0.3s, font-decoration 0.3s;
+    } 
+        
+    .offcanvas .nav-link:hover{
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+        
+        
+    .offcanvas .offcanvas-title{
+        color: white;
+        font-family: "Permanent Marker", sans-serif;
+        font-size: 3rem;
+    }
+        
+    main .search-word{
+        font-family: "Merriweather", sans-serif;
+        font-weight: bold;
+    }
+        
+    .card{
+        box-shadow: 2px 8px 8px rgba(0,0,0,0.2);
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+        
+    .card:hover{
+        box-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+        transform: translateY(-5px);
+    }
+        
+    .card img{
+        height: 200px;
+    }
+        
+        
+</style>
+</head>
+    
+<body>
+
+<header>
+    <nav class="navbar navbar-dark navbar-expand-lg p-3" style="background-color: #014d5b; height: 6rem; color: white;">
+         
+              
+              <div class="d-flex logo ms-3">
+                    <img src="pictures/logo.png" alt="Logo" width="50" height="50" class="align-text-center me-3">
+                    <a class="navbar-brand" href="#"> <h1>KazDream</h1> </a>
+              </div>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+              <div class="offcanvas-header p-4">
+                <h4 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Menu</h4>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+
+              <div class="offcanvas-body">
+                  
+                <ul class="navbar-nav justify-content-center flex-grow-1">
+
+                    <li class="nav-item me-3 ">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item me-3">
+                        <a class="nav-link active" aria-current="page" href="destination.html">Destination</a>
+                    </li>
+
+                    <li class="nav-item me-3">
+                        <a class="nav-link " href="blog.html">Blogs</a>
+                    </li>
+
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="contacts.html">Contact Us</a>
+                    </li>
+                </ul>
+                  
+                <div class="d-flex justify-content-center search-login bt-group" role="group">
+                    <button class="btn btn-light me-2" onclick="window.location.href = 'registration.html';">Sign Up</button>
+                    <button class="btn btn-light me-4" onclick="window.location.href = 'registration.html';">Sign In</button>
+                </div>
+
+                  <!--
+                <form class="d-flex mt-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit"><a>Search</a></button>
+                </form>
+                -->
+              </div>
+
+            </div>
+
+    </nav>
+</header>
+
+<main class="container p-4">
+    <div class="text-center py-5">
+        <h1 class="text-black search-word">Find your favorite travel path!</h1>
+        <div class="d-flex justify-content-center mt-4">
+            <div class="dropdown me-3">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="cityDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    City
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="cityDropdown">
+                    <li><a class="dropdown-item" href="#">Astana</a></li>
+                    <li><a class="dropdown-item" href="#">Almaty</a></li>
+                    <li><a class="dropdown-item" href="#">Aktau</a></li>
+                </ul>
+            </div>
+            <div class="dropdown me-3">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="priceDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Price
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="priceDropdown">
+                    <li><a class="dropdown-item" href="#">less than 10$</a></li>
+                    <li><a class="dropdown-item" href="#">10$ - 20$</a></li>
+                    <li><a class="dropdown-item" href="#">20$ more</a></li>
+                </ul>
+            </div>
+            <div class="dropdown me-3">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="durationDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Duration
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="durationDropdown">
+                    <li><a class="dropdown-item" href="#">1-3 hours</a></li>
+                    <li><a class="dropdown-item" href="#">4-8 hours</a></li>
+                    <li><a class="dropdown-item" href="#">12-24 hours</a></li>
+                    <li><a class="dropdown-item" href="#">2 days+</a></li>
+                </ul>
+            </div>
+            <input type="text" class="form-control w-50 rounded" placeholder="Write name of place...">
+        </div>
+    </div>
+    
+    <div class="justify-content-lg-center p-0" style="width: 100%">
+        
+        <!--Row 1-->
+        <div class="row justify-content-center">
+            
+                <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top">
+                    <img src="pictures/almatynka-lake.jpg" class="card-img-top object-fit-cover" alt="Big Almaty Lake">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">Almaty: bus tour to nature places (Kayndy lake, Medeu, Shymbulak, etc)</h5>
+                            <p class="card-title text-black">Bus Tour starts from Almaty city's center and end in  Kayndy Lake</p>
+                            <p class="card-text text-black fst-italic mt-2">2 days • Free water</p>
+                            <p class="card-text text-success">TrustTour certification</p>
+                            
+                            
+                        </div>
+                        <div class="card-footer d-flex justify-content-end">
+                                <p class="card-text text-black fw-bold me-auto">from 40,00 $</p>
+                                <p class="card-text text-warning">★ 4,0 (523)</p>
+                        </div>
+                            
+                        
+                </div>
+                
+                <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top" >
+                    <img src="pictures/aktau.jpg" class="card-img-top object-fit-cover" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">Aktau: visit beach of biggest lake in the world</h5>
+                            <p class="card-title text-black">Come and see the biggest lake in the world!</p>
+                            <p class="card-text text-black fst-italic mt-2">3 days • Dinner and breakfast are included</p>
+                            <p class="card-text text-success">TrustTour certification</p>
+                        </div>
+                        
+                        <div class="card-footer d-flex justify-content-end">
+                            <p class="card-text text-black fw-bold me-auto">from 50,00 $</p>
+                            <p class="card-text text-warning">★ 4,1 (681)</p>
+                        </div>
+                </div>
+            
+                <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top hover-shadow">
+                        <img src="pictures/sharyn-canyon.jpg" class="card-img-top object-fit-cover" alt="Sharyn Canyon">
+                            <div class="card-body">
+                                <h5 class="card-title text-black fw-bold">Aktau: bus tour Hop-On Hop-Off to Sharyn Canyon</h5>
+                                <p class="card-title text-black">Visit the one of places of amazing nature of Kazakhstan</p>
+                                <p class="card-text text-black fst-italic mt-2">1 day • Free water</p>
+                                <p class="card-text text-success">TrustTour certification</p>
+                            </div>
+                    
+                        <div class="card-footer d-flex justify-content-end">
+                            <p class="card-text text-black fw-bold me-auto">from 25,00 $</p>
+                            <p class="card-text text-warning">☆4,4 (256)</p>
+                        </div>
+                </div>
+            
+               <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top">
+                        <img src="pictures/baiterek.jpg" class="card-img-top object-fit-cover" alt="Baiterek in center">
+                            <div class="card-body">
+                                <h5 class="card-title text-black fw-bold">Astana: bus tour through the capital with visiting reustarant</h5>
+                                <p class="card-title text-black">Visit the capital of the Great Steppe in the world</p>
+                                <p class="card-text text-black fst-italic mt-2">1 day • Dinner included</p>
+                            </div>
+                            
+                            <div class="card-footer d-flex justify-content-end">
+                                    <p class="card-text text-black fw-bold me-auto">from 27,00 $</p>
+                                    <p class="card-text text-warning">★ 4,2 (1453)</p>
+                                </div>
+                </div>
+            
+            
+            
+        </div>
+        
+        <!--Row 2-->
+        <div class="row row-cols-12 justify-content-center">
+            
+                <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top">
+                    <img src="pictures/baikonur.jpg" class="card-img-top object-fit-cover" alt="Baikonur Spaceship">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">Baikonur: special bus tour programm</h5>
+                            <p class="card-title text-black">Visit the place where launched the first man to space</p>
+                            <p class="card-text text-black fst-italic mt-2">2 days • Dinner and breakfast included</p>
+                            <p class="card-text text-success">TrustTour certification</p>
+                        </div>
+                    
+                        <div class="card-footer d-flex justify-content-end">
+                            <p class="card-text text-black fw-bold me-auto">from 45,00 $</p>
+                            <p class="card-text text-warning">★4,9 (2135)</p>
+                        </div>
+                </div>
+                
+                <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top">
+                    <img src="pictures/28Panfilov.jpg" class="card-img-top object-fit-cover" alt="28 Panfilov statue">
+                        <div class="card-body">
+                            <h5 class="card-title text-black fw-bold">Almaty: bus tour Hop-On Hop-Off across history places</h5>
+                            <p class="card-title text-black">Start visit the popular sights, history places in the city with great history</p>
+                            <p class="card-text text-black fst-italic mt-2">1 day • Audiogid: as desired</p>
+                            <p class="card-text text-success">TrustTour certification</p>
+                        </div>
+                    
+                        <div class="card-footer d-flex justify-content-end">
+                            <p class="card-text text-black fw-bold me-auto">from 15,00 $</p>
+                            <p class="card-text text-warning">★ 4,8 (1337)</p>
+                        </div>
+                </div>
+            
+                <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top">
+                        <img src="pictures/palace.jpg" class="card-img-top object-fit-cover" alt="Astana Palace">
+                            <div class="card-body">
+                                <h5 class="card-title text-black fw-bold">Astana: National Museum, Palace of peace and consolidation, etc.</h5>
+                                <p class="card-title text-black">Bus tour in the night time in the Astana</p>
+                                <p class="card-text text-black fst-italic mt-2">5 hours • Audiogid: as desired</p>
+                            </div>
+                    
+                            <div class="card-footer d-flex justify-content-end">
+                                <p class="card-text text-black fw-bold me-auto">from 8,00 $</p>
+                                <p class="card-text text-warning">★ 3,9 (134)</p>
+                            </div>
+                </div>
+            
+               <div class="card col-lg mx-lg-2 mb-3 p-0 rounded-top shadow">
+                        <img src="pictures/medeu2.jpg" class="card-img-top object-fit-cover" alt="Medeu Winter">
+                            <div class="card-body">
+                                <h5 class="card-title text-black fw-bold">Almaty: ice skating in Medeu</h5>
+                                <p class="card-title text-black">Walking on the ice of the highest ice skating rink in the world!</p>
+                                <p class="card-text text-black fst-italic mt-2">4 hours • Dinner included</p>
+                                <p class="card-text text-success">TrustTour certification</p>
+                            </div>
+                   
+                            <div class="card-footer d-flex justify-content-end">
+                                <p class="card-text text-black fw-bold me-auto">from $18,00</p>
+                                <p class="card-text text-warning">★ 4,7 (634)</p>
+                            </div>
+                </div>
+            
+            
+            
+        </div>
+        
+    </div>
+</main>
+
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center fs-5">
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3">WEB Technologies (FrontEnd)</li>
+            <li class="mx-3">© Astana IT University, 2024</li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3"><a href="registration.html" class="text-white">Home</a></li>
+            <li class="mx-3"><a href="#" class="text-white">Destination</a></li>
+            <li class="mx-3"><a href="blog.html" class="text-white">Blog</a></li>
+            <li class="mx-3"><a href="contacts.html" class="text-white">Contact Us</a></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li class="mx-3">Kazhybek Asset</li>
+            <li class="mx-3">Alisher Berik</li>
+            <li class="mx-3">Group: IT-2308</li>
+        </ul>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

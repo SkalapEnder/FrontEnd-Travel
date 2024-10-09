@@ -5,14 +5,38 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Blogs Page</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    
-    <link href="css/common-styles.css" rel="stylesheet">
-    <link href="css/blog-styles.css" rel="stylesheet">
-    <style>        
+    <style>
+        
+        .logo{
+            font-family: "Pacifico", cursive;
+        }    
+
+        .offcanvas{
+               background-color: rgba(0, 0, 0, 0.8);  
+        }
+
+        .offcanvas .nav-link{
+            font-size: 1.2rem;
+            font-family: "Raleway", sans-serif;
+            color: white;
+            transition: font-size 0.3s, font-decoration 0.3s;
+        } 
+
+        .offcanvas .nav-link:hover{
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+
+        .offcanvas .offcanvas-title{
+            color: white;
+            font-family: "Permanent Marker", sans-serif;
+            font-size: 3rem;
+        }
+        
         
         .bg{
             background-color: #006D81;
@@ -79,7 +103,7 @@
                         </li>
 
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="contacts.html">FAQs</a>
+                            <a class="nav-link" href="contacts.html">Contact Us</a>
                         </li>
                     </ul>
 
@@ -239,25 +263,25 @@
     </main>
 <!-- Main -->
 
-
-<footer>
-    <ul>
-        <li>WEB Technologies (FrontEnd)</li>
-        <li>© Astana IT University, 2024</li>
-    </ul>
-    <ul>
-        <li><a href="registration.html" class="text-white">Home</a></li>
-        <li><a href="#" class="text-white">Destination</a></li>
-        <li><a href="blog.html" class="text-white">Blog</a></li>
-        <li><a href="contacts.html" class="text-white">Contact Us</a></li>
-    </ul>
-    <ul>
-        <li>Kazhybek Asset</li>
-        <li>Alisher Berik</li>
-        <li>Group: IT-2308</li>
-    </ul>
+    <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center fs-5">
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3">WEB Technologies (FrontEnd)</li>
+            <li class="mx-3">© Astana IT University, 2024</li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center mb-3">
+            <li class="mx-3"><a href="registration.html" class="text-white">Home</a></li>
+            <li class="mx-3"><a href="#" class="text-white">Destination</a></li>
+            <li class="mx-3"><a href="blog.html" class="text-white">Blog</a></li>
+            <li class="mx-3"><a href="contacts.html" class="text-white">Contact Us</a></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li class="mx-3">Kazhybek Asset</li>
+            <li class="mx-3">Alisher Berik</li>
+            <li class="mx-3">Group: IT-2308</li>
+        </ul>
+    </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
