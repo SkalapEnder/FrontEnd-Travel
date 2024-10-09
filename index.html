@@ -13,8 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="css/main-styles.css" rel="stylesheet">
     <!--<link href="css/destination-styles.css" rel="stylesheet">-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
     .logo{
         font-family: "Pacifico", cursive;
@@ -119,15 +117,16 @@
             <a href="book_now.html" class="btn">Book Now</a>
         </div>
         <div class="hpage">
-            <img src="pictures/hpage.png" alt="ship">
+            <img src="pictures_main/hpage.png" alt="ship">
         
         </div>
     </section>
     
 
-     <div class="container">
+     <div class="container-fluid justify-content-center text-center mb-5">
+         <div class="row">
          <div class="card__container">
-        <article class="card__article">
+        <article class="card__article me-2">
             
             <figure>
             <img src="pictures/image1.jpg" alt="Burabay">
@@ -140,7 +139,7 @@
             </div>
                 
              </article>
-        <article class="card__article">
+        <article class="card__article me-2">
             
             <figure><img src="pictures/image2.jpg" alt="Medeu">
             <figcaption>Kazakhstan, Almaty, Medeu</figcaption>
@@ -151,7 +150,7 @@
             <a href="https://medeu.kz/" class="card__button">Read More</a>
             </div>
              </article>
-        <article class="card__article">
+        <article class="card__article me-2">
             
             <figure><img src="pictures/image3.jpg" alt="Astana">
             <figcaption>Kazakhstan, Astana, EXPO-2017</figcaption>
@@ -165,7 +164,8 @@
              </article>
              </div>
              </div>
-  <div class="container-fluid justify-content-center text-center z">
+         </div>
+  <div class="container-fluid justify-content-center text-center">
       <div id="carousel" class="carousel slide w-100" style="width: 1000px;">
           
   <div class="carousel-indicators ">
@@ -173,21 +173,21 @@
     <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner rounded ">
+  <div class="carousel-inner rounded-5">
     <div class="carousel-item active">
-      <img src="pictures/forest.jpg" class="d-block w-100" alt="forest">
+      <img src="pictures_main/forest.jpg" class="d-block w-100" alt="forest">
       <div class="carousel-caption d-none d-md-block">
         <h5>Forest</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="pictures/mountains.jpg" class="d-block w-100" alt="mountains">
+      <img src="pictures_main/mountains.jpg" class="d-block w-100" alt="mountains">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="bg-blue-100">Mountains</h5>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="pictures/nature.jpg" class="d-block w-100" alt="nature">
+      <img src="pictures_main/nature.jpg" class="d-block w-100" alt="nature">
       <div class="carousel-caption d-none d-md-block">
         <h5 class="bg-dark rounded">Nature</h5>
       </div>
@@ -206,9 +206,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     
-      <div class="card-group my-5  w-100" style="width: 1000px; justify-items: center">
+      <div class="card-group my-5 w-100 rounded-5" style="width: 1000px; justify-items: center">
   <div class="card">
-    <img src="pictures/left-picture.jpg" class="card-img-top object-fit-cover" alt="center-picture">
+    <img src="pictures_main/left-picture.jpg" class="card-img-top object-fit-cover" alt="left-picture">
     <div class="card-body">
       <h5 class="card-title text-black">Freedom</h5>
       <p class="card-text text-black">Freedom is the ability to act, speak, and think without hindrance or restraint. It empowers individuals to pursue their passions and dreams, shaping their own destinies. In a broader sense, freedom fosters creativity and innovation, driving societies toward progress and harmony.</p>
@@ -219,18 +219,18 @@
     </div>
   </div>
   <div class="card">
-    <img src="pictures/center-picture.jpg" class="card-img-top object-fit-cover" alt="center-picture">
+    <img src="pictures_main/center-picture.jpg" class="card-img-top object-fit-cover" alt="center-picture">
     <div class="card-body">
-      <h5 class="card-title text-black">Balance</h5>
+      <h5 class="card-title text-light">Balance</h5>
       <p class="card-text text-black">Balance is the harmony achieved between different aspects of life, such as work and leisure or personal and professional responsibilities. It allows individuals to maintain mental and emotional well-being, fostering resilience in the face of challenges. Striking this equilibrium can lead to greater satisfaction and fulfillment in everyday living.</p>
-        <button type="button" class="btn btn-outline-info">LEARN MORE</button>
+        <button type="button" class="btn btn-outline-danger">LEARN MORE</button>
     </div>
     <div class="card-footer">
       <small class="text-body-secondary">Last updated 3 mins ago</small>
     </div>
   </div>
   <div class="card">
-    <img src="pictures/right-picture.jpg" class="card-img-top object-fit-cover" alt="right-picture">
+    <img src="pictures_main/right-picture.jpg" class="card-img-top object-fit-cover" alt="right-picture">
     <div class="card-body">
       <h5 class="card-title text-black">Desire</h5>
       <p class="card-text text-black">Desire is a powerful driving force that motivates individuals to pursue goals and aspirations. It can inspire creativity and ambition, pushing people to seek new experiences and achieve personal growth. However, unchecked desire can also lead to dissatisfaction, reminding us of the importance of balance and mindfulness in our pursuits.</p>
@@ -242,11 +242,12 @@
   </div>
 </div>
 </div>
-<div class="qtn">
-    <blockquote cite="https://www.shutterfly.com/ideas/travel-quotes/"><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
     
-    </div>
-    <footer class="bg-dark text-white py-4 mt-5">
+<div class="qtn">
+    <blockquote class="p-2" cite="https://www.shutterfly.com/ideas/travel-quotes/"><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
+</div>
+    
+<footer class="bg-dark text-white py-4 mt-5 text-center">
     <div class="container text-center fs-5">
         <ul class="list-unstyled d-flex justify-content-center mb-3">
             <li class="mx-3">WEB Technologies (FrontEnd)</li>
@@ -266,129 +267,6 @@
     </div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>"width=device-width, initial-scale=1.0">
-    <title>Travel Landing Page</title>
-    <!--  -->
-    <link rel="stylesheet"  href="css/main-styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="backlayer">
-    <header>
-        <div id="logo">
-            <img src="pictures/logo.png" alt="Logo" id="logo-img"><h1>KazDream</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destination.html">Destination</a></li>
-                <li><a href="contacts.html">Contact Us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="search-login">
-            <input type="text" placeholder="Search...">
-            <button onclick="window.location.href = 'destination.html';">Search</button>
-
-            <button onclick="window.location.href = 'registration.html';">Sign Up</button>
-            <button onclick="window.location.href = 'registration.html';">Sign In</button>
-        </div>
-    </header>
-   <section class="home">
-        <div class="home-content">
-            <h1>Explore Dream Destination</h1>
-            <dl>
-            <dt>NEVER</dt>
-            <dd>SAY </dd>
-            <dt>NEVER</dt>
-            </dl>
-            <a href="book_now.html" class="btn">Book Now</a>
-        </div>
-        <div class="hpage">
-            <img src="pictures/hpage.png" alt="ship">
-        
-        </div>
-    </section>
-    </div>
-    
-
-     <div class="container">
-         <div class="card__container">
-        <article class="card__article">
-            
-            <figure>
-            <img src="pictures/image1.jpg" alt="Burabay">
-            <figcaption>Kazakhstan, Kokshetau, Burabay</figcaption> 
-            </figure>
-            <div class="card__data">
-            <h2 class="card__title">Burabay</h2>
-            <p class="card__description">A true oasis in the midst of the Kazakh steppe, this beautiful place is located within the territory of Burabay Park.</p>
-            <a href="https://visitastana.kz/en/near-the-city/rest-zone/burabay/" class="card__button">Read More</a>
-            </div>
-                
-             </article>
-        <article class="card__article">
-            
-            <figure><img src="pictures/image2.jpg" alt="Medeu">
-            <figcaption>Kazakhstan, Almaty, Medeu</figcaption>
-            </figure>
-            <div class="card__data">
-            <h2 class="card__title">Medeu</h2>
-            <p class="card__description">10,500 square meters of ice at an altitude of 1,691 meters above sea level. </p>
-            <a href="https://medeu.kz/" class="card__button">Read More</a>
-            </div>
-             </article>
-        <article class="card__article">
-            
-            <figure><img src="pictures/image3.jpg" alt="Astana">
-            <figcaption>Kazakhstan, Astana, EXPO-2017</figcaption>
-            </figure>
-            <div class="card__data">
-            <h2 class="card__title">EXPO-2017</h2>
-            <p class="card__decription">Experience Expo 2017 Astana </p>
-            <a href="https://www.expo2017astana.com/index.html" class="card__button">Read More</a>
-            
-        </div>
-             </article>
-             </div>
-             </div>
-
-<div class="qtn">
-    <blockquote cite="https://www.shutterfly.com/ideas/travel-quotes/"><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
-    
-    </div>
-    <footer>
-        <div id="footer-section">
-            <ul>
-                <li>WEB Technologies (FrontEnd)</li>
-                <li>©Astana IT University, 2024</li>
-            </ul>
-        </div>
-
-        <div id="footer-section">
-            <ul>
-                <li style="font-weight: bolder; font-size: 24px;">Pages</li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destination.html">Destination</a></li>
-                <li><a href="contacts.html">Contact Us</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </div>
-
-        <div id="footer-section">
-            <ul>
-                <li style="font-weight: bolder; font-size: 24px;">Authors</li>
-                <li>Kazhybek Asset</li>
-                <li>Alisher Berik</li>
-                <li>Group: IT-2308</li>
-            </ul>
-        </div>
-        
-    </footer>
-    
 </body>
 </html>
 

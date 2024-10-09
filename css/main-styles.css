@@ -258,26 +258,6 @@ transition: 1s;
   }
 }
 
-footer {
-    padding: 20px;
-    background-color: #014d5b;
-    text-align: center;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
-}
 figcaption{
     font-size: 10px;
 }
