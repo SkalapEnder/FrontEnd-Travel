@@ -79,57 +79,74 @@
         <div class="faq">
             <h2>What is this webiste? <span>+</span></h2>
             <div class="faq-answer">
-                <p>Our website is touristic platform that suggest tours in Kazakhstan.</p>
+                <p>Our platform is an all-in-one travel service designed to help you discover, plan, and book your perfect trip. We offer a wide range of travel options, including flights, hotels, vacation packages, and activities, tailored to suit every traveler’s needs and budget. </p>
             </div>
         </div>
         
         <div class="faq">
-            <h2>Which tour companies are you working with<span>+</span></h2>
+            <h2>How do I book a trip?<span>+</span></h2>
             <div class="faq-answer">
-                <p>We are young platform and we working with htc.kz only</p>
+                <p>To book a trip, simply browse our available destinations, choose your preferred dates and package, and click on it. Follow the on-screen instructions to enter your details and complete the payment process. Once confirmed, you’ll receive a booking confirmation via email.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>Can I cancel or modify my booking?<span>+</span></h2>
+            <div class="faq-answer">
+                <p>Yes, you can cancel or modify your booking. The ability to make changes depends on the type of booking and the policies of the service providers (hotels, airlines, etc.). Visit the "My Bookings" section of your account to cancel or modify your trip. Cancellation fees may apply.</p>
             </div>
         </div>
     
         <div class="faq">
             <h2>What payment methods do you accept? <span>+</span></h2>
             <div class="faq-answer">
-                <p>We accept major credit cards, Mastercard, and bank transfers for larger purchases.</p>
+                <p>We accept major credit and debit cards (Visa, MasterCard, American Express), PayPal, and in some cases, bank transfers.</p>
             </div>
         </div>
 
         <div class="faq">
-            <h2>What payment methods do you accept? <span>+</span></h2>
+            <h2>Do I need a visa to travel?<span>+</span></h2>
             <div class="faq-answer">
-                <p>We accept major credit cards, Mastercard, and bank transfers for larger purchases.</p>
+                <p>The visa requirements depend on your destination and nationality. Our platform provides general information regarding visa requirements, but it’s always best to check with the embassy or consulate of your destination country for the most accurate and up-to-date information.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>What happens if my flight is delayed or canceled?<span>+</span></h2>
+            <div class="faq-answer">
+                <p>In case of a flight delay or cancellation, we advise you to contact the airline directly for the latest information and assistance. Some airlines offer compensation or rebooking options depending on the circumstances. Our customer support team is ready to help with your problems.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>How can I contact customer support?<span>+</span></h2>
+            <div class="faq-answer">
+                <p>You can reach our customer support team via the “Contact Us” section below. We offer assistance through email only. Our support team is available 24/7 to help with any questions or issues you may encounter during your booking or travel experience.</p>
             </div>
         </div>
     </div>
     <!--#########################################-->
     <h1 style="padding: 20px; text-align: center;">Contact us</h1> 
-    <div class="container d-flex ">
-        <div class="form-block w-100 me-3">
-                    <div>
-                        <h2>Write your name</h2>
-                        <p>Write your name to understand you among other users.</p>
-                        <input type="text" placeholder="Write your name...">
-                        <p id="name-hint">Your name must contain, at least, 3 characters!</p>
-                    </div>
-
-                    <div>
-                        <h2>Write your name</h2>
-                        <p>Write your email to contact you through email</p>
-                        <input type="text" placeholder="Write your name...">
-                        <p id="email-hint">Your name must contain @ symbol</p>
-                    </div>
-
-                    <div>
-                        <h2>Write your wishes</h2>
-                        <p>Write your wishes.</p>
-                        <textarea type="text" placeholder="Write your wishes..."></textarea>
-                    </div>
-                    
-                    <button>Send</button>
-        </div>
+    <div class="container d-flex">
+        <form class="form-block w-100 me-3" id="form" action="/">
+            <h2>Contact Us</h2>
+            <div class="form-control">
+                <h4>Write your username</h4>
+                <input id="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="form-control">
+                <h4>Write your email</h4>
+                <input id="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="form-control">
+                <h4>Write your wishes</h4>
+                <textarea id="textarea" type="text"></textarea>
+                <div class="error"></div>
+            </div>
+            <div class="form-submit"><button type="submit">Send</button></div>
+        </form>
 
         <div class="form-block w-100 text-center">
                 <div>
@@ -182,6 +199,7 @@
 
 </div>
 <script src="js\faq.js"></script>
+<script src="js\form.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

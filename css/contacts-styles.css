@@ -7,6 +7,7 @@ body{
 }
 
 .form-block{
+    justify-content: center;
     padding: 20px;
     margin: auto;
     background-color: #014d5b;
@@ -14,23 +15,68 @@ body{
     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.9);
 }
 
-#name-hint, #email-hint{
-    font-weight: 100;
-    font-style: italic;
+form{
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    background-color: #014d5b;
+    border-radius: 3px;
+    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.9);
 }
 
-.form-block input[type="text"], textarea{
+.form-control {
+    color: white;
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control.error input, .form-control.error textarea {
+    border-color: #ff4848;
+}
+
+.form-control .error {
+    color: #ff4848;
+    font-size: 15px;
+    height: 20px;
+}
+
+form input, textarea{
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 18px;
+	padding: 10px;
+
     height: 30px;
-    width: 90%;
+    width: 100%;
 }
 
-.form-block h2{
+form h2{
     text-align: center;
 }
 
-.form-block textarea{
+form textarea{
     min-height: 255px;
     max-height: 255px;
+}
+
+.form-submit{
+    text-align: center;
+    justify-content: center;
+}
+
+.form-submit button{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-size: 1.25em;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 table{
@@ -75,21 +121,28 @@ label h2{
     align-items: center;
 }
 
-.faq h3 span {
+.faq span {
     font-size: 24px;
+    transition: all .25s ease-in-out;
 }
 
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
-}
-
-.faq.open .faq-answer {
-    max-height: 200px; /* Adjust based on content */
+    transition: all 1s;
 }
 
 .faq-answer p {
     font-weight: 200;
     margin: 10px 0;
 }
+
+/* After toggle in JS script */
+.faq.open .faq-answer {
+    max-height: 120px; 
+}
+
+.faq.open span {
+    transform: rotate(45deg);
+}
+

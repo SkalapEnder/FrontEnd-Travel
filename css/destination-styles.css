@@ -2,11 +2,12 @@
     align-items: center;
     text-align: center;
 
-    margin-bottom: 60px;
+    margin: 30px;
 }
 
 .search-section h1{
     color: #333;
+    font-weight: bolder;
 }
 
 .search-filter {
@@ -115,8 +116,8 @@
 
 .event-price {
     position: relative;
-    bottom: 1;
-    right: 1;
+    bottom: 5px;
+    left: 0;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -132,42 +133,174 @@
     color: #ff9800;
 }
 
- /* Styling for the icon */
- .icon {
-    z-index: 1;
-    background-color: rgb(190, 190, 190);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    cursor: pointer;
-    position: fixed;
-    right: 0;
-    top: 30%;
-    padding: 7px;
+
+ main .search-word{
+    font-family: "Merriweather", sans-serif;
+    font-weight: bold;
 }
 
-.icon img{
-    width: 40px;
-}
-
-
-.popup {
-    visibility: hidden;
-    width: 150px;
-    background-color: #a8a8a8;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 10px;
-    position: absolute;
-    z-index: 2;
-    top: 110%; 
-    right: 15%;
+/* Discount section */
+.discount{
+    display: none;
     opacity: 0;
-    transition: opacity 0.3s;
+    max-height: 220px;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+    font-family: 'Rubik', serif;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(0deg, rgba(1,77,91,1) 0%, rgba(9,102,121,1) 50%, rgba(0,176,134,1) 100%);
+    color: azure;
+}
+
+.discount.open{
+    display: block;
+    opacity: 1;
+    
+    transition: all 0.7s;
+}
+
+.discount.remove{
+    opacity: 0;
+    display: none;
+    transition: all 0.7s;
+}
+    
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer .timer_part{
+    margin: 10px;
+    padding: 3px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.discount-btn, .discount-close, .discount-link{
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    color: white;
+}
+
+.discount-close{
+    rotate: 45deg;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.discount-submit{
+    align-items: center;
+    display: flex; 
+    justify-content: center;
+}
+
+.discount-link{
+   padding: 10px;
+   border-radius: 5px;
+    text-decoration: none; 
+    margin-right: 10px; 
+    margin-top: 5px;
+    transition: background-color .3s ease;
+
+}
+
+.discount-link:hover {
+    background-color: #0000003a;
+}
+
+/* Pop up section */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+
+    background-color: rgba(1,77,91,1);
+    color: white;
+    border: 2px solid #000;
+    z-index: 100;
+    transition: all 1s;
+    border: 0;
+    border-radius: 10px;
+}
+
+.popup .popup-close{
+    rotate: 45deg;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    color: white;
 }
 
 
-.icon:hover .popup {
-    visibility: visible;
-    opacity: 1;
+
+.popup-line, .popup-form{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.popup-input{
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: 0;
+}
+
+.popup-input .error{
+    margin: 3px;
+    font-size: 10px;
+    color: #ff4848;
+    background-color: transparent;
+    border: 0;
+}
+
+.popup-input.error input{
+    border-color: #ff4848;
+}
+
+.popup-input input{
+    border-radius: 5px;
+    width: auto;
+}
+
+.popup-submit{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-size: 1.25em;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.popup.show, .overlay.show{
+    display: block;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+
+    transition: all 1s;
 }
