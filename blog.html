@@ -12,29 +12,12 @@
     
     <link href="css/common-styles.css" rel="stylesheet">
     <link href="css/blog-styles.css" rel="stylesheet">
-    <style>        
-        
-        .bg{
-            background-color: #006D81;
-            background-color: white;
-        }
-        
-        
-        .post img{
-            height: 200px;
-        }
-        
-        .carousel-caption{
-            background-color: rgba(0,0,0,0.5);
-        }
-        
-    </style>
 </head>
     
-<body class="bg">
+<body>
 <!-- Header -->
 	<header>
-        <nav class="navbar navbar-dark navbar-expand-lg p-3" style="background-color: #014d5b; height: 6rem; color: white;">
+        <nav class="navbar navbar-dark navbar-expand-lg p-3">
 
 
                   <div class="d-flex logo ms-3">
@@ -62,80 +45,82 @@
                         </li>
 
                         <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="destination.html">Destination</a>
+                            <a class="nav-link " aria-current="page" href="destination.html">Destination</a>
                         </li>
 
                         <li class="nav-item me-3">
-                            <a class="nav-link " href="blog.html">Blogs</a>
+                            <a class="nav-link active" href="blog.html">Blogs</a>
                         </li>
 
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="contacts.html">FAQs</a>
+                            <a class="nav-link " href="contacts.html">FAQs</a>
                         </li>
                     </ul>
 
                     <div class="d-flex justify-content-center search-login bt-group" role="group">
-                        <button class="btn btn-light me-2" onclick="window.location.href = 'registration.html';">Sign Up</button>
-                        <button class="btn btn-light me-4" onclick="window.location.href = 'registration.html';">Sign In</button>
+                        <button class="btn btn-light me-2" onclick="window.location.href = 'book_now.html';">Sign Up</button>
+                        <button class="btn btn-light me-4" onclick="window.location.href = 'book_now.html';">Sign In</button>
                     </div>
                   </div>
 
                 </div>
-
+                <img src="pictures/dark_mode.webp" id="icon" alt="Toggle Mode">
         </nav>
     </header>
 <!-- Header -->
 
 <!-- Main -->
 <main>
-    <div id="carouselExample" class="carousel slide" style="height: 500px;" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="pictures/blog-sharyn-canyon.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>Amazing nature of the Great Steppe</h1>
-                <p>Visit the wonderful locations, from steppe to american like canyons</p>
+    
+    <div container-fluid px-0>
+        <div id="carouselExample" class="carousel slide m-0 p-0" style="height: 500px;" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-        </div>
-        <div class="carousel-item">
-            <img src="pictures/blog-astana-night.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>The center of the Great Steppe</h1>
-                <p>Visit the capital and newest city in Kazakhstan</p>
-            </div>                
-        </div>
-        <div class="carousel-item">
-            <img src="pictures/blog-kaindy-lake.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>Untouched nature</h1>
-                <p>Kazakhstan has many nature places untouched by human for thousands years</p>
+            <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <img src="pictures/blog-sharyn-canyon.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Sharyn Canyon">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Amazing nature of the Great Steppe</h1>
+                    <p>Visit the wonderful locations, from steppe to american like canyons</p>
+                </div>
             </div>
+            <div class="carousel-item">
+                <img src="pictures/blog-astana-night.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Astana Bridge">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>The center of the Great Steppe</h1>
+                    <p>Visit the capital and newest city in Kazakhstan</p>
+                </div>                
+            </div>
+            <div class="carousel-item">
+                <img src="pictures/blog-kaindy-lake.jpg" class="d-block w-100 object-fit-cover" style="height: 500px;" alt="Kaindy Lake">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Untouched nature</h1>
+                    <p>Kazakhstan has many nature places untouched by human for thousands years</p>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
     </div>
         
-        
-    <h1 class="text-center my-4">Popular blog topics in month!</h1>
+    <h1 class="text-center my-4 fw-bold">Popular blog topics in month!</h1>
 
     <div class="post-list">
         
         <div class="post card">
             <img src="pictures/blog-map.jpg" alt="Map of Kazahstan">
             <div class="post-body card-body">
-                <h5>Best places in Kazakhstan in 2024</h5>
+                <h4 class="fw-bold">Best places in Kazakhstan in 2024</h4>
                 <p>From the majestic landscapes of the Altai Mountains to the vibrant cultural tapestry of Almaty, this Central Asian gem offers a wealth of experiences for every type of traveler.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
@@ -144,7 +129,7 @@
         <div class="post card">
             <img src="pictures/blog-tips.png" alt="Passport and map">
             <div class="post-body card-body">
-                <h5>How to prepare to travel</h5>
+                <h4 class="fw-bold">How to prepare to travel</h4>
                 <p>Embarking on a new adventure can be exhilarating, but it often comes with its fair share of stress and confusion. Whether you’re planning a weekend getaway or a long-haul international trip, proper preparation can make all the difference.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
@@ -154,7 +139,7 @@
         <div class="post card">
             <img src="pictures/blog-astana.png" alt="Baiterek Astana">
             <div class="post-body card-body">
-                <h5>Top-5 interesting places in Astana</h5>
+                <h4 class="fw-bold">Top-5 interesting places in Astana</h4>
                 <p>Whether you're a history buff, an architecture enthusiast, or simply looking to experience something new, Astana has something for everyone.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
@@ -163,7 +148,7 @@
         <div class="post card">
             <img src="pictures/blog-almaty-lake.jpg" alt="Almaty Lake">
             <div class="post-body card-body">
-                <h5>Top-5 places in Almaty</h5>
+                <h4 class="fw-bold">Top-5 places in Almaty</h4>
                 <p>Welcome to Almaty, Kazakhstan's vibrant city nestled at the foot of the majestic Tien Shan mountains. Known for its rich history, cultural diversity, and stunning natural beauty, Almaty offers a unique blend of experiences for every traveler.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
@@ -172,7 +157,7 @@
         <div class="post card">
             <img src="pictures/blog-history.jpg" alt="Nomads">
             <div class="post-body card-body">
-                <h5>Brief history of Kazakhstan</h5>
+                <h4 class="fw-bold">Brief history of Kazakhstan</h4>
                 <p>Kazakhstan, the world's largest landlocked country, has a rich history shaped by its vast steppes and diverse cultures. For centuries, nomadic tribes like the Scythians, Turks, and Mongols roamed the region, playing key roles in the Silk Road trade routes.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
@@ -181,7 +166,7 @@
         <div class="post card">
             <img src="pictures/atyrau.jpg" alt="Caspian Sea">
             <div class="post-body">
-                    <h5>Top-5 hotels in Atyrau</h2>
+                    <h4 class="fw-bold">Top-5 hotels in Atyrau</h4>
                     <p>Whether you're traveling for business or leisure, Atyrau has some incredible hotel options that cater to all your needs. From luxurious amenities to exceptional service, we've handpicked the top five hotels in this vibrant city to ensure you have a comfortable and memorable experience.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
@@ -190,7 +175,7 @@
         <div class="post card">
             <img src="pictures/blog-do-you-know.png" alt="Do you know image">
             <div class="post-body card-body">
-                <h5>Do you know about...?</h5>
+                <h4 class="fw-bold">Do you know about...?</h4>
                 <p>Nestled at the heart of Central Asia, Kazakhstan is a land of breathtaking contrasts, where ancient traditions meet modern innovation. From its vast, sprawling steppes to the soaring peaks of the Tian Shan mountains, this country offers an extraordinary blend of natural beauty and cultural richness.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
@@ -219,5 +204,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/bg-change.js"></script>
 </body>
 </html>

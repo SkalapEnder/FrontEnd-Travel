@@ -1,87 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content=<!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link href="css/common-styles.css" rel="stylesheet">
     <link href="css/main-styles.css" rel="stylesheet">
-    <!--<link href="css/destination-styles.css" rel="stylesheet">-->
-    <style>
-    .logo{
-        font-family: "Pacifico", cursive;
-    }    
-        
-        
-    .offcanvas{
-           background-color: rgba(0, 0, 0, 0.8);  
-    }
-        
-    .offcanvas .nav-link{
-        font-size: 1.2rem;
-        font-family: "Raleway", sans-serif;
-        color: white;
-        transition: font-size 0.3s, font-decoration 0.3s;
-    } 
-        
-    .offcanvas .nav-link:hover{
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-decoration: underline;
-    }
-        
-        
-    .offcanvas .offcanvas-title{
-        color: white;
-        font-family: "Permanent Marker", sans-serif;
-        font-size: 3rem;
-    }
-        
-    main .search-word{
-        font-family: "Merriweather", sans-serif;
-        font-weight: bold;
-    }  
-</style>
 </head>
     
 <body>
 
-<header>
-    <nav class="navbar navbar-dark navbar-expand-lg p-3" style="background-color: #014d5b; height: 6rem; color: white;">
-         
-              
-              <div class="d-flex logo ms-3">
-                    <img src="pictures/logo.png" alt="Logo" width="50" height="50" class="align-text-center me-3">
-                    <a class="navbar-brand" href="#"> <h1>KazDream</h1> </a>
-              </div>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg p-3">
+        <div class="d-flex logo ms-3" id="logotype">
+            <img src="pictures/logo.png" alt="Logo" width="50" height="50" class="align-text-center me-3">
+            <a class="navbar-brand" href="#"> <h1>KazDream</h1> </a>
+        </div>
 
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-              <div class="offcanvas-header p-4">
-                <h4 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Menu</h4>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
+            <div class="offcanvas-header p-4">
+            <h4 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Menu</h4>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
 
-              <div class="offcanvas-body">
-                  
+            <div class="offcanvas-body">
+                
                 <ul class="navbar-nav justify-content-center flex-grow-1">
 
                     <li class="nav-item me-3 ">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
 
                     <li class="nav-item me-3">
-                        <a class="nav-link active" aria-current="page" href="destination.html">Destination</a>
+                        <a class="nav-link" aria-current="page" href="destination.html">Destination</a>
                     </li>
 
                     <li class="nav-item me-3">
@@ -89,20 +49,22 @@
                     </li>
 
                     <li class="nav-item me-3">
-                        <a class="nav-link" href="contacts.html">Contact Us</a>
+                        <a class="nav-link" href="contacts.html">FAQs</a>
                     </li>
                 </ul>
-                  
+                    
                 <div class="d-flex justify-content-center search-login bt-group" role="group">
-                    <button class="btn btn-light me-2" onclick="window.location.href = 'registration.html';">Sign Up</button>
-                    <button class="btn btn-light me-4" onclick="window.location.href = 'registration.html';">Sign In</button>
-                  </div>
-                
+                    <button class="btn btn-light me-2" onclick="window.location.href = 'book_now.html';">Sign Up</button>
+                    <button class="btn btn-light me-4" onclick="window.location.href = 'book_now.html';">Sign In</button>
                 </div>
+                
+                <img src="pictures/dark_mode.webp" id="icon" alt="Toggle Mode">
+            </div>
+
         </div>
-    
+
     </nav>
-    </header>              
+</header>              
                   
                   
                   
@@ -221,9 +183,9 @@
   <div class="card">
     <img src="pictures_main/center-picture.jpg" class="card-img-top object-fit-cover" alt="center-picture">
     <div class="card-body">
-      <h5 class="card-title text-light">Balance</h5>
+      <h5 class="card-title text-black">Balance</h5>
       <p class="card-text text-black">Balance is the harmony achieved between different aspects of life, such as work and leisure or personal and professional responsibilities. It allows individuals to maintain mental and emotional well-being, fostering resilience in the face of challenges. Striking this equilibrium can lead to greater satisfaction and fulfillment in everyday living.</p>
-        <button type="button" class="btn btn-outline-danger">LEARN MORE</button>
+        <button type="button" class="btn btn-outline-info">LEARN MORE</button>
     </div>
     <div class="card-footer">
       <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -247,26 +209,35 @@
     <blockquote class="p-2" cite="https://www.shutterfly.com/ideas/travel-quotes/"><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
 </div>
     
-<footer class="bg-dark text-white py-4 mt-5 text-center">
-    <div class="container text-center fs-5">
-        <ul class="list-unstyled d-flex justify-content-center mb-3">
-            <li class="mx-3">WEB Technologies (FrontEnd)</li>
-            <li class="mx-3">© Astana IT University, 2024</li>
-        </ul>
-        <ul class="list-unstyled d-flex justify-content-center mb-3">
-            <li class="mx-3"><a href="registration.html" class="text-white">Home</a></li>
-            <li class="mx-3"><a href="#" class="text-white">Destination</a></li>
-            <li class="mx-3"><a href="blog.html" class="text-white">Blog</a></li>
-            <li class="mx-3"><a href="contacts.html" class="text-white">Contact Us</a></li>
-        </ul>
-        <ul class="list-unstyled d-flex justify-content-center">
-            <li class="mx-3">Kazhybek Asset</li>
-            <li class="mx-3">Alisher Berik</li>
-            <li class="mx-3">Group: IT-2308</li>
-        </ul>
-    </div>
+<footer>
+  <ul>
+      <li>WEB Technologies (FrontEnd)</li>
+      <li>© Astana IT University, 2024</li>
+  </ul>
+  <ul>
+      <li><a href="registration.html" class="text-white">Home</a></li>
+      <li><a href="#" class="text-white">Destination</a></li>
+      <li><a href="blog.html" class="text-white">Blog</a></li>
+      <li><a href="contacts.html" class="text-white">Contact Us</a></li>
+  </ul>
+  <ul>
+      <li>Kazhybek Asset</li>
+      <li>Alisher Berik</li>
+      <li>Group: IT-2308</li>
+  </ul>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const icon = document.getElementById("icon");
+
+      icon.addEventListener("click", () => {
+          document.body.classList.toggle("dark-mode");
+          icon.src = document.body.classList.contains("dark-mode") ? "pictures/light_mode.png" : "pictures/dark_mode.webp";
+      });
+  });
+</script>
 </body>
 </html>
 

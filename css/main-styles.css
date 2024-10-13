@@ -6,6 +6,49 @@ body {
     color: #fff;
 }
 
+:root {
+  /* Light Mode Colors */
+  --primary-color: #017a8b;
+  --navbar-bg: #014d5b;
+  --navbar-text-color: white;
+  --body-bg-color: #017a8b;
+  --body-text-color: #000;
+  --card-bg-color: #f9f9f9;
+  --card-text-color: #017a8b;
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+  --primary-color: #185a8c ;
+  --navbar-bg: #407d9a ;
+  --navbar-text-color: #f1f1f1;
+  --body-bg-color: #86bdd7;
+  --body-text-color: #eaeaea;
+  --card-bg-color: #2c2c2c;
+  --card-text-color: #f39c12;
+}
+.home-content .btn {
+  background-color: var(primary-color);
+}
+.search-login button {
+  background-color: var(primary-color);
+}
+.carousel-caption h5 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Apply colors */
+body {
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text-color);
+}
+
 /*
 header {
     display: flex;

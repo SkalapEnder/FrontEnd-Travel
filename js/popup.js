@@ -15,6 +15,7 @@ document.getElementById('overlay').addEventListener('click', function () {
 
 
 const form = document.getElementById('popup-form');
+const names = document.getElementById('name');
 const email = document.getElementById('email');
 
 const setError = (element, message) => {
@@ -48,6 +49,7 @@ const isValidEmail = email => {
 
 const validateInputs = () => {
     const emailValue = email.value.trim();
+    const nameValue = names.value.trim();
 
     if(emailValue === '') {
         setError(email, 'Email is required');
@@ -55,5 +57,13 @@ const validateInputs = () => {
         setError(email, 'Provide a valid email address');
     } else {
         setSuccess(email);
+    }
+
+    if(nameValue === '') {
+        setError(names, 'Name is required');
+    } else if(usernameValue.length < 3) {
+        setError(names, 'Your name length must be 3 or greater');
+    } else {
+        setSuccess(names);
     }
 };

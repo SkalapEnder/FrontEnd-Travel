@@ -1,3 +1,44 @@
+
+:root {
+    /* Light Mode Colors */
+    --primary-color: #017a8b;
+    --navbar-bg: #014d5b;
+    --navbar-text-color: white;
+    --body-bg-color: #f9f9f9;
+    --body-text-color: #1d1d1d;
+    --card-bg-color: #f9f9f9;
+    --card-text-color: #1d1d1d;
+    --card-info-color: #555555;
+
+    --discount-color-1: rgba(9,102,121,1);
+    --discount-color-2: rgba(0,176,134,1);
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+    --primary-color: #f1c40f;
+    --navbar-bg: #003341;
+    --navbar-text-color: white;
+    --body-bg-color: #1d1d1d;
+    --body-text-color: #eaeaea;
+    --card-bg-color: #3a3a3a;
+    --card-text-color: #f9f9f9;
+    --card-info-color: #cfcfcf;
+
+    --discount-color-1: rgb(5, 79, 94);
+    --discount-color-2: rgb(0, 126, 96);
+}
+
+body {
+    
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+}
+
 .search-section {
     align-items: center;
     text-align: center;
@@ -6,7 +47,7 @@
 }
 
 .search-section h1{
-    color: #333;
+    color: var(--body-text-color);
     font-weight: bolder;
 }
 
@@ -47,7 +88,7 @@
 }
 
 .event-card {
-    background-color: #fff;
+    background-color: var(--card-bg-color);
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(10, 10, 10, 0.616);
     overflow: hidden;
@@ -90,19 +131,15 @@
     
 }
 
-.event-cert{
-    color:darkgreen;
-}
-
 .event-details h3 {
-    color: black;
+    color: var(--card-text-color);
     font-size: 18px;
     font-weight: bold;
     margin: 5px 0;
 }
 
 .event-details h5 {
-    color: black;
+    color: var(--card-text-color);
     font-size: 15px;
     margin: 5px 0;
 }
@@ -110,7 +147,7 @@
 .event-details p {
     font-style: italic;
     font-size: 15px;
-    color: #555555;
+    color: var(--card-info-color);
     margin: 5px 0;
 }
 
@@ -125,7 +162,7 @@
 }
 
 .event-price .price {
-    color: black;
+    color: var(--card-text-color);
     font-weight: bold;
 }
 
@@ -153,7 +190,7 @@
     align-items: center;
     justify-content: center;
     
-    background: linear-gradient(0deg, rgba(1,77,91,1) 0%, rgba(9,102,121,1) 50%, rgba(0,176,134,1) 100%);
+    background: linear-gradient(0deg, var(--navbar-bg) 0%, var(--discount-color-1) 50%, var(--discount-color-2) 100%);
     color: azure;
 }
 
@@ -169,18 +206,6 @@
     display: none;
     transition: all 0.7s;
 }
-    
-.timer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.timer .timer_part{
-    margin: 10px;
-    padding: 3px;
-    background-color: rgba(0,0,0,0.4);
-}
 
 .discount-btn, .discount-close, .discount-link{
     background-color: rgba(0,0,0,0);
@@ -193,6 +218,7 @@
     position: absolute;
     top: 5px;
     right: 10px;
+    font-size: 32px;
 }
 
 .discount-submit{
@@ -208,11 +234,29 @@
     margin-right: 10px; 
     margin-top: 5px;
     transition: background-color .3s ease;
+    font-size: 25px;
+    font-weight: 700;
 
 }
 
 .discount-link:hover {
     background-color: #0000003a;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount h1, .timer h4{
+    font-weight: 500;
+}
+
+.timer .timer_part{
+    margin: 10px;
+    padding: 3px;
+    background-color: rgba(0,0,0,0.4);
 }
 
 /* Pop up section */
@@ -241,6 +285,7 @@
     background-color: rgba(0,0,0,0);
     border: 0;
     color: white;
+    font-size: 22px;
 }
 
 
@@ -261,7 +306,7 @@
 
 .popup-input .error{
     margin: 3px;
-    font-size: 10px;
+    font-size: 13px;
     color: #ff4848;
     background-color: transparent;
     border: 0;
