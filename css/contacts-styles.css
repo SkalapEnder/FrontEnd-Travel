@@ -77,6 +77,8 @@ form textarea{
     font-size: 1.25em;
     padding-left: 40px;
     padding-right: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 table{

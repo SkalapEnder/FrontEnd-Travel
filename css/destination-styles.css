@@ -273,8 +273,15 @@ body {
     border: 2px solid #000;
     z-index: 100;
     transition: all 1s;
+    opacity: 0;
     border: 0;
     border-radius: 10px;
+    transition: all 1s ease;
+}
+
+.popup.show{
+    display: block;
+    opacity: 1;
 }
 
 .popup .popup-close{

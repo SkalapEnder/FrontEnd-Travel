@@ -132,8 +132,45 @@
         <h1>Find your favorite travel path!</h1>
     </div>
     
-        
-    <div class="event-list">
+    <form id="filter-form">
+        <label for="city">City:</label>
+        <select id="city">
+            <option value="">--Select City--</option>
+            <option value="Almaty">Almaty</option>
+            <option value="Astana">Astana</option>
+            <!-- Add more cities as needed -->
+        </select>
+    
+        <label for="price">Max Price:</label>
+        <input type="number" id="price" placeholder="Enter max price">
+    
+        <label for="duration">Duration:</label>
+        <select id="duration">
+            <option value="">--Select Duration--</option>
+            <option value="1 day">1 day</option>
+            <option value="2 days">2 days</option>
+            <option value="3 days">3 days</option>
+        </select>
+    
+        <label>
+            <input type="checkbox" id="free-water"> Free Water
+        </label>
+    
+        <label>
+            <input type="checkbox" id="certified"> Certified
+        </label>
+    
+        <button type="button" onclick="filterTours()">Apply Filters</button>
+    </form>
+    
+    <button onclick="playSound('sounds/click_1.mp3')" type="button">Play Sound</button>
+    <audio src="sounds/click_1.mp3" id="test_sound"></audio>
+    <hr>
+    <script src="js/buttonSound.js"></script>
+    <script src="js/list/getEvents.js"></script>
+    
+    <div class="event-list" id="event-lists"></div>
+    <!-- <div class="event-list">
         <div class="event-card">
             <div class="event-image">
                 <img src="pictures/almatynka-lake.jpg" alt="Big Almaty Lake">
@@ -274,7 +311,7 @@
             </div>
         </div>
             
-    </div>
+    </div> -->
         
 </main>
 
@@ -298,6 +335,7 @@
 
 <!-- JS scripts -->
 <script src="js/discount.js"></script>
+<script src="js/getEvents.js"></script>
 <script src="js/popup.js"></script>
 <script src="js/bg-change.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

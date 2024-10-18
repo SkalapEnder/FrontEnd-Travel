@@ -1,22 +1,28 @@
-document.getElementById('discount-popup').addEventListener('click', function () {
-    document.getElementById('popupForm').style.display = 'block';
+const form = document.getElementById('popup-form');
+const names = document.getElementById('name');
+const email = document.getElementById('email');
+
+const discount document.getElementById('discount-popup')
+
+.addEventListener('click', function () {
+    document.getElementById('popupForm').classList.toggle('show');
     document.getElementById('overlay').style.display = 'block';
 });
 
 document.getElementById('popup-close-btn').addEventListener('click', function () {
-    document.getElementById('popupForm').style.display = 'none';
+    document.getElementById('popupForm').classList.toggle('show');
     document.getElementById('overlay').style.display = 'none';
 });
 
 document.getElementById('overlay').addEventListener('click', function () {
-    document.getElementById('popupForm').style.display = 'none';
+    document.getElementById('popupForm').classList.toggle('show');
     document.getElementById('overlay').style.display = 'none';
 });
 
 
-const form = document.getElementById('popup-form');
-const names = document.getElementById('name');
-const email = document.getElementById('email');
+
+
+
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;

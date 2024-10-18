@@ -145,9 +145,36 @@
                 <textarea id="textarea" type="text"></textarea>
                 <div class="error"></div>
             </div>
-            <div class="form-submit"><button type="submit">Send</button></div>
+            <div class="form-submit"><button type="submit">Send</button><button onclick="clearForm()">Clear</button></div>
         </form>
-
+        <script>
+            // Function to clear all input, textarea, and select elements
+            function clearForm() {
+                localStorage.clear();
+                const form = document.getElementById('form');
+    
+                // Clear all input fields
+                const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="number"], input[type="checkbox"], input[type="radio"]');
+                inputs.forEach(input => {
+                    input.value = ''; // Clear text input
+                    if (input.type === 'checkbox' || input.type === 'radio') {
+                        input.checked = false; // Uncheck checkboxes and radio buttons
+                    }
+                });
+    
+                // Clear all textarea fields
+                const textareas = form.querySelectorAll('textarea');
+                textareas.forEach(textarea => {
+                    textarea.value = ''; // Clear textarea
+                });
+    
+                // Reset all select elements
+                const selects = form.querySelectorAll('select');
+                selects.forEach(select => {
+                    select.selectedIndex = 0; // Reset to first option
+                });
+            }
+        </script>
         <div class="form-block w-100 text-center">
                 <div>
                     <table>
