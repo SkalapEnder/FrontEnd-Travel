@@ -68,3 +68,30 @@ const validateInputs = () => {
         removeError(textarea);
     }
 };
+
+// Function to clear all input, textarea, and select elements
+function clearForm() {
+    localStorage.clear();
+    const form = document.getElementById('form');
+
+    // Clear all input fields
+    const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="number"], input[type="checkbox"], input[type="radio"]');
+    inputs.forEach(input => {
+        input.value = ''; // Clear text input
+        if (input.type === 'checkbox' || input.type === 'radio') {
+            input.checked = false; // Uncheck checkboxes and radio buttons
+        }
+    });
+
+    // Clear all textarea fields
+    const textareas = form.querySelectorAll('textarea');
+    textareas.forEach(textarea => {
+        textarea.value = ''; // Clear textarea
+    });
+
+    // Reset all select elements
+    const selects = form.querySelectorAll('select');
+    selects.forEach(select => {
+        select.selectedIndex = 0; // Reset to first option
+    });
+}

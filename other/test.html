@@ -3,43 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Accordion</title>
+    <title>Flag Guessing Game</title>
     <style>
-        .faq-content {
-            display: none;
-            padding: 10px;
-            background-color: #f1f1f1;
-            transition: max-height 0.2s ease-out;
-        }
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
-        .faq-question {
-            cursor: pointer;
-            padding: 10px;
-            background-color: #ddd;
-            margin: 5px 0;
-        }
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.map {
+    width: 600px;
+    height: 400px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/BlankMap-World6.svg/1920px-BlankMap-World6.svg.png');
+    background-size: cover;
+    position: relative;
+    border: 2px solid #333;
+}
+
+.flags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flag {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+}
     </style>
 </head>
 <body>
-    <h2>FAQs</h2>
 
-    <div class="faq-item">
-        <div class="faq-question">What is your return policy?</div>
-        <div class="faq-content">Our return policy lasts for 30 days...</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">How do I track my order?</div>
-        <div class="faq-content">You can track your order using the tracking number...</div>
+    <h1>Country Flag Guessing Game</h1>
+    <div class="game-container">
+        <div class="map" id="map">
+            <h3>Drag the flags onto the map!</h3>
+        </div>
+        <div class="flags" id="flags">
+            <img src="https://restcountries.com/data/usa.svg" alt="USA Flag" class="flag" draggable="true" id="flag-usa" data-country="USA">
+            <img src="https://restcountries.com/data/kol.svg" alt="Kolkata Flag" class="flag" draggable="true" id="flag-india" data-country="India">
+            <img src="https://restcountries.com/data/gbr.svg" alt="UK Flag" class="flag" draggable="true" id="flag-uk" data-country="UK">
+        </div>
     </div>
 
     <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', function () {
-                const content = this.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
-            });
-        });
+        // script.js
+
+// Enable dragging for flag images
+const flags = document.querySelectorAll('.flag');
+
+flags.forEach(flag => {
+    flag.addEventListener('dragstart', dragStart);
+});
+
+// Add drop event handlers to the map
+const map = document.getElementById('map');
+
+map.addEventListener('dragover', dragOver);
+map.addEventListener('drop', drop);
+
+function dragStart(e) {
+    e.dataTransfer.setData('text/plain', e.target.id);
+}
+
+function dragOver(e) {
+    e.preventDefault(); // Prevent default to allow drop
+}
+
+function drop(e) {
+    e.preventDefault();
+    const flagId = e.dataTransfer.getData('text/plain');
+    const flag = document.getElementById(flagId);
+    
+    // Get the mouse position relative to the map
+    const rect = map.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    // Create a new flag image at the drop position
+    const newFlag = document.createElement('img');
+    newFlag.src = flag.src;
+    newFlag.className = 'flag';
+    newFlag.style.position = 'absolute';
+    newFlag.style.left = `${x}px`;
+    newFlag.style.top = `${y}px`;
+    newFlag.style.width = '50px'; // Size of the flag on the map
+    map.appendChild(newFlag);
+
+    // Optionally, remove the original flag from the flags list
+    flag.remove();
+}
+
     </script>
+
 </body>
 </html>

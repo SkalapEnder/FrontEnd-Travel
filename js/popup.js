@@ -2,9 +2,7 @@ const form = document.getElementById('popup-form');
 const names = document.getElementById('name');
 const email = document.getElementById('email');
 
-const discount document.getElementById('discount-popup')
-
-.addEventListener('click', function () {
+document.getElementById('discount-popup').addEventListener('click', function () {
     document.getElementById('popupForm').classList.toggle('show');
     document.getElementById('overlay').style.display = 'block';
 });

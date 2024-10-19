@@ -51,23 +51,6 @@ body {
     font-weight: bolder;
 }
 
-.search-filter {
-    margin-top: 20px;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.search-filter h1{
-    position: relative;
-    top: 50%;
-    padding: 5px 15px;
-    margin-right: 20px;
-    align-items: center;
-}
-
 .search-filter input {
     top: 50%;
     width: 50%;
@@ -261,30 +244,26 @@ body {
 
 /* Pop up section */
 .popup {
-    display: none;
     position: fixed;
+    right: -100%;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     padding: 40px;
-
+    width: 475px;
     background-color: rgba(1,77,91,1);
     color: white;
     border: 2px solid #000;
+    transition: right 0.75s ease-in-out;
     z-index: 100;
-    transition: all 1s;
-    opacity: 0;
     border: 0;
     border-radius: 10px;
-    transition: all 1s ease;
 }
 
 .popup.show{
-    display: block;
-    opacity: 1;
+    right: 37.5%;
 }
 
-.popup .popup-close{
+.popup-close{
     rotate: 45deg;
     position: absolute;
     top: 5px;
@@ -293,6 +272,7 @@ body {
     border: 0;
     color: white;
     font-size: 22px;
+    cursor: pointer;
 }
 
 
@@ -340,7 +320,7 @@ body {
 
 }
 
-.popup.show, .overlay.show{
+.overlay.show{
     display: block;
 }
 
@@ -355,4 +335,47 @@ body {
     z-index: 99;
 
     transition: all 1s;
+}
+
+.filter-form{
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 8px;
+    color: var(--card-text-color);
+}
+
+.filter-form label{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--card-text-color);
+}
+
+.filter-form button{
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 7px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.filter-section{
+    display: flex;
+    padding:10px;
+    justify-content: space-around;
+}
+
+.filter-section input[type="number"], .filter-section select{
+    padding:6px;
+    color: var(--card-text-color);
+    background-color: var(--card-bg-color);
+    border-radius: 5px;
+}
+
+.filter-currency label{
+    font-size: 1em;
+    font-weight: 800;
 }

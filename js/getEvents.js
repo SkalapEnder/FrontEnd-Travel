@@ -91,7 +91,7 @@ const data = [
       "title": "Bus tour Hop-On Hop-Off across historical places",
       "description": "Visit the popular sights and historical places of this great city",
       "duration": "1 day",
-      "included": "Audioguide: as desired",
+      "included": "Free water",
       "certification": true,
       "price": 15.00,
       "rating": {
@@ -104,8 +104,8 @@ const data = [
       "city": "Astana",
       "title": "National Museum, Palace of Peace and Reconciliation, etc.",
       "description": "Bus tour in the night time in Astana",
-      "duration": "5 hours",
-      "included": "Audioguide: as desired",
+      "duration": "1 day",
+      "included": "Free water",
       "certification": false,
       "price": 8.00,
       "rating": {
@@ -118,7 +118,7 @@ const data = [
       "city": "Almaty",
       "title": "Ice skating in Medeu",
       "description": "Skating on the ice of the highest skating rink in the world!",
-      "duration": "4 hours",
+      "duration": "2 days",
       "included": "Dinner",
       "certification": true,
       "price": 18.00,
@@ -137,22 +137,40 @@ function extractTextData(data) {
 }
 
 let events = extractTextData(data);
-console.log(events);
 
-// Display initial tours
+const currencyRadios = document.querySelectorAll("input[type='radio']");
+
+function getSelectedCurrency() {
+  let selectedCurrency = "";
+  for(let i = 0; i < currencyRadios.length; i++){
+      if(currencyRadios[i].checked){
+        selectedCurrency = currencyRadios[i].value;
+        break;
+      }
+  }
+
+  return selectedCurrency;
+}
+
+
+currencyRadios.forEach(radio => {
+  radio.addEventListener('change', getSelectedCurrency);
+});
+
 window.onload = function() {
-    displayTours(data); // Show all tours initially
+    displayTours(data); 
 };
 
-// Function to display tours
-function displayTours(list) {
-    const eventList = document.getElementById('event-lists');
-    eventList.innerHTML = ''; // Clear previous results
 
+function displayTours(list) {
+    const eventList = document.getElementById('event-lists'); 
+
+    eventList.innerHTML = ''; 
+    console.log(getSelectedCurrency());
     if (list.length === 0) {
         eventList.innerHTML = '<p>No tours found.</p>';
     } else {
-        list.forEach(eventObj => { // Correctly use the forEach method on list
+        list.forEach(eventObj => {
             let certificate = "";
             if (eventObj.certification) {
                 certificate = "<p class=\"event-cert\">TrustTour certification</p>";
@@ -173,7 +191,7 @@ function displayTours(list) {
                     </div>
 
                     <div class="event-price">
-                        <p class="price">from ${eventObj.price}$</p>
+                        <p class="price">from ` + convert(eventObj.price, getSelectedCurrency()) + `</p>
                         <p class="rating">★ ${eventObj.rating.score} (${eventObj.rating.reviews})</p>
                     </div>
                 </div>
@@ -182,25 +200,50 @@ function displayTours(list) {
     }
 }
 
-// Function to filter tours
+function convert(priceInUSD, toWhat){
+  let exchangeRate = 1.0;
+  let costSymbol = "$";
+
+  switch (toWhat){
+      
+      case "RUB": 
+        exchangeRate = 97.16;
+        costSymbol = "₽";
+        console.log("1");
+        break;
+      case "KZT": 
+        exchangeRate = 487.49;
+        costSymbol = "₸";
+        console.log("2");
+        break;
+      case "USD":
+      default:
+        exchangeRate = 1.0;
+        costSymbol = "$";
+        console.log("3");
+        break;
+  }
+  return (priceInUSD * exchangeRate).toFixed(2) + "" + costSymbol;
+}
+
+
 function filterTours() {
     const city = document.getElementById('city').value;
     const maxPrice = parseFloat(document.getElementById('price').value);
     const duration = document.getElementById('duration').value;
-    const freeWater = document.getElementById('free-water').checked;
+    const included = document.getElementById('included').value;
     const certified = document.getElementById('certified').checked;
 
-    // Filter the data
+
     const filteredTours = data.filter(eventObj => {
         return (
             (city === '' || eventObj.city === city) &&
             (isNaN(maxPrice) || eventObj.price <= maxPrice) &&
             (duration === '' || eventObj.duration === duration) &&
-            (!freeWater || eventObj.included.includes("Free water")) && // Assuming you want to check for "Free water"
+            (included === '' || eventObj.included === included) &&
             (!certified || eventObj.certification === certified)
         );
     });
 
-    // Display the filtered results
     displayTours(filteredTours);
 }
