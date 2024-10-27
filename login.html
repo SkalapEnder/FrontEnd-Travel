@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="css/book-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+   <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: linear-gradient(90deg, rgba(81,73,210,0.2) 25%, rgba(47,47,230,0.44) 44%, rgba(46,50,231,0.44) 56%, rgba(39,74,235,0.4431022408963585) 64%, rgba(0,212,255,0.5) 90%), url("pictures/banner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+    }
+
+    .backlayer{
+        padding: 20px;
+        
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        background-size: cover;
+        background-position: center;
+        opacity: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        background: rgba(0, 108, 128, 1);
+        box-shadow: 10px 10px;
+        padding: 40px;
+        border-radius: 35px;
+        margin-top: -10%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: Myslide2;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+
+    form {
+        opacity: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    h2 {
+        font-style: "Nerko One", cursive;
+        margin-bottom: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    label {
+        margin-bottom: 5px;
+        color: white;
+    }
+
+    input, select {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .backbutton{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .submitbutton{
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+        padding: 10px;
+    
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+
+    button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        
+    }
+
+    .art-subtext{
+        align-items: center;
+    }
+            @keyframes Myslide2{
+        from{margin-top:100%}
+        to{margin-top: -10%;
+        }
+    }
+        #error-message {
+        color: rgb(255, 90, 25);
+        padding: 15px;
+        text-align: center;
+        font-size: 1.2em;
+    }
+       
+</style>
+</head>
+    
+<body>
+    <div class="backlayer">
+        <a href="index.html" class="backbutton"><img src="pictures/back-arrow.png" width="40" height="40" alt="Back"></a>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <form id="loginForm">
+                <h2>Log In</h2>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Enter your password" required>
+
+                
+                <div id="error-message"></div>
+               
+                <button class="submitbutton" type="submit">Log In</button>
+            </form> 
+        </div>
+    </div>
+    <script src="js/auth/loginUser.js"></script>
+    <script src="js/save-form.js"></script>
+</body>
+</html>

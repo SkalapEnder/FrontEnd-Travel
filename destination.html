@@ -22,7 +22,7 @@
 
 <!-- Discount section --->
 <div class="discount">
-    <h1>Win in little game and get 5% one-time discount for your travels!</h1>
+    <h1>Subscribe to our newslatter and get 5% one-time discount for your travels!</h1>
     
     <button class="discount-close">+</button>
     
@@ -45,7 +45,7 @@
 <div class="overlay" id="overlay"></div>
 
 <div class="popup" id="popupForm">
-    <h2>Subscribe to our Newsletter</h2>
+    <h2>Subscribe to our newsletter</h2>
     <form id="popup-form">
         <div class="popup-line">
             <label style="font-size: 20px;">Name:</label>
@@ -109,9 +109,7 @@
                     </li>
                 </ul>
                     
-                <div class="d-flex justify-content-center search-login bt-group" role="group">
-                    <button class="btn btn-light me-2" onclick="window.location.href = 'book_now.html';">Sign Up</button>
-                    <button class="btn btn-light me-4" onclick="window.location.href = 'book_now.html';">Sign In</button>
+                <div id="auth-section" class="d-flex justify-content-center search-login bt-group" role="group">
                 </div>
                 
                 <img src="pictures/dark_mode.webp" id="icon" alt="Toggle Mode">
@@ -141,7 +139,7 @@
             </div>
             <div>
                 <label for="price">Max Price:</label>
-                <input type="number" id="price" placeholder="Enter max price">
+                <input type="number" id="price" placeholder="Enter max price"><p id="currencySymbol"></p>
             </div>
         </div>
         <div class="filter-section">
@@ -184,7 +182,10 @@
                 </div>
             </div>
         </div>
-    <button type="button" onclick="filterTours()">Apply Filters</button>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="mx-2" onclick="filterTours()">Apply Filters</button>
+        <button type="button" onclick="clearFilters()">Clear Filters</button>
+    </div>
     </form>
     
     <div class="event-list" id="event-lists"></div>
@@ -353,28 +354,15 @@
 </footer>
 
 <!-- JS scripts -->
-<script src="js/discount.js"></script>
-<script src="js/getEvents.js"></script>
-<script src="js/popup.js"></script>
+<script src="js/auth/loadUser.js"></script>
+
+<script src="js/destination/discount.js"></script>
+<script src="js/destination/getEvents.js"></script>
+<script src="js/destination/popup.js"></script>
+
 <script src="js/bg-change.js"></script>
+<script src="js/save-form.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Select the rating element and the slider
-    const ratingElement = document.getElementById('rating');
-    const ratingSlider = document.getElementById('rating-slider');
-
-    // Function to update the rating text based on slider value
-    ratingSlider.addEventListener('input', function() {
-        const sliderValue = ratingSlider.value;
-        const newRating = (sliderValue / 10).toFixed(1); // Divide by 10 and format to 1 decimal
-        ratingElement.textContent = newRating; // Update the rating text
-    });
-
-    // Set the initial rating when the page loads
-    window.onload = function() {
-        const initialValue = ratingSlider.value;
-        ratingElement.textContent = (initialValue / 10).toFixed(1);
-    };
-</script>
 </body>
 </html> 

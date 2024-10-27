@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "image": "pictures/almatynka-lake.jpg",
+    "city": "Almaty",
+    "title": "Bus tour to nature places (Kayndy, Medeu, Shymbulak, etc)",
+    "description": "Bus Tour starts from Almaty city's center and ends in Kayndy Lake",
+    "duration": "2 days",
+    "included": "Free water",
+    "certification": true,
+    "price": 40.00,
+    "rating": {
+      "score": 4.0,
+      "reviews": 523
+    }
+  },
+  {
+    "id": 2,
+    "image": "pictures/aktau.jpg",
+    "city": "Aktau",
+    "title": "Visit beach of the biggest lake in the world",
+    "description": "Come and see the biggest lake in the world!",
+    "duration": "3 days",
+    "included": "Dinner and breakfast",
+    "certification": true,
+    "price": 50.00,
+    "rating": {
+      "score": 4.1,
+      "reviews": 681
+    }
+  },
+  {
+    "id": 3,
+    "image": "pictures/sharyn-canyon.jpg",
+    "city": "Aktau",
+    "title": "Bus tour Hop-On Hop-Off to Sharyn Canyon",
+    "description": "Visit one of the amazing nature spots of Kazakhstan",
+    "duration": "1 day",
+    "included": "Free water",
+    "certification": true,
+    "price": 25.00,
+    "rating": {
+      "score": 4.4,
+      "reviews": 256
+    }
+  },
+  {
+    "id": 4,
+    "image": "pictures/baiterek.jpg",
+    "city": "Astana",
+    "title": "Bus tour through the capital with restaurant visit",
+    "description": "Visit the capital of the Great Steppe",
+    "duration": "1 day",
+    "included": "Dinner",
+    "certification": false,
+    "price": 27.00,
+    "rating": {
+      "score": 4.2,
+      "reviews": 1453
+    }
+  },
+  {
+    "id": 5,
+    "image": "pictures/baikonur.jpg",
+    "city": "Baikonur",
+    "title": "Special bus tour program",
+    "description": "Visit the place where the first manned space flight was launched",
+    "duration": "2 days",
+    "included": "Dinner and breakfast",
+    "certification": true,
+    "price": 45.00,
+    "rating": {
+      "score": 4.9,
+      "reviews": 2135
+    }
+  },
+  {
+    "id": 6,
+    "image": "pictures/28Panfilov.jpg",
+    "city": "Almaty",
+    "title": "Bus tour Hop-On Hop-Off across historical places",
+    "description": "Visit the popular sights and historical places of this great city",
+    "duration": "1 day",
+    "included": "Free water",
+    "certification": true,
+    "price": 15.00,
+    "rating": {
+      "score": 4.8,
+      "reviews": 1337
+    }
+  },
+  {
+    "id": 7,
+    "image": "pictures/palace.jpg",
+    "city": "Astana",
+    "title": "National Museum, Palace of Peace and Reconciliation, etc.",
+    "description": "Bus tour in the night time in Astana",
+    "duration": "1 day",
+    "included": "Free water",
+    "certification": false,
+    "price": 8.00,
+    "rating": {
+      "score": 3.9,
+      "reviews": 134
+    }
+  },
+  {
+    "id": 8,
+    "image": "pictures/medeu2.jpg",
+    "city": "Almaty",
+    "title": "Ice skating in Medeu",
+    "description": "Skating on the ice of the highest skating rink in the world!",
+    "duration": "2 days",
+    "included": "Dinner",
+    "certification": true,
+    "price": 18.00,
+    "rating": {
+      "score": 4.7,
+      "reviews": 634
+    }
+  }
+]

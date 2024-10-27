@@ -372,7 +372,98 @@ nav ul li a:hover {
     width: 316px;
     padding-inline: 2.5rem;
   }
+.game-container {
+    z-index: 1000;
+    position: absolute;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 600px;
+    margin-top: 300px;
+    margin-left: 450px;
+    animation: MySlide4 3s ease-in-out; /* Adjusted the animation */
+    animation-fill-mode: forwards; /* Stay at the final state */
+    opacity: 0; /* Initial state to fade in */
+    transition: opacity 3s; /* Smooth transition for visibility */
+}
+.close-button{
+    padding-left: 10px;
+    padding-top: 3px;
+    margin-left: 50px;
+    font-size: 20px;
+    text-align: center;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+}
+@keyframes MySlide4 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        position: fixed;
+    }
+}
+.close-button:hover{
+    background-color: darkred;
+    transition: 0.5s;
+}
 
+        #word-bank, #sentence {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .word {
+            margin: 5px;
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropzone {
+            margin: 5px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            min-width: 60px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropzone.filled {
+            background-color: transparent;
+            border: none;
+        }
+
+button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        audio {
+            margin-top: 20px;
+            display: none;
+        }
+#song{
+    display: none;
+}
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
