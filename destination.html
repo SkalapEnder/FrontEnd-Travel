@@ -12,19 +12,16 @@
 
     <link href="css/common-styles.css" rel="stylesheet">
     <link href="css/destination-styles.css" rel="stylesheet">
-    <style>
-        
-    
-    </style>
 </head>
     
 <body>
 
 <!-- Discount section --->
 <div class="discount">
-    <h1>Subscribe to our newslatter and get 5% one-time discount for your travels!</h1>
-    
     <button class="discount-close">+</button>
+    <h2>Subscribe to our newslatter and get newest information for your travels!</h2>
+    
+   
     
     <div class="timer">
         <h4>Left time:</h4>
@@ -43,6 +40,7 @@
 
 
 <div class="overlay" id="overlay"></div>
+<div class="overlay-ans" id="overlay-ans"></div>
 
 <div class="popup" id="popupForm">
     <h2>Subscribe to our newsletter</h2>
@@ -67,7 +65,10 @@
     </form>
     <button class="popup-close" id="popup-close-btn">+</button>
 </div>
-
+<div class="popup-answer" id="popup-answer">
+    <h3>Thanks to subscribe!</h3>
+    <button class="popup-close" id="popup-asnwer-close-btn">+</button>
+</div>
 <!-- Discount --->
 
 <header>
@@ -108,11 +109,11 @@
                         <a class="nav-link" href="contacts.html">FAQs</a>
                     </li>
                 </ul>
-                    
+                
+                <img src="pictures/light_mode.png" id="icon" alt="Toggle Mode">
+
                 <div id="auth-section" class="d-flex justify-content-center search-login bt-group" role="group">
                 </div>
-                
-                <img src="pictures/dark_mode.webp" id="icon" alt="Toggle Mode">
             </div>
 
         </div>
@@ -127,7 +128,7 @@
     
     <form class="filter-form" id="filter-form">
         <div class="filter-section">
-            <div>
+            <div class="filter-filter">
                 <label for="city">City:</label>
                 <select id="city">
                     <option value="">Select City</option>
@@ -137,13 +138,13 @@
                     <option value="Baikonur">Baikonur</option>
                 </select>
             </div>
-            <div>
+            <div class="filter-filter">
                 <label for="price">Max Price:</label>
                 <input type="number" id="price" placeholder="Enter max price"><p id="currencySymbol"></p>
             </div>
         </div>
         <div class="filter-section">
-            <div>
+            <div class="filter-filter">
                 <label for="duration">Duration:</label>
                 <select id="duration">
                     <option value="">Select Duration</option>
@@ -153,7 +154,7 @@
                 </select>
             </div>
             
-            <div>
+            <div class="filter-filter">
                 <label for="included">Extras:</label>
                 <select id="included">
                     <option value="">Select Extras</option>
@@ -164,11 +165,11 @@
             </div>
         </div>
         <div class="filter-section">
-            <div>
+            <div class="filter-filter">
                 <label for="certification">Is have certification:</label>
                 <input type="checkbox" id="certified">
             </div>
-            <div>
+            <div class="filter-filter">
                 <label>Currency: </label>
                 <div class="btn-group filter-currency" id="button-groups" role="group" data-bs-theme="dark">
                     <input type="radio" value="USD" class="btn-check" name="btnradio" id="btnradio1">

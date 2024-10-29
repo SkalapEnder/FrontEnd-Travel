@@ -40,8 +40,14 @@ body::-webkit-scrollbar{
 }
 
 #icon {
+    position: default;
     width: 30px;
+    height: 30px;
     cursor: pointer;
+    background-color: none;
+    top: 0;
+    right: 0;
+        
 }
 
 #logotype{
@@ -60,9 +66,10 @@ body {
 }
 
 #icon {
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 
@@ -164,7 +171,7 @@ footer ul li a:hover {
 
 .offcanvas{
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);  
+    background-color: rgba(0, 0, 0, 0.651);  
 }
 
 .offcanvas .nav-link{
@@ -183,4 +190,30 @@ footer ul li a:hover {
 .offcanvas .offcanvas-title{
     font-family: "Permanent Marker", sans-serif;
     font-size: 3rem;
+}
+
+.offcanvas .offcanvas-body .navbar-nav .nav-item .active{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+@media (max-width: 992px) {
+    .logo h1{
+        font-size: 1.75rem;
+    }
+
+    .logo img{
+        height: 30px;
+        width: 30px;
+    }
+
+    #icon{
+        margin-right: 0;
+        position: absolute;
+        top: 40px;
+        right: 100px;
+        width: 50px;
+        height: 50px;
+    }
 }

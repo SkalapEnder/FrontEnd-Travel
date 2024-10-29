@@ -58,7 +58,9 @@ prevBtns.forEach(btn => {
 
 // Clear form function
 function clearForm() {
-    document.getElementById('form').reset();
+    document.querySelectorAll("input, select, textarea").forEach((element) => {
+        localStorage.removeItem(element.id);
+        element.value = ""; });
     currentStep = 0;
     updateFormStep();
 }

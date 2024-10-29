@@ -1,3 +1,17 @@
+:root {
+    --navbar-bg: #014d5b;
+    --navbar-text-color: white;
+    --form-bg-color: #014d5b;
+    --form-text-color: #1d1d1d;
+}
+
+.dark-mode {
+    --navbar-bg: #003341;
+    --navbar-text-color: white;
+    --form-bg-color: #1d1d1d;
+    --form-text-color: #eaeaea;
+}
+
 .backlayer{
     background-color: rgba(0,0,0,0.7);
 }
@@ -90,9 +104,28 @@ table{
 }
 
 td{
+    border: 1px solid #0d312e;
     font-family: "Lato", sans-serif;
     font-weight: 100;
     font-style: normal;
+    padding: 5px;
+}
+
+tr{
+    border: 1px solid #0d312e;
+    padding: 5px;
+}
+
+td h5{
+    font-size: 1.25rem;
+}
+
+tr h1{
+    font-size: 2rem;
+}
+
+th h3{
+    font-size: 1.75rem;
 }
 
 label h2{
@@ -104,6 +137,7 @@ label h2{
 .faq-section {
     max-width: 600px;
     margin: 0 auto;
+    padding: 15px;
 }
 
 .faq {
@@ -113,9 +147,11 @@ label h2{
     margin-bottom: 10px;
     padding: 15px;
     cursor: pointer;
+    justify-content: center;
 }
 
 .faq h2 {
+    text-align: center;
     margin: 0;
     font-size: 20px;
     display: flex;
@@ -151,7 +187,7 @@ label h2{
 
 .popup {
     position: fixed;
-    right: -100%;
+    right: -200%;
     top: 50%;
     transform: translateY(-50%);
     padding: 40px;
@@ -284,4 +320,42 @@ label h2{
     z-index: 99;
 
     transition: all 1s;
+}
+
+.popup-answer {
+    position: fixed;
+    right: -200%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px;
+    width: 475px;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+    border: 2px solid #000;
+    transition: right 0.75s ease-in-out;
+    z-index: 102;
+    border: 0;
+    border-radius: 10px;
+}
+
+.popup-answer.show{
+    right: 37.5%;
+}
+
+@media (max-width: 900px) {
+    .faq-section{
+        
+    }
+
+    td h5{
+        font-size: 1rem;
+    }
+    
+    tr h1{
+        font-size: 1.5rem;
+    }
+    
+    th h3{
+        font-size: 1.25rem;
+    }
 }

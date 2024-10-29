@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {   
-    const deadline = new Date("2024-10-30");
+    const deadline = new Date("2024-11-30");
 
     let timerId = null;
     let isClosed = false;
