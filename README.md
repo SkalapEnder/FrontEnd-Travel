@@ -1,3 +1,4 @@
+#**Link:** https://skalapender.github.io/FrontEnd-Travel/
 
 # KazDream Travel Website
 
@@ -36,6 +37,7 @@ KazDream is a travel website designed to inspire exploration and help users disc
 - **JavaScript** files in `js/` manage interactivity, including game logic and timer functions.
 - **Images** and **audio files** are stored in `pictures/` and `sounds/`, respectively.
 
+#**Link:** https://skalapender.github.io/FrontEnd-Travel/
 ---
 
 © Astana IT University, 2024. Developed by Kazhybek Asset and Alisher Berik.
