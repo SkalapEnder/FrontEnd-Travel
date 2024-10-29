@@ -1,20 +1,21 @@
 
 :root {
-    /* Light Mode Colors */
-    --primary-color: #017a8b;
     --navbar-bg: #014d5b;
     --navbar-text-color: white;
-    --body-bg-color: #f9f9f9;
-    --body-text-color: #1d1d1d;
+    --form-bg-color: #014d5b;
+    --form-text-color: #1d1d1d;
+    --button-color-unhov: rgba(1, 77, 91, 0.4);
+    --button-color-hov: rgba(1, 77, 91, 0.8);
 }
 
-/* Dark Mode Colors */
 .dark-mode {
-    --primary-color: #f1c40f;
     --navbar-bg: #003341;
     --navbar-text-color: white;
-    --body-bg-color: #1d1d1d;
-    --body-text-color: #eaeaea;
+    --form-bg-color: #003341;
+    --form-text-color: #eaeaea;
+
+    --button-color-unhov: rgba(0, 51, 65, 0.4);
+    --button-color-hov: rgba(0, 51, 65, 0.8);
 }
 
 body, main {

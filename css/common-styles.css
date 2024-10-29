@@ -84,7 +84,10 @@ footer *{
 }
 
 footer {
-    padding: 20px;
+    position: static;
+    bottom: 0;
+    padding: 15px;
+    width: 100%;
     background-color: #1e2022;
     text-align: center;
 }
@@ -104,11 +107,13 @@ footer ul li a {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, font-size 0.3s;
+    font-weight: default;
 }
 
 footer ul li a:hover {
     background-color:rgba(0, 0, 0, 0.5)f;
     font-size: 25px;
+    font-weight: 600;
 }
 
 
@@ -159,8 +164,8 @@ footer ul li a:hover {
 
 .profile-img{
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 0px 5px;
 }
 
@@ -215,5 +220,23 @@ footer ul li a:hover {
         right: 100px;
         width: 50px;
         height: 50px;
+    }
+
+    .profile-img{
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+
+@media (max-width: 700px){
+    footer *{
+        font-size: 14px;
+    }
+
+    footer ul li a:hover{
+        font-size: 20px;
+        
     }
 }

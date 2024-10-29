@@ -36,7 +36,7 @@ function updateAuthSection() {
 function setTheme(userData){
     if(userData.theme === "dark"){
         document.body.classList.toggle("dark-mode");
-        icon.src = document.body.classList.contains("dark-mode") ? "pictures/light_mode.png" : "pictures/dark_mode.webp";
+        icon.src = document.body.classList.contains("dark-mode") ? "pictures/dark_mode.png" : "pictures/light_mode.png";
     }
 }
 

@@ -3,17 +3,26 @@
     --navbar-text-color: white;
     --form-bg-color: #014d5b;
     --form-text-color: #1d1d1d;
+    --button-color-unhov: rgba(1, 77, 91, 0.7);
+    --button-color-hov: rgba(1, 77, 91, 1);
+
+    --back-bg-color: rgba(0,0,0,0.55);
 }
 
 .dark-mode {
     --navbar-bg: #003341;
     --navbar-text-color: white;
-    --form-bg-color: #1d1d1d;
+    --form-bg-color: #003341;
     --form-text-color: #eaeaea;
+
+    --button-color-unhov: rgba(0, 51, 65, 0.7);
+    --button-color-hov: rgba(0, 51, 65, 1);
+
+    --back-bg-color: rgba(0,0,0,0.86);
 }
 
 .backlayer{
-    background-color: rgba(0,0,0,0.7);
+    background-color: var(--back-bg-color);
 }
 
 body{
@@ -21,11 +30,12 @@ body{
 }
 
 .form-block{
-    width: 70%;
+    width: 95%;
     justify-content: center;
-    padding: 20px;
-    margin: auto;
-    background-color: #014d5b;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: var(--form-bg-color);
     border-radius: 3px;
     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.9);
 }
@@ -34,7 +44,7 @@ form{
     justify-content: center;
     padding: 20px;
     margin: auto;
-    background-color: #014d5b;
+    background-color: var(--form-bg-color);
     border-radius: 3px;
 }
 
@@ -61,10 +71,10 @@ form input, textarea{
     border: 2px solid #f0f0f0;
 	border-radius: 4px;
 	display: block;
-	font-size: 18px;
+	font-size: 20px;
 	padding: 10px;
 
-    height: 30px;
+    height: 40px;
     width: 100%;
 }
 
@@ -85,14 +95,17 @@ form textarea{
 .form-step button{
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
-    padding: 10px;
+    padding: 5px 20px;
     border: 0;
     color: white;
     font-size: 1.25em;
-    padding-left: 20px;
-    padding-right: 20px;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.form-step, .form-step-active{
+    padding: 0;
+    margin: 0;
 }
 
 table{
@@ -104,7 +117,7 @@ table{
 }
 
 td{
-    border: 1px solid #0d312e;
+    border: 1px solid #062421;
     font-family: "Lato", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -141,7 +154,7 @@ label h2{
 }
 
 .faq {
-    background-color: #014d5b;
+    background-color: var(--form-bg-color);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
@@ -187,22 +200,25 @@ label h2{
 
 .popup {
     position: fixed;
-    right: -200%;
-    top: 50%;
-    transform: translateY(-50%);
+    right: -300%;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     padding: 40px;
     width: 600px;
-    background-color: rgba(1,77,91,1);
+    
+    background-color: var(--form-bg-color);
     color: white;
     border: 2px solid #000;
-    transition: right 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     z-index: 100;
     border: 0;
     border-radius: 10px;
+    margin: auto;
 }
 
 .popup.show{
-    right: 37.5%;
+    right: 25%;
 }
 
 .popup-close{
@@ -218,6 +234,7 @@ label h2{
 }
 
 .form-step {
+    justify-content: center;
     display: none;
 }
 
@@ -229,7 +246,7 @@ label h2{
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: rgba(1,77,91, 0.4);
+    background-color: var(--button-color-unhov);
     border-radius: 3px;
     padding: 10px;
     border: 0;
@@ -242,67 +259,7 @@ label h2{
 }
 
 #popup-open-btn:hover{
-    background-color: rgba(1,77,91, 1);
-}
-
-.overlay.show{
-    display: block;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    z-index: 99;
-
-    transition: all 1s;
-}
-
-.popup-line, .popup-form{
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
-.popup-input{
-    margin: 10px;
-    font-size: 20px;
-    color: white;
-    background-color: transparent;
-    border: 0;
-}
-
-.popup-input .error{
-    margin: 3px;
-    font-size: 13px;
-    color: #ff4848;
-    background-color: transparent;
-    border: 0;
-}
-
-.popup-input.error input{
-    border-color: #ff4848;
-}
-
-.popup-input input{
-    border-radius: 5px;
-    width: auto;
-}
-
-.popup-submit{
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-    padding: 10px;
-    border: 0;
-    color: white;
-    font-size: 1.25em;
-    padding-left: 40px;
-    padding-right: 40px;
-
+    background-color: var(--button-color-hov);
 }
 
 .overlay.show{
@@ -324,11 +281,12 @@ label h2{
 
 .popup-answer {
     position: fixed;
-    right: -200%;
-    top: 50%;
-    transform: translateY(-50%);
+    right: -400%;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     padding: 40px;
-    width: 475px;
+    width: 400px;
     background-color: rgba(0, 0, 0, 0.678);
     color: white;
     border: 2px solid #000;
@@ -336,15 +294,29 @@ label h2{
     z-index: 102;
     border: 0;
     border-radius: 10px;
+    margin: auto;
 }
 
 .popup-answer.show{
-    right: 37.5%;
+    right: 25%;
+}
+
+.success-message {
+    color: green;
+    display: none;
+}
+.error-message {
+    color: red;
+    display: none;
 }
 
 @media (max-width: 900px) {
-    .faq-section{
-        
+    .popup{
+        width: 80%;
+    }
+
+    .popup-answer{
+        width: 80%;
     }
 
     td h5{
@@ -357,5 +329,19 @@ label h2{
     
     th h3{
         font-size: 1.25rem;
+    }
+
+    .faq.open .faq-answer {
+        max-height: 200px; 
+    }
+}
+
+@media (max-width: 500px){
+    .popup, .popup-answer {
+        width: 90%;
+    }
+
+    .popup-input input{
+        width: 100%;
     }
 }

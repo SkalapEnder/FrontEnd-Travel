@@ -51,7 +51,7 @@ const validateInputs = () => {
     } else if(usernameValue.length < 3) {
         setError(username, 'Username length must be 3 or greater');
     } else {
-        setSuccess(username);
+        removeError(username);
     }
 
     if(emailValue === '') {
@@ -59,7 +59,7 @@ const validateInputs = () => {
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
     } else {
-        setSuccess(email);
+        removeError(email);
     }
 
     if(textareaValue === ''){
@@ -71,15 +71,16 @@ const validateInputs = () => {
 
 // Function to clear all input, textarea, and select elements
 function clearForm() {
-    localStorage.clear();
     const form = document.getElementById('form');
 
     // Clear all input fields
     const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="number"], input[type="checkbox"], input[type="radio"]');
     inputs.forEach(input => {
-        input.value = ''; // Clear text input
+         // Clear text input
         if (input.type === 'checkbox' || input.type === 'radio') {
             input.checked = false; // Uncheck checkboxes and radio buttons
+        } else {
+            input.value = '';
         }
     });
 

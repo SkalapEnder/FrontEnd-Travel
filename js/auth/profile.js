@@ -12,6 +12,8 @@ class userProfileObj {
     }
 }
 
+const icon = document.getElementById("icon");
+const theme = document.getElementById('profile-theme');
 const deletePopup = document.querySelector('.deleteQst');
 const closePopup = document.getElementById('close-popup');
 const overlay = document.getElementById('overlay');
@@ -70,16 +72,18 @@ function getUser(userID){
 function changeTheme(){
     let user = getUser(parseInt(localStorage.getItem("activeUserId")));
 
+    document.body.classList.toggle("dark-mode");
+    icon.src = document.body.classList.contains("dark-mode") ? "pictures/dark_mode.png" :  "pictures/light_mode.png" ;
+
+    document.getElementById('profile-theme').innerText = user.theme === "dark" ? 'White' : 'Dark';
     user.theme = (user.theme === "dark" ? 'white' : 'dark');
-    document.getElementById('profile-theme').innerText = user.theme === "dark" ? 'Dark' :  'White';
     updateCurrentUser(user);
-    changeBG();
 }
 
 function setTheme(userData){
     if(userData.theme === "dark"){
         document.body.classList.toggle("dark-mode");
-        icon.src = document.body.classList.contains("dark-mode") ? "pictures/light_mode.png" : "pictures/dark_mode.webp";
+        icon.src = document.body.classList.contains("dark-mode") ? "pictures/dark_mode.png" : "pictures/light_mode.png";
     }
 }
 
@@ -136,11 +140,6 @@ function loadActiveUserProfile() {
     }
 }
 
-function changeBG(){
-    document.body.classList.toggle("dark-mode");
-    icon.src = document.body.classList.contains("dark-mode") ? "pictures/light_mode.png" : "pictures/dark_mode.webp";
-}
-
 function deleteAccount(){
     let user = getUser(parseInt(localStorage.getItem("activeUserId")));
 
@@ -156,3 +155,9 @@ function deleteAccount(){
 
     logoutUser();
 }
+
+icon.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    icon.src = document.body.classList.contains("dark-mode") ? "pictures/light_mode.png" : "pictures/dark_mode.png";
+    theme.innerText = theme.innerText === "Dark" ? "White" : "Dark";
+});

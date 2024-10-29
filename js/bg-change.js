@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const icon = document.getElementById("icon");
 
-    const groups = document.getElementById('button-groups');
+    document.body.classList.contains("dark-mode") ? changeThemeCurrencyButtons() : 0;
 
     icon.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
         icon.src = document.body.classList.contains("dark-mode") ? "pictures/dark_mode.png" :  "pictures/light_mode.png";
-        changeThemeCurrencyButtons();
+         changeThemeCurrencyButtons();
     });
 
     function changeThemeCurrencyButtons() {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if(label.classList.contains('btn-outline-dark')){
                 label.classList.add('btn-outline-light');
                 label.classList.remove('btn-outline-dark');
-            } else{
+            } else {
                 label.classList.add('btn-outline-dark');
                 label.classList.remove('btn-outline-light');
             }

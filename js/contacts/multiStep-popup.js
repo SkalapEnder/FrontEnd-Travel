@@ -1,32 +1,17 @@
 const popupForm = document.getElementById('popupForm');
-
+const overlay = document.getElementById('overlay');
 const openButton = document.getElementById('popup-open-btn');
 const closeButton = document.getElementById('popup-close-btn');
+
 const formSteps = document.querySelectorAll('.form-step');
 const nextBtns = document.querySelectorAll('.next-btn');
 const prevBtns = document.querySelectorAll('.prev-btn');
-const overlay = document.getElementById('overlay');
 
 const popupAnswer = document.getElementById('popup-answer');
 const popupAnswerClose = document.getElementById('popup-answer-close-btn');
 
 let currentStep = 0;
 
-// Function to show the popup
-openButton.addEventListener('click', () => {
-    popupForm.classList.add('show');
-    overlay.classList.add('show');
-    currentStep = 0;
-    updateFormStep();
-});
-
-// Function to hide the popup
-closeButton.addEventListener('click', () => {
-    popupForm.classList.remove('show');
-    overlay.classList.remove('show');
-});
-
-// Update form step display
 function updateFormStep() {
     formSteps.forEach((step, index) => {
         step.classList.remove('form-step-active');
@@ -36,7 +21,112 @@ function updateFormStep() {
     });
 }
 
-// Navigate to the next step
+function clearForm() {
+    document.querySelectorAll("input, select, textarea").forEach((element) => {
+        localStorage.removeItem(element.id);
+        element.value = ""; 
+    });
+    currentStep = 0;
+    updateFormStep();
+}
+
+const sendBtn = document.getElementById('form-send-btn');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const textarea = document.getElementById('textarea');
+
+sendBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    if(validateInputs()){
+        popupAnswer.classList.add('show');
+        clearForm();
+    }
+    else {}
+})
+
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+const removeError = element =>{
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.remove('error');
+}
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const textareaValue = textarea.value.trim();
+    
+    if(validateEmail(emailValue) & validateName(usernameValue) & validateTexting(textareaValue)){ return true;}
+
+    return false;
+};
+
+function validateEmail(emailValue){
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+        return false;
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+        return false;
+    } else {
+        removeError(email);
+        return true;
+    }
+}
+
+function validateName(usernameValue){
+    if(usernameValue === '') {
+        setError(username, 'Username is required');
+        return false;
+    } else if(usernameValue.length < 3) {
+        setError(username, 'Username length must be 3 or greater');
+        return false;
+    } else {
+        removeError(username);
+        return true;
+    }
+}
+
+function validateTexting(textareaValue){
+    if(textareaValue === ''){
+        setError(textarea, 'Please, write something');
+        return false;
+    } else {
+        removeError(textarea);
+        return true;
+    }
+}
+
+openButton.addEventListener('click', () => {
+    popupForm.classList.add('show');
+    overlay.classList.add('show');
+    currentStep = 0;
+    updateFormStep();
+});
+
+
+closeButton.addEventListener('click', () => {
+    popupForm.classList.remove('show');
+    overlay.classList.remove('show');
+});
+
+
 nextBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         if (currentStep < formSteps.length - 1) {
@@ -46,7 +136,6 @@ nextBtns.forEach(btn => {
     });
 });
 
-// Navigate to the previous step
 prevBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         if (currentStep > 0) {
@@ -56,15 +145,13 @@ prevBtns.forEach(btn => {
     });
 });
 
-// Clear form function
-function clearForm() {
-    document.querySelectorAll("input, select, textarea").forEach((element) => {
-        localStorage.removeItem(element.id);
-        element.value = ""; });
-    currentStep = 0;
-    updateFormStep();
-}
+overlay.addEventListener('click', () =>{
+    popupForm.classList.remove('show');
+    overlay.classList.remove('show');
+})
 
-function sendForm(){
-    popupAnswer.classList.add('show');
-}
+popupAnswerClose.addEventListener('click', () =>{
+    popupAnswer.classList.remove('show');
+    popupForm.classList.remove('show');
+    overlay.classList.remove('show');
+})
