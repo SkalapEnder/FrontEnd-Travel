@@ -7,7 +7,7 @@ function loginUser(userId) {
 function checkUser(email, password){
     let userList = JSON.parse(localStorage.getItem("userList"));
     
-    if(userList[0] === null){
+    if(userList === null || userList[0] === null || userList.length === 0){
         return -1;
     } else {
         for(let i = 0; i < userList.length; i++){
