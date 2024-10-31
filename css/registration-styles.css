@@ -17,9 +17,8 @@
     box-shadow: 10px 10px;
     padding: 35px;
     border-radius: 35px;
-    margin-top: 2%;
+    margin-top: -2%;
     margin-bottom: 2%;
-    width: 370px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: Myslide2;
     animation-duration: 2s;
@@ -39,15 +38,6 @@ h2 {
     font-size: 28px;
     text-align: center;
     color: white;
-}
-
-label {
-    font-size: 22px;
-    margin-bottom: 5px;
-}
-input{
-    font-size: 14px;
-    height: 55px;
 }
 
 input, select {
@@ -160,32 +150,29 @@ a:hover {
         width: 100%;
     }
     .form-container{
-        position: static;
-        padding: 25px;
+        padding: 20px;
         margin-bottom: 5%;
-        max-width: 90%;
+        width: 90%;
     }
     fieldset{
         flex-direction: column;
         height: 120px;
-    }
+    }    
 }
 
 @media (max-width: 550px){
     .backbutton{
         position: static;
         margin: 15px;
-        right: 0;
-        top: 0; 
-        left: 0; 
-        transform: none;
+        top: 0;
+        left: 0;
     }
     body {
         width: 100vw;
     }
 }
 
-@media (max-width: 860px){
+@media (max-width: 860px), (max-height: 800px){
     .container{
         height: 100%;
         background-size: fill;
@@ -195,7 +182,6 @@ a:hover {
 
 @keyframes Myslide2{
     from{margin-top:100%}
-    to{margin-top: 2%;
-    }
+    to{margin-top: -2%;}
     
 }
