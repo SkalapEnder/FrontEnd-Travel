@@ -11,6 +11,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 .backlayer{
     padding: 20px;
     
@@ -21,7 +25,7 @@ body {
 .container {
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 96vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +58,8 @@ h2 {
 }
 
 label {
-    margin-bottom: 5px;
-    color: mistyrose;
+    margin-bottom: 10px;
+    color: white;
 }
 
 input {
@@ -88,8 +92,11 @@ button:hover {
     
 }
 
-.art-subtext{
-    align-items: center;
+#error-message {
+    color: rgb(255, 90, 25);
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 @keyframes Myslide2{

@@ -50,7 +50,8 @@ function createProfile(userData){
     document.getElementById('profile-name').innerText = userData.name;
     document.getElementById('profile-surname').innerText = userData.surname;
     document.getElementById('profile-gender').innerText = userData.gender == 1 ? 'Male' : 'Female';
-    document.getElementById('profile-age').innerText = calculateAge(userData.birthday);
+    document.getElementById('profile-age').innerText = calculateAge(userData.birthday) + " year"
+    document.getElementById('profile-bday').innerText = getRightDate(userData.birthday);
     document.getElementById('profile-email').innerText = userData.email;
     document.getElementById('profile-theme').innerText = userData.theme === "dark" ? 'Dark' : 'White';
 };
@@ -91,7 +92,7 @@ function placeImage(userData){
     if(userData.image== "" || userData.image === null){
         return `<img class="profile-img" src="https://eu.ui-avatars.com/api/?name=${userData.name}+${userData.surname}&size=250" alt="profileImage">`
     } else{
-        return `<img class="profile-img" src="${userData.image}" alt="profileImage">`
+        return `<img class="profile-img" src=${userData.image} alt="profileImage">`
     }
 };
 
@@ -112,6 +113,11 @@ function updateCurrentUser(User){
     }
 
     localStorage.setItem("userList", JSON.stringify(userList));
+}
+
+function getRightDate(dateString){
+    const birthDate = new Date(dateString);
+    return birthDate.toLocaleDateString();
 }
 
 function calculateAge(dateString) {
@@ -150,6 +156,8 @@ function deleteAccount(){
             break;
         }
     }
+
+    userList = userList.filter(element => element !== null);
 
     localStorage.setItem("userList", JSON.stringify(userList));
 

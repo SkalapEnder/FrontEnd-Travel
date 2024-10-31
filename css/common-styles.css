@@ -104,10 +104,10 @@ footer ul li {
 
 footer ul li a {
     background-color:rgba(0, 0, 0, 0)f;
-    text-decoration: none;
+    text-decoration: underline;
     border-radius: 5px;
     transition: background-color 0.3s, font-size 0.3s;
-    font-weight: default;
+    font-weight: 500;
 }
 
 footer ul li a:hover {
@@ -230,13 +230,13 @@ footer ul li a:hover {
 
 
 
-@media (max-width: 700px){
+@media (max-width: 550px){
     footer *{
-        font-size: 14px;
+        font-size: 18px;
     }
 
     footer ul li a:hover{
-        font-size: 20px;
-        
+        font-weight: 700;
+        font-size: 22px;
     }
 }

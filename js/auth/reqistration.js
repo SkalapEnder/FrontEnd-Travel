@@ -12,6 +12,7 @@ class userProfileObj {
     }
 }
 
+// Get elements from page
 const form = document.getElementById('registrationForm');
 const userName = document.getElementById('name');
 const userSurname = document.getElementById('surname');
@@ -20,65 +21,27 @@ const gender = document.getElementById('gender');
 const email = document.getElementById('email');
 const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
-
+const themeWhite = document.getElementById("theme-radio-w");
+const themeDark = document.getElementById("theme-radio-d");
+const errorMessage = document.getElementById("error-message");
 
 // Form validation code
 form.addEventListener('submit', e => {
     e.preventDefault();
 
     if(validateInputs()){
-        createUser();
-        clearForm();
-        window.location.href = "./profile.html";
-        console.log("I'm here!")
-    };
-});
-
-function createUser(){
-    let newUser = new userProfileObj(getFreeID(), userName.value, userSurname.value, '', birthDate.value, gender.value, email.value, password1.value, "white");
-
-    updateUsers(newUser);
-    loginUser(newUser.id);
-    setTimeout(() => window.location.href = "profile.html", 2000);
-}
-
-function getFreeID(){
-    let userList = JSON.parse(localStorage.getItem("userList"));
-    if(userList === null || userList[0] === null || userList.length === 0) { return 0; }
-    for(let i = 0; i < userList.length; i++){
-        if(userList[i].id != i){
-            return i;
+        if(!findSameEmail(email)){
+            createUser();
+            clearForm();
+            window.location.href = "./profile.html";
+        } else {
+            errorMessage.style.display = 'block';
+            setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
         }
     }
-    return userList.length;
-}
+});
 
-function updateUsers(newUser){
-    let userList = JSON.parse(localStorage.getItem("userList"));
-    
-    if(userList === null || userList[0] === null || userList.length === 0){
-        userList = [];
-    } 
-    userList.push(newUser);
-
-    localStorage.setItem("userList", JSON.stringify(userList));
-}
-
-function loginUser(userId) {
-    localStorage.setItem("activeUserId", userId);
-    localStorage.setItem("loggedin", true);
-}
-
-function clearForm(){
-    document.querySelectorAll("input, select, textarea").forEach((element) => {
-    localStorage.removeItem(element.id);
-    if (element.type === 'radio') { element.checked = false;}
-    else if (element.type === 'checkbox') { element.checked = false;} 
-    else { element.value = ""; }
-    }
-)};
-
-
+// Validate input section
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
@@ -185,6 +148,40 @@ const validateInputs = () => {
     }
 };
 
+
+
+// New user functions
+function createUser(){
+    sortingList();
+
+    let image = `https://eu.ui-avatars.com/api/?name=${userName.value}+${userSurname.value}&size=250`
+    let newUser = new userProfileObj(getFreeID(), userName.value, userSurname.value, image, birthDate.value, 
+                                    gender.value, email.value, password1.value, getTheme());
+    updateUsers(newUser);
+    loginUser(newUser.id);
+    setTimeout(() => window.location.href = "profile.html", 2000);
+}
+
+function getTheme(){
+    if (themeWhite.checked) {
+        return themeWhite.value;
+    } else if (themeDark.checked) {
+        return themeDark.value;
+    } else return "white";
+}
+
+function getFreeID(){
+    let userList = JSON.parse(localStorage.getItem("userList"));
+    let j = 0;
+    if(userList === null || userList.length === 0) { return 0; }
+    for(let i = 0; i < userList.length; i++){
+        if(userList[i].id != j){
+            return j;
+        } else ++j;
+    }
+    return userList.length;
+}
+
 function isUpper18(dateString){
     const birthDate = new Date(dateString);
     const today = new Date();
@@ -199,3 +196,74 @@ function isUpper18(dateString){
 
     return age >= 18;
 }
+
+function findSameEmail(email){
+    let userList = JSON.parse(localStorage.getItem("userList"));
+    
+    if(userList === null || userList.length === 0){
+        return false;
+    } else {
+        for(let i = 0; i < userList.length; i++){
+            let user = userList[i];
+            if(email.value === user.email){
+                return true;
+            }
+        }
+        
+        return false;
+    }
+}
+
+// Sorting section
+function sortingList(){
+    let userList = JSON.parse(localStorage.getItem("userList"));
+
+    if(userList === null || userList.length === 0) return;
+
+    userList.sort(sort_by_id());
+    localStorage.setItem("userList", JSON.stringify(userList));
+}
+
+function sort_by_id() {
+    return function (elem1, elem2) {
+      if (elem1.id < elem2.id) {
+        return -1;
+      } else if (elem1.id > elem2.id) {
+        return 1;
+      } else {
+        return 0;
+      }
+    };
+  }
+
+// Section with localStorage
+function updateUsers(newUser){
+    let userList = JSON.parse(localStorage.getItem("userList"));
+    
+    if(userList === null || userList.length === 0){
+        userList = [];
+    } 
+    userList.push(newUser);
+    
+    localStorage.setItem("userList", JSON.stringify(userList));
+}
+
+function loginUser(userId) {
+    localStorage.setItem("activeUserId", userId);
+    localStorage.setItem("loggedin", true);
+}
+
+function clearForm(){
+    document.querySelectorAll("input, select, textarea").forEach((element) => {
+    localStorage.removeItem(element.id);
+    if (element.type === 'radio') { element.checked = false;}
+    else if (element.type === 'checkbox') { element.checked = false;}
+    else if (element.type === 'email' | element.type === 'text' | element.type === 'password'){ 
+        element.value = ""; 
+    }
+    else { element.value = ""; }
+    }
+)};
+
+
+

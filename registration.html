@@ -5,127 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/book-styles.css">
+    <link rel="stylesheet" href="css/login-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-   <style>
-                * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
+    <style>
     body {
         background-image: linear-gradient(90deg, rgba(81,73,210,0.2) 25%, rgba(47,47,230,0.44) 44%, rgba(46,50,231,0.44) 56%, rgba(39,74,235,0.4431022408963585) 64%, rgba(0,212,255,0.5) 90%), url("pictures/banner.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         font-family: Arial, sans-serif;
     }
-
-    .backlayer{
-        padding: 20px;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .container {
-        background-size: cover;
-        background-position: center;
-        opacity: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .form-container {
-        background: rgba(0, 108, 128, 1);
-        box-shadow: 10px 10px;
-        padding: 40px;
-        border-radius: 35px;
-        margin-top: -10%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        animation: Myslide2;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-    }
-
-    form {
-        opacity: 100%;
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-    }
-
-    h2 {
-        font-style: "Nerko One", cursive;
-        margin-bottom: 20px;
-        text-align: center;
-        color: white;
-    }
-
-    label {
-        margin-bottom: 5px;
-        color: white;
-    }
-
-    input, select {
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 10px;
-        border: 1px solid #fff;
-        border-radius: 5px;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .backbutton{
-        background-color: rgba(0, 0, 0, 0);
-    }
-
-    .submitbutton{
-        font-size: 18px;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    button {
-        padding: 10px;
-
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-
-    }
-
-    button:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        
-    }
-
-    .art-subtext{
-        align-items: center;
-    }
-            @keyframes Myslide2{
-        from{margin-top:100%}
-        to{margin-top: -10%;
-        }
-    }
-        #error-message {
-        color: rgb(255, 90, 25);
-        padding: 15px;
-        text-align: center;
-        font-size: 1.2em;
-    }
-
-    @media (max-width:420px){
-        form{
-            width: 90%;
-        }
-        .form-container{
-            padding: 20px;
-        }
-    }
-</style>
+    
+    </style>
 </head>
     
 <body>
@@ -135,32 +27,32 @@
 <div class="container">
     <div class="form-container">
         <form id="registrationForm">
-            <h2>Sign Up</h2>
-            <div class="d-flex">
+            <h2>Sign Up | <a href="login.html">Log In</a></h2>
+            <div class="d-flex popup-line">
                 <label for="name">Your name</label>
-                <div class="popup-input">
+                <div>
                     <input type="text" id="name" placeholder="Enter your name">
                     <div class="error"></div>
                 </div>
             </div>
-            <div class="d-flex">
+            <div class="d-flex popup-line">
                 <label>Your surname</label>
-                <div class="popup-input">
+                <div>
                     <input type="text" id="surname" placeholder="Enter your surname">
                     <div class="error"></div>
                 </div>
             </div>
-            <div class="d-flex">
+            <div class="d-flex popup-line">
                 <label>Your birthday</label>
-                <div class="popup-input">
-                    <input type="date" id="birthday">
+                <div>
+                    <input type="date" id="birthday" value="2001-09-11">
                     <div class="error"></div>
                 </div>
             </div>
-            <div class="d-flex">
+            <div class="d-flex popup-line">
                 <label>Your gender</label>
-                <div class="popup-input">
-                    <select class="form-select shadow-lg" id="gender">
+                <div>
+                    <select class="form-select" id="gender">
                         <option value="" selected >Choose...</option>
                         <option value="1">Male</option>
                         <option value="2">Female</option>
@@ -168,33 +60,63 @@
                     <div class="error"></div>
                 </div>
             </div>
+            <div class="d-flex popup-line">
+                <label>Your theme</label>
+                <div>
+                    <fieldset>
+                        <div class="radio-inline">
+                            <input type="radio" id="theme-radio-w" name="radio-theme" value="white" checked>
+                            <label for="radio-theme">White</label>
+                            <img src="pictures/light_mode.png">
+                        </div>
+                        <div class="radio-inline">
+                            <input type="radio" id="theme-radio-d" name="radio-theme" value="dark">
+                            <label for="radio-theme">Dark</label>
+                            <img src="pictures/dark_mode.png">
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
             <br>
-            <div class="d-flex">
+            <div class="d-flex popup-line">
                 <label>Your email</label>
-                <div class="popup-input">
+                <div>
                     <input type="email" id="email">
                     <div class="error"></div>
                 </div>
             </div>
 
-            <div class="d-flex">
+            <div class="d-flex popup-line">
                 <label>Your Password</label>
-                <div class="popup-input">
+                <div>
                     <input type="password" id="password1" placeholder="Enter your password">
                     <div class="error"></div>
                 </div>
             </div>
 
-            <div class="d-flex">
+            <div class="d-flex popup-line">
                 <label>Your Password again</label>
-                <div class="popup-input">
+                <div>
                     <input type="password" id="password2" placeholder="Enter your password again">
                     <div class="error"></div>
                 </div>
             </div>
+            
+            <button class="submitbutton" id="submitbutton" type="submit">Sign Up</button>
+        </form>
+        <div class="popup-answer" id="error-message">
+            <h3>This email is exist! <br /> Try log in or write another email</h3>
+        </div>
+            
+    </div>
+    <div class="error-message" id="errorMessage"><h2></h2></div>
+</div>
+<script src="js/auth/reqistration.js"></script>
+<script src="js/save-form.js"></script>
+<script src="js/calendar.js"></script>
+</body>
+</html>
 
-            
-            
             <!-- <label for="surname">Your surname</label>
             <input type="text" id="surname" placeholder="Enter your surname">
             
@@ -221,16 +143,4 @@
             <textarea id="description"></textarea>
             
             <div id="error-message" style="color: red; display: none;">Check-out cannot be earlier than check-in</div> -->
-            
-            <button class="submitbutton" id="submitbutton" type="submit">Sign Up</button>
-        </form>
-        
-            
-    </div>
-    <div class="error-message" id="errorMessage"><h2></h2></div>
-</div>
-<script src="js/auth/reqistration.js"></script>
-<script src="js/save-form.js"></script>
-<script src="js/calendar.js"></script>
-</body>
-</html>
+         

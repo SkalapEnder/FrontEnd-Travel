@@ -37,11 +37,13 @@ body, main {
     padding: 20px;
     justify-content: center;
     margin: auto;
+    margin-bottom: screen;
 }
 .profile-section{
     margin: 10px;
     justify-content: center;
     display: flex;
+    flex-direction: row;
     color: var(--body-text-color);
 }
 #profile-img{
@@ -71,6 +73,7 @@ body, main {
     color: white;
     font-size: 20px;
     font-weight: 600;
+    width: 120px;
     border: 0;
     padding: 8px;
     border-radius: 7px;
@@ -127,4 +130,14 @@ body, main {
     z-index: 99;
 
     transition: all 1s;
+}
+
+@media (max-width:350px){
+    .profile-section{
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .changeThemeBtn{
+        margin-left: 0;
+    }
 }
