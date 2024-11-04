@@ -12,6 +12,7 @@
     <link href="css/main-styles.css" rel="stylesheet">
     <script src="js/game.js"></script>
     <script src="js/timer-main.js"></script>
+    <script src="js/destination/chat.js" defer></script>
     <style>
     .timer{
     display: flex;
@@ -21,8 +22,33 @@
 </head>
     
 <body>
- <div class="game-container">
-        <h3>Arrange the words and get special gift!<button class="close-button" onclick="closeGame()">x</button></h3>
+    <div id="chatContainer">
+    <div id="profileHeader">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ79rKX_zHyVVvDNRft6_98Nd373KDxhmArug&s" alt="Jungkook's Photo" id="profilePhoto">
+      <div>
+        <h3 id="profileName" style="margin: 0;">Jungkook</h3>
+        <span id="onlineStatus">Online</span>
+      </div>
+         <button id="closeButton" onclick="closeChat()">✕</button>
+    </div>
+
+     
+    <div id="chatWindow">
+      <div id="messages"></div>
+    </div>
+    <div id="inputArea">
+      <input type="text" id="messageInput" placeholder="Message..." onkeypress="checkEnter(event)">
+      <button onclick="sendMessage()" id="button-chat">Send</button>
+    </div>
+  </div>
+<div class='gameBody'>
+    
+     <div class="game-container">
+        <button class="close-button" onclick="closeGame()">x</button>
+        <h3 class="title-game-cont">
+            <p class="text-title">Arrange the words and get special gift!</p>
+            
+        </h3>
         
         <div id="word-bank">
             <div class="word" draggable="true" ondragstart="drag(event)" id="word1">euphoria</div>
@@ -53,6 +79,9 @@
         <audio id="button-sound" src="/sounds/button-sound.mp3" preload="auto"></audio>
         <audio id="button-sound-error" src="sounds/button-sound-error.mp3"></audio>
     </div>
+    </div>
+
+
 
   <header>
     <nav class="navbar navbar-dark navbar-expand-lg p-3">
@@ -92,10 +121,12 @@
                         <a class="nav-link" href="contacts.html">FAQs</a>
                     </li>
                 </ul>
-                
-                <div id="auth-section" class="d-flex justify-content-center search-login bt-group" role="group">
+                    
+                <div class="d-flex justify-content-center search-login bt-group" role="group">
+                    <button class="btn btn-light me-2" onclick="window.location.href = 'registration.html';">Sign Up</button>
+                    <button class="btn btn-light me-4" onclick="window.location.href = 'login.html';">Sign In</button>
                 </div>
-
+                
                 <img src="pictures/dark_mode.webp" id="icon" alt="Toggle Mode">
             </div>
 
@@ -124,8 +155,8 @@
     
 
      <div class="container-fluid justify-content-center text-center mb-5">
-         <div class="row">
-         <div class="card__container">
+        <div class="row">
+        <div class="card__container">
         <article class="card__article me-2">
             
             <figure>
@@ -139,6 +170,7 @@
             </div>
                 
              </article>
+
         <article class="card__article me-2">
             
             <figure><img src="pictures/image2.jpg" alt="Medeu">
@@ -197,7 +229,7 @@
     </div>
 </footer>
 
-<script src="js/auth/loadUser.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
