@@ -15,9 +15,7 @@ body::-webkit-scrollbar{
     display: none;
 }
 
-.backlayer{
-    padding: 20px;
-    
+.backlayer{    
     background-size: cover;
     background-position: center;
 }
@@ -37,7 +35,7 @@ body::-webkit-scrollbar{
     padding: 20px;
     border-radius: 35px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity:78%;
+
     filter:drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
     animation: Myslide2;
      animation-duration: 4s;

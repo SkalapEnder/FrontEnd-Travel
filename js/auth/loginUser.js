@@ -5,6 +5,7 @@ const errorMessage = document.getElementById('error-message');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
+    let popupTimeout = 4000;
 
     if(validateInputs()){
         let res = checkUser(email.value, password.value);
@@ -21,7 +22,7 @@ form.addEventListener('submit', e => {
 
             errorMessage.style.display = 'block';
             errorMessage.innerHTML = msg;
-            setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            setTimeout(() => { errorMessage.style.display = 'none'; }, popupTimeout);
         }
     }
 });

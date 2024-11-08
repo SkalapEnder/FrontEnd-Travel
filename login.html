@@ -10,34 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            background-image: linear-gradient(90deg, rgba(81,73,210,0.2) 25%, rgba(47,47,230,0.44) 44%, rgba(46,50,231,0.44) 56%, rgba(39,74,235,0.4431022408963585) 64%, rgba(0,212,255,0.5) 90%), url("pictures/banner.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-        }
-        
-        @keyframes Myslide2{
-            from{top:200%}
-            to{top: 50%;
-            }
-            
-        }
-        .form-container{
-            width: 370px;
-            position: fixed;
-            right: 25%;
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%);
-            animation: Myslide2;
-            animation-duration: 2s;
-            animation-iteration-count: 1;
-        }
-        </style>
 </head>
     
 <body>
@@ -50,14 +22,14 @@
             <h2><a href="registration.html">Sign Up</a> | Log In</h2>
             
             <div class="popup-line">
-                <label style="font-size: 20px;">Email:</label>
+                <label>Email:</label>
                 <div class="popup-input">
                     <input id="email" type="email" placeholder="Enter your email">
                     <div class="error"></div>
                 </div>
             </div>
             <div class="popup-line">
-                <label style="font-size: 20px;">Password:</label>
+                <label>Password:</label>
                 <div class="popup-input">
                     <input id="password1" type="password" placeholder="Enter your password">
                     <div class="error"></div>
@@ -69,6 +41,12 @@
         <div class="popup-answer" id="error-message"></div>
     </div>
 </div>
+    <script async type="text/javascript" 
+            src="https://cdn.enzoic.com/js/enzoic.min.js"></script>
+    <script type="text/javascript">
+        var passwordEl = document.getElementById('password1'); 
+        Enzoic.applyToInputElement(passwordEl);
+    </script>
     <script src="js/auth/loginUser.js"></script>
     <script src="js/save-form.js"></script>
 </body>

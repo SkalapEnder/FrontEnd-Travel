@@ -1,8 +1,8 @@
 class userProfileObj {
-    constructor(id, name, surname, image, birthday, gender, email, password, theme){
+    constructor(id, name, /*surname,*/ image, birthday, gender, email, password, theme){
         this.id = id;
         this.name = name;
-        this.surname = surname;
+        /*this.surname = surname;*/
         this.image = image;
         this.birthday = birthday;
         this.gender = gender;
@@ -15,14 +15,12 @@ class userProfileObj {
 // Get elements from page
 const form = document.getElementById('registrationForm');
 const userName = document.getElementById('name');
-const userSurname = document.getElementById('surname');
+// const userSurname = document.getElementById('surname');
 const birthDate = document.getElementById('birthday');
 const gender = document.getElementById('gender');
 const email = document.getElementById('email');
 const password1 = document.getElementById('password1');
 const password2 = document.getElementById('password2');
-const themeWhite = document.getElementById("theme-radio-w");
-const themeDark = document.getElementById("theme-radio-d");
 const errorMessage = document.getElementById("error-message");
 
 // Form validation code
@@ -36,7 +34,7 @@ form.addEventListener('submit', e => {
             window.location.href = "./profile.html";
         } else {
             errorMessage.style.display = 'block';
-            setTimeout(() => { errorMessage.style.display = 'none'; }, 3000);
+            setTimeout(() => { errorMessage.style.display = 'none'; }, 3500);
         }
     }
 });
@@ -66,14 +64,14 @@ const isValidEmail = email => {
 
 const validateInputs = () => {
     const userNameValue = userName.value.trim();
-    const userSurnameValue = userSurname.value.trim();
+    // const userSurnameValue = userSurname.value.trim();
     const emailValue = email.value.trim();
     const birthDateValue = new Date(birthDate.value);
     const genderValue = gender.value.trim();
     const password1Value = password1.value.trim();
     const password2Value = password2.value.trim();
 
-    let nameB, surnameB, emailB, birthB, genderB, passwordB;
+    let nameB, /*surnameB,*/ emailB, birthB, genderB, passwordB;
 
     if(userNameValue === '') {
         setError(userName, 'Name is required');
@@ -86,16 +84,16 @@ const validateInputs = () => {
         nameB = true;
     }
 
-    if(userSurnameValue === '') {
-        setError(userSurname, 'Surname is required');
-        surnameB = false;
-    } else if(userSurnameValue.length < 3) {
-        setError(userSurname, 'Surname length must be 3 or greater');
-        surnameB = false;
-    } else {
-        removeError(userSurname);
-        surnameB = true;
-    }
+    // if(userSurnameValue === '') {
+    //     setError(userSurname, 'Surname is required');
+    //     surnameB = false;
+    // } else if(userSurnameValue.length < 3) {
+    //     setError(userSurname, 'Surname length must be 3 or greater');
+    //     surnameB = false;
+    // } else {
+    //     removeError(userSurname);
+    //     surnameB = true;
+    // }
 
     if(emailValue === '') {
         setError(email, 'Email is required');
@@ -141,7 +139,7 @@ const validateInputs = () => {
         passwordB = true;
     }
 
-    if(nameB && surnameB && emailB && genderB && birthB && passwordB){
+    if(nameB /*&& surnameB*/ && emailB && genderB && birthB && passwordB){
         return true;
     } else{
         return false;
@@ -155,19 +153,11 @@ function createUser(){
     sortingList();
 
     let image = `https://eu.ui-avatars.com/api/?name=${userName.value}+${userSurname.value}&size=250`
-    let newUser = new userProfileObj(getFreeID(), userName.value, userSurname.value, image, birthDate.value, 
-                                    gender.value, email.value, password1.value, getTheme());
+    let newUser = new userProfileObj(getFreeID(), userName.value, /*userSurname.value,*/ image, birthDate.value, 
+                                    gender.value, email.value, password1.value, "white");
     updateUsers(newUser);
     loginUser(newUser.id);
     setTimeout(() => window.location.href = "profile.html", 2000);
-}
-
-function getTheme(){
-    if (themeWhite.checked) {
-        return themeWhite.value;
-    } else if (themeDark.checked) {
-        return themeDark.value;
-    } else return "white";
 }
 
 function getFreeID(){
