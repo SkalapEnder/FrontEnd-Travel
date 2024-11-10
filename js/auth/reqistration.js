@@ -127,6 +127,11 @@ const validateInputs = () => {
 
 
     if(password1Value === "" ){
+        if(password2Value === ""){
+            setError(password2, 'Write password!');
+        } else if(password2Value !== "") {
+            setError(password2, 'Passwords are not equal!');
+        }
         setError(password1, 'Write your password!');
         passwordB = false;
     } else if(password1Value !== password2Value){
@@ -152,7 +157,7 @@ const validateInputs = () => {
 function createUser(){
     sortingList();
 
-    let image = `https://eu.ui-avatars.com/api/?name=${userName.value}+${userSurname.value}&size=250`
+    let image = `https://eu.ui-avatars.com/api/?name=${userName.value}&size=250`
     let newUser = new userProfileObj(getFreeID(), userName.value, /*userSurname.value,*/ image, birthDate.value, 
                                     gender.value, email.value, password1.value, "white");
     updateUsers(newUser);

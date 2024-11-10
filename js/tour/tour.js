@@ -158,7 +158,134 @@ const data = [
     }
   ]
 
-let events = extractTextData(data);
+const tourInfo = document.getElementById('tourInfo');
+const tourImage = document.getElementById('tourImage');
+
+function createContentFromSession() {
+    const activeTourID = sessionStorage.getItem('activeTourID');
+    console.log(activeTourID);
+
+    if (activeTourID !== null) {
+        let tour = getTour(activeTourID);
+
+        createInfo(tour);
+        createWeather(tour);
+        suggestHotel(tour);
+
+    } else {
+        document.querySelector('main').innerHTML = `<h2 style="min-height: 100vh; padding:10%; margin: auto; text-align:center">There is no info about tour!<br><a href="destination.html">Back to list</a></h2>`
+    }
+}
+
+
+function getTour(id) {
+    const eventData = data.find(event => event.id == id);
+    console.log(eventData);
+    if (eventData) {
+        return new eventObj(
+            eventData.image,
+            eventData.title,
+            eventData.city,
+            eventData.description,
+            eventData.duration,
+            eventData.included,
+            eventData.certification,
+            eventData.price,
+            eventData.rating.score,
+            eventData.rating.reviews
+        );
+    } else {
+        return null;
+    }
+}
+
+function createInfo(tour){
+    document.title = `${tour.title}`;
+    
+    document.getElementById('tourMain').innerHTML =
+    `<h1>${tour.title}</h1>
+     <h4 id="tourRating">★${tour.rating_score} (${tour.rating_reviews})</h4>`
+
+    console.log(document.getElementById('tourMain').innerHTML);
+
+    tourInfo.innerHTML =
+    `<div class="tourField">
+        <label>City of tour:</label>
+        <h3> ${tour.city}</h3>
+    </div>
+
+    <div class="tourField">
+        <label>Duration:</label>
+        <h3> ${tour.duration}</h3>
+    </div>
+
+    <div class="tourField">
+        <label>Included: </label>
+        <h3>${tour.included}</h3>
+    </div>
+    `
+}
+
+// Price section
+function roundDown(number, base) { return Math.floor(number / base) * base; }
+  
+// Get right price, symbol and rate
+function convertPrice(priceInUSD, toWhat){
+    let exchangeRate = 1.0;
+
+    switch (toWhat){
+        
+        case "RUB": 
+            exchangeRate = 97.16;
+            break;
+        case "KZT": 
+            exchangeRate = 487.49;
+            break;
+        case "USD":
+        default:
+            exchangeRate = 1.0;
+            break;
+}
+return (priceInUSD * exchangeRate).toFixed(2);
+}
+
+function getRate(toWhat){
+    let exchangeRate = 1.0;
+
+    switch (toWhat){
+        
+        case "RUB": 
+            exchangeRate = 100.0;
+            break;
+        case "KZT": 
+            exchangeRate = 500.0;
+            break;
+        case "USD":
+        default:
+            exchangeRate = 1.0;
+            break;
+}
+
+return exchangeRate;
+}
+
+function convertSymbol(toWhat){
+    let costSymbol = "$";
+
+    switch (toWhat){
+        case "RUB": 
+        costSymbol = "₽";
+        break;
+        case "KZT": 
+        costSymbol = "₸";
+        break;
+        case "USD":
+        default:
+        costSymbol = "$";
+        break;
+    }
+    return costSymbol;
+}
 
 const currencyRadios = document.querySelectorAll("input[type='radio']");
 
@@ -174,159 +301,24 @@ function getSelectedCurrency() {
   return selectedCurrency;
 }
 
-
 currencyRadios.forEach(radio => {
-  radio.addEventListener('change', getSelectedCurrency);
-});
+    radio.addEventListener('change', updatePrice);
+  });
 
-window.onload = function() {
-    displayTours(data);
-    filterTours();
-    addEvents();
-};
+function updatePrice(){ createInfo(); }
 
 
-function displayTours(list) {
-    const eventList = document.getElementById('event-lists'); 
-    const footer = document.querySelector('footer');
-    eventList.innerHTML = ''; 
-    console.log(getSelectedCurrency());
-    if (list.length === 0) {
-        eventList.innerHTML = '<p>No tours found.</p>';
-        footer.style.position = 'absolute';
-    } else {
-        footer.style.position = 'static';
-        list.forEach(eventObj => {
-            let certificate = "";
-            if (eventObj.certification) {
-                certificate = "<p class=\"event-cert\">TrustTour certification</p>";
-            }
 
-            eventList.innerHTML += `
-                <div class="event-card card" data-id=${eventObj.id}>
-                    <div class="event-image">
-                        <img src="${eventObj.image}" alt="${eventObj.title}">
-                    </div>    
-
-                    <div class="event-details">
-                        <h3>${eventObj.city}: ${eventObj.title}</h3>
-                        <h5>${eventObj.description}</h5>
-                        <p>${eventObj.duration} • ${eventObj.included}</p>
-
-                        ${certificate}
-                    </div>
-
-                    <div class="event-price card-footer">
-                        <p class="price">from ` + roundDown(convertPrice(eventObj.price, getSelectedCurrency()), 10 * getRate(getSelectedCurrency())) + convertSymbol(getSelectedCurrency()) + `</p>
-                        <p class="rating">★ ${eventObj.rating.score} (${eventObj.rating.reviews})</p>
-                    </div>
-                </div>
-            `;
-        });
-    }
-}
-
-function addEvents(){
-  const cards = document.querySelectorAll('.card');
-  
-
-  cards.forEach(card => {
-    card.addEventListener('click', function(){
-      sessionStorage.setItem('activeTourID', card.getAttribute('data-id'));
-      window.location.href = "tour.html";
-    }
-  )});
-}
-
-function roundDown(number, base) {
-  return Math.floor(number / base) * base;
-}
-
-function convertPrice(priceInUSD, toWhat){
-  let exchangeRate = 1.0;
-
-  switch (toWhat){
-      
-      case "RUB": 
-        exchangeRate = 97.16;
-        break;
-      case "KZT": 
-        exchangeRate = 487.49;
-        break;
-      case "USD":
-      default:
-        exchangeRate = 1.0;
-        break;
-  }
-  return (priceInUSD * exchangeRate).toFixed(2);
-}
-
-function getRate(toWhat){
-  let exchangeRate = 1.0;
-
-  switch (toWhat){
-      
-      case "RUB": 
-        exchangeRate = 100.0;
-        break;
-      case "KZT": 
-        exchangeRate = 500.0;
-        break;
-      case "USD":
-      default:
-        exchangeRate = 1.0;
-        break;
-  }
-
-  return exchangeRate;
-}
-
-function convertSymbol(toWhat){
-    let costSymbol = "$";
-
-    switch (toWhat){
-        case "RUB": 
-          costSymbol = "₽";
-          break;
-        case "KZT": 
-          costSymbol = "₸";
-          break;
-        case "USD":
-        default:
-          costSymbol = "$";
-          break;
-    }
-    return costSymbol;
+function isHaveCertificate(certification){
+    if(certification) return 'Yes';
+    else return 'No';
 }
 
 
-function filterTours() {
-    const city = document.getElementById('city').value;
-    const maxPrice = parseFloat(document.getElementById('price').value);
-    const duration = document.getElementById('duration').value;
-    const included = document.getElementById('included').value;
-    const certified = document.getElementById('certified').checked;
-
-
-    const filteredTours = data.filter(eventObj => {
-        return (
-            (city === '' || eventObj.city === city) &&
-            (isNaN(maxPrice) || convertPrice(eventObj.price, getSelectedCurrency()) <= maxPrice) &&
-            (duration === '' || eventObj.duration === duration) &&
-            (included === '' || eventObj.included === included) &&
-            (!certified || eventObj.certification === certified)
-        );
-    });
-
-    displayTours(filteredTours);
-    addEvents();
+function removeActiveTour(){
+    sessionStorage.setItem('activeTour', null);
 }
 
-function clearFilters(){
-  document.querySelectorAll("input, select, textarea").forEach((element) => {
-      localStorage.removeItem(element.id);
-      if (element.type === 'radio') { element.checked = false;}
-      else if (element.type === 'checkbox') { element.checked = false;} 
-      else { element.value = ""; }
-      }
-  )};
+window.addEventListener('load', createContentFromSession);
+
+window.addEventListener('beforeunload', removeActiveTour);

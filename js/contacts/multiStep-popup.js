@@ -41,7 +41,9 @@ sendBtn.addEventListener('click', (event) => {
         popupAnswer.classList.add('show');
         clearForm();
     }
-    else {}
+    else {
+        updateFormStep();
+    }
 })
 
 
@@ -77,28 +79,59 @@ const validateInputs = () => {
     return false;
 };
 
-function validateEmail(emailValue){
-    if(emailValue === '') {
-        setError(email, 'Email is required');
+function isContainNumbers(usernameValue){
+    return usernameValue.match(/\d+/);
+}
+
+function isContainSpecials(username){
+    let specials = /[!@#$%^&*()\-+={}[\]:;"'<>,.?\/|\\]/;
+    return specials.test(username);
+}
+
+function isNameCorrect(usernameValue){
+    if(usernameValue.length < 3){
+        setError(username, 'Write longer name')
         return false;
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
-        return false;
-    } else {
-        removeError(email);
-        return true;
     }
+    
+    if (isContainNumbers(usernameValue)){
+        setError(username, 'Remove numbers')
+        return false;
+    }
+    
+    if (isContainSpecials(usernameValue)){
+        setError(username, 'Remove special symbols')
+        return false;
+    }
+
+    return true;
 }
 
 function validateName(usernameValue){
     if(usernameValue === '') {
+        currentStep = 0;
         setError(username, 'Username is required');
         return false;
-    } else if(usernameValue.length < 3) {
-        setError(username, 'Username length must be 3 or greater');
+    } else if(!isNameCorrect(usernameValue)) {
+        currentStep = 0;
         return false;
     } else {
         removeError(username);
+        return true;
+    }
+}
+
+function validateEmail(emailValue){
+    if(emailValue === '') {
+        currentStep = currentStep < 1 ? 0 : 1;
+        setError(email, 'Email is required');
+        return false;
+    } else if (!isValidEmail(emailValue)) {
+        currentStep = currentStep < 1 ? 0 : 1;
+        setError(email, 'Provide a valid email address');
+        return false;
+    } else {
+        removeError(email);
         return true;
     }
 }
@@ -113,6 +146,7 @@ function validateTexting(textareaValue){
     }
 }
 
+
 openButton.addEventListener('click', () => {
     popupForm.classList.add('show');
     overlay.classList.add('show');
@@ -120,12 +154,10 @@ openButton.addEventListener('click', () => {
     updateFormStep();
 });
 
-
 closeButton.addEventListener('click', () => {
     popupForm.classList.remove('show');
     overlay.classList.remove('show');
 });
-
 
 nextBtns.forEach(btn => {
     btn.addEventListener('click', () => {

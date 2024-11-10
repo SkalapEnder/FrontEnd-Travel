@@ -65,16 +65,21 @@
         </nav>
     </header>
     <main>
-        <div id="profile-img"></div>
+        <div style="text-align: center; margin: auto;">
+
+            <div id="profile-img"></div>
+            
+            <input type="file" id="inputImageProfile" style="display: none;" accept="image/*">
+            <div class="PhotoSection">
+                <button class="button changeProfile" onclick="triggerCamera()">Change Image</button>
+                <button class="button changeProfile" onclick="deletePhoto()">Delete Image</button>
+            </div>
+        </div>
 
         <div class="profile-info">
             <div class="profile-section">
                 <label for="profile-name">Name: </label>
                 <h3 id="profile-name" name="profile-name"></h3>
-            </div>
-            <div class="profile-section">
-                <label for="profile-surname">Surname: </label>
-                <h3 id="profile-surname" name="profile-surname"></h3>
             </div>
             <div class="profile-section">
                 <label for="profile-gender">Gender: </label>
@@ -97,11 +102,12 @@
                 <h3 id="profile-theme" name="profile-theme"></h3>
                 <button class="changeThemeBtn" onclick="changeTheme()">Change</button>
             </div>
+            <div class="profile-btns">
+                <button class="btn btn-outline-secondary" onclick="logoutUser()">Log out</button>
+                <button id="delete-Btn" class="btn btn-outline-danger">Delete account</button>
+            </div>
         </div>
-        <div class="profile-btns">
-            <button class="btn btn-outline-secondary" onclick="logoutUser()">Log out</button>
-            <button id="delete-Btn" class="btn btn-outline-danger">Delete account</button>
-        </div>
+        
         <div class="overlay" id="overlay"></div>
         <div class="deleteQst">
             <h3>Do you really want to delete account?</h3>

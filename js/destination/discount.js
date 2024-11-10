@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {   
     const deadline = new Date("2024-11-30");
-
+    console.log(isViaSession());
     let timerId = null;
+    let isViewed = isViaSession() ? sessionStorage.getItem("IsDiscountViewed") : localStorage.getItem("IsDiscountViewed");
+    console.log(isViewed);
     let isClosed = false;
+    
     // Calculate difference and turn off function
     function countdownTimer() {
       let diff = deadline - new Date();
@@ -39,13 +42,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showDiscountSection() {
         $discountSection.classList.add('open');
+        
+        isViaSession() ? 
+        sessionStorage.setItem("IsDiscountViewed", true) : 
+        localStorage.setItem("IsDiscountViewed", true);
     }
 
     $closeButton.addEventListener('click', function() {
         $discountSection.classList.add('remove');
-        
-        isClosed = true
+        isClosed = true;
+        sessionStorage.setItem('IsDiscountViewed', true);
     });
 
-    setTimeout(showDiscountSection, 1000);
+      if(!isViewed) setTimeout(showDiscountSection, 1000);
   });
+
+  function isViaSession(){
+    let t = sessionStorage.getItem("IsViaSession");
+    if(t) return true;
+    else return false;
+  }

@@ -47,7 +47,7 @@ main {
 }
 
 .post-list{
-    margin: 15px 20px;
+    margin: 15px 10px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 4fr));
     gap: 20px;
@@ -85,7 +85,7 @@ main {
 }
 
 .post-footer a{
-    
+    font-weight: 600;
     position: relative;
     bottom: 0;
     color: var(--card-text-color);
@@ -102,8 +102,46 @@ main {
     border-top-right-radius: 5px;
 }
 
+.filter{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.filter input{
+    padding: 6px;
+    color: var(--card-text-color);
+    background-color: var(--card-bg-color);
+    border-radius: 5px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.filter button{
+    margin-left: 15px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 180px;
+    border: 0;
+    padding: 8px;
+    border-radius: 7px;
+    background: rgba(0, 0, 0, 0.4);
+    transition: all 0.5s;
+}
+
+.filter button:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+
 @media (max-width: 900px) {
     .post-list{
-        grid-template-columns: repeat(auto-fill, minmax(250px, 3fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+    }
+}
+
+@media (max-width: 540px){
+    .filter input{
+        width: 90%;
     }
 }

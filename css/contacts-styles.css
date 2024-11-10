@@ -1,9 +1,9 @@
 :root {
-    --navbar-bg: #014d5b;
+    --navbar-bg: #12464f;
     --navbar-text-color: white;
-    --form-bg-color: #014d5b;
+    --form-bg-color: #12464f;
     --form-text-color: #1d1d1d;
-    --button-color-unhov: rgba(1, 77, 91, 0.7);
+    --button-color-unhov: rgba(1, 77, 91, 0.85);
     --button-color-hov: rgba(1, 77, 91, 1);
 
     --back-bg-color: rgba(0,0,0,0.55);
@@ -15,7 +15,7 @@
     --form-bg-color: #003341;
     --form-text-color: #eaeaea;
 
-    --button-color-unhov: rgba(0, 51, 65, 0.7);
+    --button-color-unhov: rgba(0, 51, 65, 0.85);
     --button-color-hov: rgba(0, 51, 65, 1);
 
     --back-bg-color: rgba(0,0,0,0.86);
@@ -27,17 +27,22 @@
 
 body{
     color: white;
+    background-image: url("../pictures/ban4.jpg");
+    background-size:    cover;
+    background-repeat:  no-repeat;
+    background-position: center;
 }
 
 .form-block{
-    width: 95%;
+    width: 1240px;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
+    padding: 20px;
+    opacity: 90%;
     background-color: var(--form-bg-color);
-    border-radius: 3px;
-    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    box-shadow: 4px 12px 30px 15px rgba(0, 0, 0, 0.7);
 }
 
 form{
@@ -155,8 +160,8 @@ label h2{
 
 .faq {
     background-color: var(--form-bg-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
     padding: 15px;
     cursor: pointer;
@@ -243,11 +248,12 @@ label h2{
 }
 
 #popup-open-btn {
+    box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     background-color: var(--button-color-unhov);
-    border-radius: 3px;
+    border-radius: 8px;
     padding: 10px;
     border: 0;
     color: white;
@@ -308,6 +314,12 @@ label h2{
 .error-message {
     color: red;
     display: none;
+}
+
+@media (max-width: 1300px){
+    .form-block{
+        width: 95%;
+    }
 }
 
 @media (max-width: 900px) {

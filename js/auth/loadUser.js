@@ -26,10 +26,19 @@ function updateAuthSection() {
         `;
         setTheme(getUser(userID));
     } else {
+        
         authSection.innerHTML = `
             <button class="btn btn-light me-2" onclick="window.location.href = 'registration.html';">Sign Up</button>
             <button class="btn btn-light me-4" onclick="window.location.href = 'login.html';">Log In</button>
         `;
+        setThemeUnlogged();
+    }
+}
+
+function setThemeUnlogged(){
+    if(sessionStorage.getItem("unloggedTheme") == 'dark'){
+        document.body.classList.toggle("dark-mode");
+        icon.src = "pictures/dark_mode.png";
     }
 }
 
@@ -57,7 +66,7 @@ function getUser(userID){
 
 function placeImage(userData){
     if(userData.image== "" || userData.image === null){
-        return `<img class="profile-img" src="https://eu.ui-avatars.com/api/?name=${userData.name}+${userData.surname}&size=250" alt="profileImage">`
+        return `<img class="profile-img" src="https://eu.ui-avatars.com/api/?name=${userData.name}&size=250" alt="profileImage">`
     } else{
         return `<img class="profile-img" src="${userData.image}" alt="profileImage">`
     }

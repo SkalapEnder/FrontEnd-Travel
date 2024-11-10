@@ -129,7 +129,9 @@
     <form class="filter-form" id="filter-form">
         <div class="filter-section">
             <div class="filter-filter">
-                <label for="city">City:</label>
+                <div class="filter-label">
+                    <label for="city">City:</label>
+                </div>
                 <select id="city">
                     <option value="">Select City</option>
                     <option value="Almaty">Almaty</option>
@@ -145,7 +147,9 @@
         </div>
         <div class="filter-section">
             <div class="filter-filter">
-                <label for="duration">Duration:</label>
+                <div class="filter-label">
+                    <label for="duration">Duration:</label>
+                </div>
                 <select id="duration">
                     <option value="">Select Duration</option>
                     <option value="1 day">1 day</option>
@@ -155,7 +159,9 @@
             </div>
             
             <div class="filter-filter">
-                <label for="included">Extras:</label>
+                <div class="filter-label">
+                    <label for="included">Extras:</label>
+                </div>
                 <select id="included">
                     <option value="">Select Extras</option>
                     <option value="Free water">Free Water</option>
@@ -166,7 +172,9 @@
         </div>
         <div class="filter-section">
             <div class="filter-filter">
-                <label for="certification">Is have certification:</label>
+                <div class="filter-label">
+                    <label for="certification">Is have certification:</label>
+                </div>
                 <input type="checkbox" id="certified">
             </div>
             <div class="filter-filter">
@@ -190,150 +198,6 @@
     </form>
     
     <div class="event-list" id="event-lists"></div>
-
-    <!-- <div class="event-list">
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/almatynka-lake.jpg" alt="Big Almaty Lake">
-            </div>    
-
-            <div class="event-details">
-                <h3>Almaty: bus tour to nature places (Kayndy, Medeu, Shymbulak, etc)</h3>
-                <h5>Bus Tour starts from Almaty city's center and end in  Kayndy Lake</h5>
-                <p>2 days • Free water</p>
-                <p class="event-cert">TrustTour certification</p>
-            </div>
-
-            <div class="event-price">
-                    <p class="price">from 40,00 $</p>
-                    <p class="rating">★ 4,0 (523)</p>
-            </div>
-        </div>
-        
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/aktau.jpg" alt="...">
-            </div>
-            <div class="event-details">
-                <h3>Aktau: visit beach of biggest lake in the world</h3>
-                <h5>Come and see the biggest lake in the world!</h5>
-                <p>3 days • Dinner and breakfast are included</p>
-                <p class="event-cert">TrustTour certification</p>
-            </div>
-            
-            <div class="event-price">
-                <p class="price">from 50,00 $</p>
-                <p class="rating">★ 4,1 (681)</p>
-            </div>
-        </div>
-    
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/sharyn-canyon.jpg" alt="Sharyn Canyon">
-            </div>   
-
-            <div class="event-details">
-                <h3>Aktau: bus tour Hop-On Hop-Off to Sharyn Canyon</h3>
-                <h5>Visit the one of places of amazing nature of Kazakhstan</h5>
-                <p>1 day • Free water</p>
-                <p class="event-cert">TrustTour certification</p>
-            </div>
-    
-            <div class="event-price">
-                <p class="price">from 25,00 $</p>
-                <p class="rating">☆4,4 (256)</p>
-            </div>
-        </div>
-    
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/baiterek.jpg" alt="Baiterek in center">
-            </div>
-
-            <div class="event-details">
-                <h3>Astana: bus tour through the capital with visiting reustarant</h3>
-                <h5>Visit the capital of the Great Steppe in the world</h5>
-                <p>1 day • Dinner included</p>
-            </div>
-                    
-            <div class="event-price">
-                <p class="price">from 27,00 $</p>
-                <p class="rating">★ 4,2 (1453)</p>
-            </div>
-        </div>
-            
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/baikonur.jpg" alt="Baikonur Spaceship">
-            </div>
-            <div class="event-details">
-                <h3>Baikonur: special bus tour programm</h3>
-                <h5>Visit the place where launched the first man to space</h5>
-                <p>2 days • Dinner and breakfast included</p>
-                <p class="event-cert">TrustTour certification</p>
-            </div>
-            
-                <div class="event-price">
-                    <p class="price">from 45,00 $</p>
-                    <p class="rating">★4,9 (2135)</p>
-                </div>
-        </div>
-        
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/28Panfilov.jpg" alt="28 Panfilov statue">
-            </div>
-
-            <div class="event-details">
-                <h3>Almaty: bus tour Hop-On Hop-Off across history places</h3>
-                <h5>Start visit the popular sights, history places in the city with great history</h5>
-                <p>1 day • Audiogid: as desired</p>
-                <p class="event-cert">TrustTour certification</p>
-            </div>
-            
-            <div class="event-price">
-                <p class="price">from 15,00 $</p>
-                <p class="rating">★ 4,8 (1337)</p>
-            </div>
-        </div>
-    
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/palace.jpg" alt="Astana Palace">
-            </div>
-
-            <div class="event-details">
-                <h3>Astana: National Museum, Palace of peace and consolidation, etc.</h3>
-                <h5>Bus tour in the night time in the Astana</h5>
-                <p>5 hours • Audiogid: as desired</p>
-            </div>
-            
-            <div class="event-price">
-                <p class="price">from 8,00 $</p>
-                <p class="rating">★ 3,9 (134)</p>
-            </div>
-        </div>
-    
-        <div class="event-card">
-            <div class="event-image">
-                <img src="pictures/medeu2.jpg" alt="Medeu Winter">
-            </div>
-
-            <div class="event-details">
-                <h3>Almaty: ice skating in Medeu</h3>
-                <h5>Walking on the ice of the highest ice skating rink in the world!</h5>
-                <p>4 hours • Dinner included</p>
-                <p class="event-cert">TrustTour certification</p>
-            </div>
-    
-            <div class="event-price">
-                <p class="price">from $18,00</p>
-                <p class="rating">★ 4,7 (634)</p>
-            </div>
-        </div>
-            
-    </div> -->
-        
 </main>
 
 <footer>

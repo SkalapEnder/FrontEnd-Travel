@@ -1,0 +1,93 @@
+
+:root {
+    /* Light Mode Colors */
+    --primary-color: #017a8b;
+    --navbar-bg: #014d5b;
+    --navbar-text-color: white;
+    --body-bg-color: #f9f9f9;
+    --body-text-color: #1d1d1d;
+    --card-bg-color: #f9f9f9;
+    --card-text-color: #1d1d1d;
+    --card-info-color: #555555;
+    --form-bg-color: #014d5b;
+    --form-text-color: #1d1d1d;
+
+    --discount-color-1: rgba(9,102,121,1);
+    --discount-color-2: rgba(0,176,134,1);
+
+    --body-font-size: 15px;
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+    --primary-color: #f1c40f;
+    --navbar-bg: #003341;
+    --navbar-text-color: white;
+    --body-bg-color: #1d1d1d;
+    --body-text-color: #eaeaea;
+    --card-bg-color: #3a3a3a;
+    --card-text-color: #f9f9f9;
+    --card-info-color: #cfcfcf;
+    --form-bg-color: #003341;
+    --form-text-color: #eaeaea;
+
+    --discount-color-1: rgb(5, 79, 94);
+    --discount-color-2: rgb(0, 126, 96);
+}
+
+body {
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+    padding: 10px 20px;
+}
+
+main{
+    padding: 50px 200px;
+}
+
+#content{
+    padding: 0px 20px;
+}
+
+.tourField{
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+}
+
+.tourField label{
+    font-size: 24px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.tourField h3{
+    font-size: 28px;
+    font-weight: 300;
+}
+
+#tourMain{
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#tourMain h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+#tourRating{
+    color: #ff9800;
+}
+
+#tourImage{
+
+}
