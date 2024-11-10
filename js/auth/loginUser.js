@@ -83,6 +83,7 @@ function validatePassword(passwordValue){
 function loginUser(userId) {
     localStorage.setItem("activeUserId", userId);
     localStorage.setItem("loggedin", true);
+    sessionStorage.clear();
     clearForm();
 }
 

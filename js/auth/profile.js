@@ -126,7 +126,7 @@ function logoutUser() {
     localStorage.removeItem("activeUserId");
     localStorage.setItem("loggedin", false);
 
-    
+    sessionStorage.clear();
 
     window.location.href = "index.html";
 }

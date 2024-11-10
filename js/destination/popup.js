@@ -17,7 +17,11 @@ const validateInputs = () => {
     const emailValue = email.value.trim();
     const nameValue = names.value.trim();
 
-    if(validateEmail(emailValue) & validateName(nameValue)){ return true;}
+    if(validateEmail(emailValue) & validateName(nameValue)){ 
+        sessionStorage.setItem("IsDiscountViewed", true); 
+        localStorage.setItem("IsDiscountViewed", true);
+        return true;
+    }
 
     return false;
 };
