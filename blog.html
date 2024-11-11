@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Blogs Page</title>
+	<title>Blogs</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Playpen+Sans:wght@100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -72,12 +72,12 @@
     <h1 class="text-center my-4 fw-bold">Search blog about your favorite topic!</h1>
     <form class="filter">
         <input type="text" id="search-input" placeholder="Write name of your blog">
-        <button type="button" class="mx-2" onclick="filterTours()">Find blog</button>
+        <button type="button" class="mx-2" id="filterBtn">Find blog</button>
     </form>
     
-    <div class="post-list">
+    <div class="post-list" id="post-list">
         
-        <div class="post card">
+        <!-- <div class="post card">
             <img src="pictures/blog-map.jpg" alt="Map of Kazahstan">
             <div class="post-body card-body">
                 <h4 class="fw-bold">Best places in Kazakhstan in 2024</h4>
@@ -139,7 +139,7 @@
                 <p>Nestled at the heart of Central Asia, Kazakhstan is a land of breathtaking contrasts, where ancient traditions meet modern innovation. From its vast, sprawling steppes to the soaring peaks of the Tian Shan mountains, this country offers an extraordinary blend of natural beauty and cultural richness.</p>
             </div>
             <div class="post-footer card-footer w-100"><a href="#">More about...</a></div>
-        </div>
+        </div> -->
     </div>
 </main>
 <!-- Main -->
@@ -163,6 +163,8 @@
     </ul>
 </footer>
 
+<script type="text/javascript" src="js/blog/blogs.json"></script>
+<script type="text/javascript" src="js/blog/createBlogList.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/auth/loadUser.js"></script>

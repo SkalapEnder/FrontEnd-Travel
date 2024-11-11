@@ -37,7 +37,7 @@ main {
     margin-right: 40px;
     margin-left: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 0.5fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
     gap: 10px;
 }
 
@@ -47,10 +47,12 @@ main {
 }
 
 .post-list{
-    margin: 15px 10px;
+    margin: 15px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 4fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 4fr));
     gap: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 .post {
@@ -63,6 +65,7 @@ main {
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .post:hover{
@@ -132,6 +135,13 @@ main {
 
 .filter button:hover{
     background: rgba(0, 0, 0, 0.7);
+}
+
+.noBlogs{
+    min-height: 50vh; 
+    padding: 0; 
+    margin: auto;
+    text-align:center;
 }
 
 @media (max-width: 900px) {

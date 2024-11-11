@@ -193,9 +193,7 @@ function displayTours(list) {
     console.log(getSelectedCurrency());
     if (list.length === 0) {
         eventList.innerHTML = '<p>No tours found.</p>';
-        footer.style.position = 'absolute';
     } else {
-        footer.style.position = 'static';
         list.forEach(eventObj => {
             let certificate = "";
             if (eventObj.certification) {
