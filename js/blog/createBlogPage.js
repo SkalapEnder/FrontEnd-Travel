@@ -9,10 +9,7 @@ class blogPreview {
     }
 }
 
-const data = JSON.parse(blogs);
-console.log(data);
-
-const datas = [
+const data = [
     {
         "id": 1,
         "title": "Best places in Kazakhstan 2024",
@@ -46,6 +43,21 @@ function loadBlog(){
         document.querySelector('main').innerHTML = `<h2 style="min-height: 100vh; padding:10%; margin: auto; text-align:center">There is no info about blog!<br><a href="blog.html">Back to list</a></h2>`
     }
 }
+
+function getBlog(blogID){
+    let userList = JSON.parse(localStorage.getItem("userList"));
+
+    if(userList === null || userList.length === 0) { return ""; }
+    for(let i = 0; i < userList.length; i++){
+        let userF = userList[i];
+        if(userF.id == userID){
+            return new userProfileObj(userID, userF.name, userF.surname, userF.image, userF.birthday, 
+                userF.gender, userF.email, userF.password, userF.theme);
+        }
+    }
+
+    return "";
+};
 
 function unloadBlog(){
 

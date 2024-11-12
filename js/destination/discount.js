@@ -44,14 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function showDiscountSection() {
         $discountSection.classList.add('open');
         
-        isViaSession() ? 
-        sessionStorage.setItem("IsDiscountViewed", true) : 
-        localStorage.setItem("IsDiscountViewed", true);
+       
     }
 
     $closeButton.addEventListener('click', function() {
         $discountSection.classList.add('remove');
         isClosed = true;
+        isViaSession() ? 
+        sessionStorage.setItem("IsDiscountViewed", true) : 
+        localStorage.setItem("IsDiscountViewed", true);
     });
 
       if(!isViewed) setTimeout(showDiscountSection, 1000);

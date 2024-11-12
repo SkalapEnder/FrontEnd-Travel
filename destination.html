@@ -141,7 +141,9 @@
                 </select>
             </div>
             <div class="filter-filter">
-                <label for="price">Max Price:</label>
+                <div class="filter-label">
+                    <label for="price">Max Price:</label>
+                </div>
                 <input type="number" id="price" placeholder="Enter max price"><p id="currencySymbol"></p>
             </div>
         </div>
@@ -178,8 +180,10 @@
                 <input type="checkbox" id="certified">
             </div>
             <div class="filter-filter">
-                <label>Currency: </label>
-                <div class="btn-group filter-currency ms-2" id="button-groups" role="group" data-bs-theme="dark">
+                <div class="filter-label">
+                    <label>Currency: </label>
+                </div>
+                <div class="btn-group filter-currency" id="button-groups" role="group" data-bs-theme="dark">
                     <input type="radio" value="USD" class="btn-check" name="btnradio" id="btnradio1">
                     <label class="btn btn-outline-dark" for="btnradio1">USD</label>
                     

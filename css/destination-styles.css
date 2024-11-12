@@ -319,15 +319,17 @@ a.event-card{
 .popup-line, .popup-form{
     display: flex;
     align-items: center;
+    text-align: end;
     margin: auto;
 }
 
 .popup-input{
-    margin: 10px;
+    margin: 0px;
     font-size: 20px;
     color: white;
     background-color: transparent;
     border: 0;
+    justify-content: end;
 }
 
 .popup-input .error{
@@ -343,7 +345,7 @@ a.event-card{
 }
 .popup-input input{
     border-radius: 5px;
-    max-width: auto;
+    max-width: 90%;
 }
 
 .popup-submit{
@@ -394,26 +396,10 @@ a.event-card{
 
 
 .filter-form{
-    padding-left: 20%;
-    padding-right: 20%;
     text-align: center;
     margin: auto;
-    margin-bottom: 8px;
+    padding-right: 30px;
     color: var(--card-text-color);
-}
-
-.filter-label label{
-    font-weight: 700;
-    font-size: 20px;
-    color: var(--card-text-color);
-    min-width: 100px; 
-    text-align: right;
-    margin-right: 10px;
-}
-
-.filter-label{
-    width: 200px;
-    text-align: right;
 }
 
 .filter-form button{
@@ -426,17 +412,28 @@ a.event-card{
     font-weight: bold;
 }
 
-.filter-section{
-    display: flex;
-    padding:5px;
-    justify-content: space-around;
+.filter-label label{
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--card-text-color);
+    width: 100%;    
 }
 
-.filter-filter input[type="number"], .filter-filter select{
-    padding: 6px;
-    color: var(--card-text-color);
-    background-color: var(--card-bg-color);
-    border-radius: 5px;
+.filter-label{
+    width: 250px;
+    text-align: right;
+    margin-right: .75rem;
+}
+
+
+
+.filter-section{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 5px;
 }
 
 .filter-currency label{
@@ -448,34 +445,62 @@ a.event-card{
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin: 15px 0px;
+    margin: 5px 0px 15px 0px;
+    min-width: 500px;
+}
+
+.filter-filter input[type="number"], .filter-filter select{
+    padding: 6px;
+    color: var(--card-text-color);
+    background-color: var(--card-bg-color);
+    border-radius: 5px;
+    align-items: start;
 }
 
 .filter-filter input[type="checkbox"]{
     width: 25px;
     height: 25px;
+    justify-self: start;
 }
 
 .filter-filter input, select{
     flex: 1;
-    margin-left: 10px;
 }
 
 @media (max-width: 1000px) {
     .filter-section{
-        display: block;
+        flex-direction: column;
     }
 
     .filter-filter{
         max-width: 90%;
         flex-direction: column;
+        min-width: 90%;
     }
 
     .filter-filter input, select{
-        width: 100%;
+        width: 70%;
+        justify-self: center;
     }
 
-    
+    .filter-filter input[type="checkbox"]{
+        width: 45px;
+        height: 45px;
+    }
+
+    .filter-label{
+        text-align: center;
+        justify-content: center;
+        margin-right: 0rem;
+    }
+
+    .filter-section{
+        align-items: center;
+        justify-content: center;
+    }
+    .filter-form{
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 500px){
@@ -485,5 +510,10 @@ a.event-card{
 
     .popup-input input{
         width: 100%;
+    }
+
+    .filter-filter input, select{
+        width: 80%;
+        justify-self: center;
     }
 }

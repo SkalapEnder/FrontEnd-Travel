@@ -35,9 +35,7 @@ function loadJSON(callback) {
     xobj.send(null);  
  }
 
-var data;
-
-const datas = [
+const data = [
     {
         "id": 1,
         "title": "Best places in Kazakhstan 2024",
@@ -54,7 +52,6 @@ const datas = [
 ]
 
 window.onload = function() {
-    fetchJSONData();
     displayBlogs(data);
     filterBlogs();
     addEvents();
@@ -64,24 +61,8 @@ const filterBtn = document.getElementById('filterBtn');
 
 filterBtn.addEventListener('click', filterBlogs);
 
-function fetchJSONData() {
-    fetch("./js/blog/blogs.json")
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error
-                    (`HTTP error! Status: ${res.status}`);
-            }
-            data = res.json();
-        })
-        .then((data) =>
-            console.log(data))
-        .catch((error) =>
-            console.error("Unable to fetch data:", error));
-}
-
 function displayBlogs(list) {
-    console.log(list);
-    const blogList = document.getElementById('post-list'); 
+    const blogList = document.getElementById('post-list');
 
     blogList.innerHTML = ''; 
     if (list == null || list.length === 0) {
