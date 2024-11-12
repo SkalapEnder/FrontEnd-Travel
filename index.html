@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
@@ -13,12 +14,17 @@
     <script src="js/game.js"></script>
     <script src="js/timer-main.js"></script>
     <script src="js/destination/chat.js" defer></script>
+    <script src="js/carousel.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAi_Uk7-4-mrTAY8s2tra6VMOvHixjei8E&libraries=places&callback=initMap" async defer></script>
     <style>
     .timer{
     display: flex;
     justify-content: center;
     align-items: center;
 }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Nerko+One&display=swap" rel="stylesheet">
 </head>
     
 <body>
@@ -105,7 +111,7 @@
                 
                 <ul class="navbar-nav justify-content-center flex-grow-1">
 
-<li class="nav-item me-3 ">
+                    <li class="nav-item me-3 ">
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
 
@@ -153,6 +159,118 @@
         </div>
     </section>
     
+    
+    
+      <section id="service">
+    <div class="title-text">
+        <h1>We provide better</h1>
+    </div>
+    <div class="service-box">
+        <div class="single-service item1">
+        <img src="pictures/blog-kaindy-lake.jpg">
+            <div class="overlay"></div>
+            <div class="service-desc">
+            <h3>Magical nature</h3>
+                <hr>
+                <p></p>
+            </div>
+        </div>
+        <div class="single-service item2">
+            <img src="pictures/blog-history.jpg">
+        <div class="overlay"></div>
+        <div class="service-desc">
+            <h3>Historical Places</h3>
+                <hr>
+                <p></p>
+            </div></div>
+        <div class="single-service item3">
+         <img src="/pictures_main/mountains.jpg">
+            <div class="overlay"></div>
+            <div class="service-desc">
+            <h3>Amazing mountains</h3>
+                <hr>
+                <p></p>
+            </div>
+        </div>
+        <div class="single-service item4">
+         <img src="pictures/Astana.webp">
+            <div class="overlay"></div>
+            <div class="service-desc">
+            <h3>Modern infrastructure</h3>
+                <hr>
+                <p></p>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+<div class="carousel-box">
+      <div class="carousel-container">
+        <h1>Our Team</h1>
+        <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn">&#10094; Prev</button>
+            <div class="carousel">
+                <!-- Profile Cards -->
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Alex Carter">
+                    <h2>Alex Carter</h2>
+                    <p>Full-Stack Developer</p>
+                    <p>Experienced in building and scaling web applications with a focus on clean code and efficient design.</p>
+                    <button>Connect</button>
+                </div>
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Bella Zhang">
+                    <h2>Bella Zhang</h2>
+                    <p>Digital Marketing</p>
+                    <p>Expert in social media and content strategy, driving brand engagement through data-driven campaigns.</p>
+                    <button>Connect</button>
+                </div>
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Carlos Ramirez">
+                    <h2>Carlos Ramirez</h2>
+                    <p>Graphic Designer</p>
+                    <p>Carlos brings ideas to life with a unique visual style and attention to detail, specializing in branding.</p>
+                    <button>Connect</button>
+                </div>
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Diane Evans">
+                    <h2>Diane Evans</h2>
+                    <p>Product Manager</p>
+                    <p>Skilled in overseeing product development from concept to launch, focusing on customer alignment.</p>
+                    <button>Connect</button>
+                </div>
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Ethan Kim">
+                    <h2>Ethan Kim</h2>
+                    <p>Data Scientist</p>
+                    <p>Enthusiast in machine learning, helping companies optimize processes through data insights.</p>
+                    <button>Connect</button>
+                </div>
+                <div class="profile-card">
+                    <img src="https://via.placeholder.com/150" alt="Fatima Noor">
+                    <h2>Fatima Noor</h2>
+                    <p>Content Creator</p>
+                    <p>Connecting with audiences through authentic storytelling and value-driven content creation.</p>
+                    <button>Connect</button>
+                </div>
+            </div>
+            <button class="carousel-btn" id="nextBtn">Next &#10095;</button>
+        </div>
+    </div>
+</div>
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+    </script>
 
      <div class="container-fluid justify-content-center text-center mb-5">
         <div class="row">
@@ -199,8 +317,36 @@
          </div>
 
 <div class="qtn">
-    <blockquote class="p-2" cite="https://www.shutterfly.com/ideas/travel-quotes/"><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
+    <blockquote ><h1 style="font-family: sans-serif">“Traveling – it leaves you speechless, then turns you into a storyteller.” – Ibn Battuta</h1></blockquote>
 </div>
+    <div>   
+     <h1 id="hotel-text">Nearby Hotels</h1>
+  <div id="map"></div>
+
+  <div id="controls">
+    <input type="text" id="city-input" placeholder="Enter city to find hotels" onkeypress="handleEnter(event)" />
+    <button onclick="searchByCity()">Find Hotels in City</button>
+    <select id="rating-filter">
+      <option value="all">All Ratings</option>
+      <option value="4">4 and above</option>
+      <option value="3">3 and above</option>
+    </select>
+    <select id="distance-filter">
+      <option value="all">All Distances</option>
+      <option value="5">Nearest 5 Hotels</option>
+    </select>
+  </div>
+
+  <div id="hotel-list-container">
+    <ul id="hotel-list"></ul>
+  </div>
+
+  <h2>Chosen Hotels</h2>
+  <div id="chosen-hotels-container">
+    <ul id="chosen-hotels-list"></ul>
+  </div>
+
+</div> 
     
 <footer>
   <ul>
@@ -209,7 +355,7 @@
   </ul>
   <ul>
       <li><a href="registration.html" class="text-white">Home</a></li>
-      <li><a href="#" class="text-white">Destination</a></li>
+      <li><a href="destination.html" class="text-white">Destination</a></li>
       <li><a href="blog.html" class="text-white">Blog</a></li>
       <li><a href="contacts.html" class="text-white">Contact Us</a></li>
   </ul>
