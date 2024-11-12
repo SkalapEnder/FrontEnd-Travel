@@ -53,7 +53,7 @@ body {
 /* Chat messages window with fixed height */
 #chatWindow {
   flex-grow: 1;
-  height: 400px; /* Fixed height */
+  height: 300px; /* Fixed height */
   padding: 10px;
   overflow-y: auto; /* Enable scrolling */
   background-color: #fafafa;
@@ -233,15 +233,13 @@ nav ul li a {
 .home {
  
   background-size: cover;
-  padding: 100px 40px;
   text-align: left;
+
 }
 .home-content{
-  background-image: url("pictures_css/slider.jpg");
+  background-image: url("pictures_css/slider_enhanced.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  border: solid 1.5px;
-  border-radius: 15px;
   padding: 100px 200px;
 
 }
@@ -298,12 +296,16 @@ padding-block: 5rem;
 /*
 display: grid;
 grid-row-gap: 3.5rem;
+    
 */
-  padding: 0 40px;
+  margin-top: 150px;
+  padding: 0 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 80px;
+  column-gap: 40px;
+  grid-row-gap: 100px;
+  margin-bottom: 100px;
 }
 
 .card__article {
@@ -312,9 +314,6 @@ overflow: hidden;
 
 }
 
-.card__article{
-  margin: 0 50px;
-}
 .card__article img{
 width: 328px;
 border-radius: 1.5rem;
@@ -381,15 +380,18 @@ border: solid 1px;
 .card__article:hover .card__data {
 animation: show-data 1s forwards;
 opacity: 1;
-transition: opacity .3s;
+transition: opacity .3s ease-in-out;
 }
 
 .card__article:hover {
 animation: remove-overflow 2s forwards;
+     transform: scale(1.05);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    
 
 }
 .card__article img:hover{
-   box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+   
 
   
 }
@@ -441,22 +443,27 @@ to {
 
 figcaption{
   font-size: 10px;
+  font-family: "Anton SC", sans-serif;
+}
+.qtn h1{
+    
+     font-family: "Anton SC", sans-serif;
 }
 .qtn{
+  color: aliceblue;
   background-color: transparent;
   border-radius: 15px;
   box-shadow: 10px;
   border: 1.5px solid;
-    transition: 1.5s;
+    transition: 1.5s all ease-in-out;
 
 }
 .qtn:hover{
-  background-image: url(pictures_css/ban.jpg);
+  background-image: url("pictures_css/banner");
   background-position: center;
+background-size: cover;
   background-repeat: no-repeat;
-  color: cornsilk;
-   -webkit-text-stroke: 2px black;
-text-stroke: 1px black;
+  color: black;
   font-style: solid;
  
   
@@ -467,10 +474,10 @@ text-stroke: 1px black;
 }
 
 .hpage img{
-  width: 50vw;
+  width: 40vw;
   height: auto;
   position: relative;
-  left: 35vw;
+  left: 40vw;
   bottom: 200px;
   animation: Myslide;
   animation-duration: 8s;
@@ -644,6 +651,7 @@ button {
 
 
 .gameBody{
+  
   position: absolute;
   top: 300px;
   z-index: 1000;
@@ -652,6 +660,7 @@ button {
   justify-content: center
 }
 .game-container {
+  background-color: var(--body-bg-color);
   position: relative;
   margin: 0 auto;
   z-index: 1000;
@@ -688,14 +697,14 @@ button {
 .dropzone{
   width: 100px;
   padding: 0;
-
-  /* height: 5%; */
+  background-color: bisque;
+    
 }
 
 
 
   #chatContainer {
-  width: 200px;
+  width: 100px;
   border: 1px solid #dbdbdb;
   border-radius: 15px;
   background-color: darkblue;
@@ -714,22 +723,26 @@ button {
   margin: 0;
   bottom: 2vh;
   right: 2vw;
+  
 /*    display: none;*/
   
 }
-@media (max-width: 800px){
+@media (max-width: 400px){
   .game-container{
     width: 70vw;
   }
 }
 
-@media (max-width: 700px) {
-  
+@media (max-width: 600px) {
+    .card--article{
+        width: 100px;
+    }
   body {
       font-size: 0.9em;
   }
 
 
+.c
   /* Header adjustments */
   header {
 /*        padding: 10px 20px;*/
@@ -808,6 +821,7 @@ button {
 #chatContainer{
   /* height: 500px; */
   width: 400px; 
+transform: scale(0.70)
 }
 #chatWindow{
   height: 300px;
@@ -819,13 +833,14 @@ button {
   height: 50px;
   /* row-gap: 10px; */
 }
-@media(max-width:1500px) {
+@media(max-width:700px) {
   #chatContainer{
     width: 300px;
+    
 
   }
-  #chatWindow{
-    height: 200px;
+  #chatWindow{n
+    height: 150px;
   }
   .game-container{
     top: 200px;
@@ -836,14 +851,493 @@ button {
     max-height: 80vh; /* Restrict height for smaller screens */
     overflow: auto; /* Enable scrolling */
 }
-}
-@media (max-width:800px){
-  .card__article{
-    margin: 0 0;
-  }
-  #chatContainer{
-    width: 300px;
 
-  }
-  
+    
 }
+
+@media(max-width:550px){
+    .carousel-box{
+        transform: scale(0.70)
+    }
+    .carousel-conteiner{
+        transform: scale(0.80);
+    }
+    
+}
+
+.carousel-box{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30hv;
+    margin-bottom: 50px;
+    background-color: transparent;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel-container h1 {
+    margin-bottom: 20px;
+    color: var();
+}
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    grid-gap:30px;
+    padding:40px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-card {
+    flex: 0 0 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-card h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-card p {
+    color: #555;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.profile-card button {
+    background-color: var(--body-bg-color) ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.profile-card button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #555;
+}
+.title-text h1{
+     font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#service{
+    width: 100%;
+ 
+}
+.service-box{
+    width:  80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    flex-basis: 40%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 50px;
+    color: #fff;
+    position: relative;
+}
+.single-service img{
+    width: 480px;
+    background-size: cover;
+    height: 300px;
+    border-radius: 7px;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+}
+.single-service:hover .overlay{
+    opacity: 1; 
+}
+
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+.service-desc p{
+    font-size: 14px;
+}
+.single-service:hover .service-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+.title-text{
+    align-items: center;
+    
+        
+}
+
+
+
+
+/*MAP API*/
+
+.map-container{
+    margin-top: 100px;
+      display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6f7ff;
+}
+#hotel-text{
+  margin-top: 100px;
+  margin: 20px;
+  color: white;
+}
+#map {
+  width: 100%;
+  height: 50vh;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#controls {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+#city-input,
+button,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  transition: 0.2s;
+}
+
+#city-input {
+  flex: 1;
+}
+
+button,
+select {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+select:hover {
+  background-color: #0056b3;
+}
+
+#hotel-list-container, #chosen-hotels-container {
+  width: 90%;
+  max-width: 800px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hotel-list, #chosen-hotels-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hotel-item {
+  flex: 1 1 calc(50% - 10px);
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hotel-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.hotel-info {
+  flex: 1;
+}
+.hotel-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.hotel-info strong {
+  color: #0056b3;
+}
+.hotel-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.hotel-info p {
+  color: #555;
+  font-size: 0.9em;
+}
+
+.rent-button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.rent-button:hover {
+  background-color: #218838;
+}
+
+#chosen-hotels-list .hotel-item {
+  flex: 1 1 calc(100% - 10px);
+    margin: auto;
+}
+    
+    #hotel-list-container, 
+#chosen-hotels-container {
+    justify-content: center;
+    margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.hotel-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hotel-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.hotel-info {
+  flex: 1;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.rent-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.rent-button.chosen {
+  background-color: red;
+  color: #fff;
+}
+
+.rent-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-button {
+  background-color: red;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+#chosen-hotels-container {
+
+  width: 90%;
+  max-width: 800px;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+justify-content: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#chosen-hotels-container h2 {
+  font-size: 1.5em;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+#chosen-hotels-list {
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.hotel-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hotel-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.hotel-info {
+  flex: 1;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
