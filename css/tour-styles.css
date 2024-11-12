@@ -19,18 +19,22 @@
 body {
     background-color: var(--body-bg-color);
     color: var(--body-text-color);
-    margin: 0;
-    padding: 0;
+
 }
 
 .navbar {
     background-color: var(--navbar-bg);
     padding: 10px 20px;
+    
+}
+
+.navbar-nav{
+    align-items: center;
 }
 
 main{
     text-align: center;
-    padding: 30px 80px;
+    padding: 30px 80px;     
 }
 
 /* Heading */
