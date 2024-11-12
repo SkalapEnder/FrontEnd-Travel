@@ -142,31 +142,19 @@ a:hover {
 
 
 
-@media (max-width:420px){
+@media (max-width:480px){
     form{
         width: 100%;
     }
     .form-container{
-        position: static;
         padding: 25px;
         margin-bottom: 5%;
         max-width: 90%;
     }
-    fieldset{
-        flex-direction: column;
-        height: 120px;
-    }
+    
 }
 
 @media (max-width: 550px){
-    .backbutton{
-        position: static;
-        margin: 15px;
-        right: 0;
-        top: 0; 
-        left: 0; 
-        transform: none;
-    }
     body {
         width: 100vw;
     }

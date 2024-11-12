@@ -58,7 +58,7 @@ body {
     
     background-color: var(--body-bg-color);
     color: var(--body-text-color);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.1s ease;
 }
 
 .navbar {
@@ -184,7 +184,7 @@ footer ul li a:hover {
 .offcanvas .nav-link{
     font-size: 1.2rem;
     font-family: "Raleway", sans-serif;
-    transition: font-size 0.3s, font-decoration 0.3s;
+    transition: font-size 0.5s, font-decoration 0.5s;
 } 
 
 .offcanvas .nav-link:hover{

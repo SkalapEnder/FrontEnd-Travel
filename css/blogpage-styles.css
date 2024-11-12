@@ -1,0 +1,109 @@
+:root {
+    --navbar-bg: #014d5b;
+    --navbar-text-color: white;
+    --body-bg-color: #f9f9f9;
+    --body-text-color: #1d1d1d;
+    --add-info-color: #555555;
+}
+
+.dark-mode {
+    --navbar-bg: #003341;
+    --navbar-text-color: white;
+    --body-bg-color: #1d1d1d;
+    --body-text-color: #eaeaea;
+    --add-info-color: #ffffff;
+}
+
+.backlayer{
+    position: absolute;
+    justify-content: start;
+    text-align: start;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-bottom-right-radius: 10px;
+}
+
+.backbutton{
+    
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+main {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+#blog-image{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 40px;
+}
+
+#blog-title{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+.blog-who{
+    text-align: center;
+    justify-content: center;
+}
+
+#blog-author, #blog-publish{
+    color:var(--add-info-color);
+    font-size: 1.5rem;
+}
+
+.blog-content{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p, h5 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+h5, h4{
+    margin-top: 30px;
+}
+
+h2, h3{
+    margin-top: 30px;
+}
+
+ul li{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    
+}
+
+.hr{
+    border: 5px solid black;
+}
+
+.blog-content ul, .blog-content li{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1000px) {
+    main{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

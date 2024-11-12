@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const icon = document.getElementById("icon");
-
+    
     document.body.classList.contains("dark-mode") ? changeThemeCurrencyButtons() : 0;
 
     icon.addEventListener("click", () => {

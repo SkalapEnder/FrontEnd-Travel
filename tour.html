@@ -65,36 +65,48 @@
     </nav>
 </header>
 <main>
+    <div class="backlayer">
+        <a href="destination.html" class="backbutton"><img src="pictures/back-arrow.png" width="50" height="50" alt="Back"></a>
+    </div>
     <div id="tourMain"></div>
-
     <div class="d-flex" id="content">
-        <div class="tourInfo" id="tourInfo">
-        </div>
+        
         <div>
             <img id="tourImage" src="">
         </div>
-    </div>
+        <div class="infoContent">
+            <div class="tourInfo" id="tourInfo">
+            </div>
 
-    <div class="tourPrice">
-        <div id="tourPrice"></div>
-
-        <div>
-            <label>Currency: </label>
-            <div class="btn-group filter-currency ms-2" id="button-groups" role="group" data-bs-theme="dark">
-                <input type="radio" value="USD" class="btn-check" name="btnradio" id="btnradio1">
-                <label class="btn btn-outline-dark" for="btnradio1">USD</label>
-                
-                <input type="radio" value="RUB" class="btn-check" name="btnradio" id="btnradio2">
-                <label class="btn btn-outline-dark" for="btnradio2">RUB</label>
-                
-                <input type="radio" value="KZT" class="btn-check" name="btnradio" id="btnradio3">
-                <label class="btn btn-outline-dark" for="btnradio3">KZT</label>
+            <div class="tourPrice">
+                <div id="tourPrice">
+                    
+                </div>
+        
+                <div>
+                    <label>Currency: </label>
+                    <div class="btn-group filter-currency ms-2" id="button-groups" role="group" data-bs-theme="dark">
+                        <input type="radio" value="USD" class="btn-check" name="btnradio" id="btnradio1">
+                        <label class="btn btn-outline-dark" for="btnradio1">USD</label>
+                        
+                        <input type="radio" value="RUB" class="btn-check" name="btnradio" id="btnradio2">
+                        <label class="btn btn-outline-dark" for="btnradio2">RUB</label>
+                        
+                        <input type="radio" value="KZT" class="btn-check" name="btnradio" id="btnradio3">
+                        <label class="btn btn-outline-dark" for="btnradio3">KZT</label>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>  
+    <div id="tourDesc">
+
     </div>
+    <div id="tourWeather">
+    </div>
+    
     <hr>
-    <div class="weatherInfo" id="weatherInfo">
-    </div>
+    
 </main>
 </body>
 
@@ -115,6 +127,8 @@
         <li><br />Group: IT-2308</li>
     </ul>
 </footer>
+
+<script src="js/tour/weather.js"></script>
 <script src="js/bg-change.js"></script>
 <script src="js/auth/loadUser.js"></script>
 <script src="js/tour/tour.js"></script>
